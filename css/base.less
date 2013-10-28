@@ -1,0 +1,304 @@
+/***************
+ * GLOBAL VARS *
+ ***************/
+
+//colors
+@LIGHT_BLUE: rgba(93, 165, 212, 1.0);
+@MEDIUM_BLUE: rgba(35, 83, 115, 1.0);
+@DARK_BLUE: rgba(13, 33, 54, 1.0);
+@FONT_COLOR: rgba(194, 222, 230, 0.9);
+
+@COL_HEIGHT: 600px;
+
+//fonts
+@MAIN_FONT: 'Open Sans Condensed', sans-serif;
+@SUB_FONT: 'Source Sans Pro', sans-serif;
+
+//header 
+@HEADER_HEIGHT: 50px;
+@HEADER_MARGIN_TOP: 20px;
+
+//board 
+@WINDOW_HEIGHT: `window.innerHeight`;
+@BOARD_HEIGHT: 750px;//~"@{WINDOW_HEIGHT}px";
+
+//animation
+@ANIM_TIME: 0.3s;
+
+//lifebar
+@LIFEBOARD_HEIGHT: 30px;
+@LIFEBAR_OPACITY: .4;
+
+//rounding 
+@CORNER_RADIUS: 15px;
+
+//icons
+@ICON_OPACITY: .8;
+@ICON_WIDTH: 100px;
+@ICON_HEIGHT: 100px;
+
+html { 
+    background: url('../icons/testbackground-1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: @FONT_COLOR;
+    font-family: @MAIN_FONT;
+}
+
+#main {
+
+}
+
+#left-col {
+    margin-top: @HEADER_MARGIN_TOP;
+}
+
+#main-col {
+    margin-top: @HEADER_MARGIN_TOP;
+    background: rgba(0, 0, 0, 0.1);//rgba(39, 43, 46, 0.5);
+}
+#my-modal {
+    //margin-right: -220px;
+    //margin-top: -72px;
+    width: 700px;
+    overflow: hidden;
+}
+#modal_container {
+    //height:600px;
+    background-color:#0f1215;
+    opacity: .9;
+    position: relative;
+    overflow: hidden;
+    h2 {
+        margin: 10px; 
+    }
+}
+.program_selection {
+    display:block;
+}
+a:link {color:white;text-decoration:none;}      /* unvisited link */
+a:visited {color:white;text-decoration:none;}  /* visited link */
+a:hover {color:white;text-decoration:none;}  /* mouse over link */
+a:active {color:white;text-decoration:none;}
+
+#program_selector {
+    width: 150px;
+    border: 1px solid white;
+    float: left;
+    margin: 20px;
+    padding: 5px;
+    //position: absolute;
+    margin-top:20px;
+    height: 150px;
+}
+
+#icon_holder {
+    width: 410px;
+    display:block;
+    margin-top: 10px;
+    //margin-right:50px;
+    min-height: 400px;
+    float:right;
+}
+
+#logo {
+    width: 200px;
+    height: 60px;
+}
+
+.logo-main {
+    position: relative;
+    top: 100px;
+}
+
+.logo-modal {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#start {
+    position: absolute;
+    bottom: 10px;
+    left: 17px;
+}
+
+@keyframes flash_kf {
+    from {color: black;}
+    to {color: rgba(190, 30, 45, 1);}
+}
+
+@-webkit-keyframes flash_kf {
+    from {color: black;}
+    to {color: rgba(190, 30, 45, 1);}
+}
+
+#gameOver {
+    animation-name: flash_kf;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    //animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Safari and Chrome: */
+    -webkit-animation-name: flash_kf;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: linear;
+    //-webkit-animation-delay: .5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    margin-top:400px; 
+    margin: 0 auto; 
+    width: 600px;
+    height: 400px;
+    font-family: @SUB_FONT;
+    font-weight:900;
+    //background-image: url('../media/gameover.gif');
+}
+
+.active-selections {
+    position: absolute;
+    text-align: left;
+    bottom: 50px; 
+    left: -22px;
+
+    li {
+        list-style: none;
+    }
+}
+
+.icon_selector {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    display:block;
+    border: 1px solid white;
+    float: left;
+    background: url('../icons/photoshop/crop.png') repeat center;
+    background-size: 60px 60px;
+    -webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+    &:hover, &.active {
+        -webkit-box-shadow: 0 0 15px #FFF;
+        -moz-box-shadow: 0 0 15px #FFF;
+        box-shadow: 0 0 15px #FFF;
+        border: 1px solid @DARK_BLUE;  
+        opacity: .8; 
+        cursor: pointer;
+    }
+}
+
+.score {
+    height: @LIFEBOARD_HEIGHT;
+    margin-bottom: 80px;
+    .points {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 900;
+        font-size: 3em;
+    }
+}
+
+.current-software {
+    #application-logo {
+        width: 200px;
+        height: 200px;
+    }    
+}
+
+#lifebar {
+    width: 100%;
+    height: @LIFEBOARD_HEIGHT;
+    background-color: @DARK_BLUE;
+
+}
+
+#lifebar-scale {
+    width: 0%;
+    height: @LIFEBOARD_HEIGHT;
+    background: @LIGHT_BLUE;
+    opacity: @LIFEBAR_OPACITY;
+    transition: opacity @ANIM_TIME ease-in, width .3s ease-in;
+
+    &:hover {
+        opacity: 1.0;
+        cursor: pointer;
+        width: 55%;
+    }
+}
+
+.rounded-corners(@radius:@CORNER_RADIUS) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -khtml-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    color: @FONT_COLOR;
+    background-color: @MEDIUM_BLUE;
+    font-family: @MAIN_FONT;
+    font-size: 18px;
+    border: 1px solid #666;
+    opacity: @ICON_OPACITY;
+    
+    &:hover {
+        background-color: @LIGHT_BLUE;
+    }    
+}
+
+.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 520px;
+		position: absolute;
+		z-index: 101;
+		padding: 20px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
