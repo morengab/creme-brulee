@@ -1,6 +1,6 @@
-project-creme-brulee
-====================
+# Tut Tut Revolution
+Social Web (05-820) final project (Fall 2013)
 
-Social web final project
+Team members: Shelby Cunningham (shelbyc), Gaby Moreno Cesar (gmorenoc), Eric Yi (eyi)
 
-Team members: Shelby Cunningham (shelbyc), Gaby Moreno Cesar (gmorenoc), Eric Yi (eyi), 
+
