@@ -32,54 +32,45 @@
 
 <body>
 	
+	<div class = "head_container"> <img style = "position: absolute; top:150px; left: 570px" id="logo" src="icons/logo.png" alt="tut tut revolution logo">
+	</div>
+			
 	<div class = "container">
 
-	<table> 
-		<tr> 
-			
-				<td>	<div class = "first_page_button"> </div> </td>
+		<div class ="first_page_button"> </div>
+		<div class ="first_page_button"> </div>
+		<div class ="first_page_button"> </div>
 
+		<div class ="first_page_button"> </div>
+		<div class ="first_page_button"> </div>
+		<div class ="first_page_button"> </div>
 
-				<td>	<div class = "first_page_button"> </div> </td>
-
-				<td>	<div class = "first_page_button"> </div> </td>
-
-		</tr>
-
-
-
-		<tr>
-
-				<td>	<div class = "first_page_button"> </div> </td>
-
-
-				<td>	<div class = "first_page_button"> </div> </td>
-
-				<td>	<div class = "first_page_button"> </div> </td>
+		<div class ="first_page_button"> </div>
+		<div class ="first_page_button"> </div>
+		<div class ="first_page_button"> </div>
 
 
 
 
-		</tr>
-
-
-		<tr>
-
-				<td>	<div class = "first_page_button"> </div> </td>
-
-
-				<td>	<div class = "first_page_button"> </div> </td>
-
-				<td>	<div class = "first_page_button"> </div> </td>
 
 
 
 
-		</tr>
 
 
 	</div>
-			
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
