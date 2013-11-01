@@ -39,13 +39,20 @@
 			
 	<div class = "container">
 
+		<div class ="first_page_button"> <a href = "index.php"> <img class = "resize_logo" src = "icons/Photoshop.png"> </a> </div>
+		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> </div>
 		<div class ="first_page_button"> </div>
+
+
+
+
+		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Illustrator.png"> </div>
 		<div class ="first_page_button"> </div>
 		<div class ="first_page_button"> </div>
 
-		<div class ="first_page_button"> </div>
-		<div class ="first_page_button"> </div>
-		<div class ="first_page_button"> </div>
+
+
+
 
 		<div class ="first_page_button"> </div>
 		<div class ="first_page_button"> </div>
