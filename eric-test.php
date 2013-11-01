@@ -59,10 +59,8 @@
 		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> </div>
 
 
-		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> </div>
+
 		<div class ="first_page_button"> </div>
-
-
 
 	
 		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Illustrator.png"> </div>
