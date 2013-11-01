@@ -34,19 +34,39 @@
 	
 <div class = "whole_container">
 
-	<div class = "head_container"> <img id="logo" src="icons/logo.png" alt="tut tut revolution logo">
-	</div>
-			
-	<div class = "container">
+	<div class = "head_container"> <img id="logo" src="icons/logo.png" alt="tut tut revolution logo"></div>
+	
+		<div class = "container">
+		
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+				<div class="flipper">
+					<div class="front">
+						<div id ="first_page_photoshop"> <img class = "resize_logo" src = "icons/Photoshop.png"> </div>
+					</div>
+					<div class="back"> 
+						<a href = "index.php">
+							<div id="first_page_photoshop_back"><img class = "resize_logo" src = "icons/Photoshop.png"> </div>
+							<div class= "play"> PLAY</div>
+						
+						</a>
+					</div>
+				</div>
+			</div>
 
-		<div class ="first_page_button"> <a href = "index.php"> <img class = "resize_logo" src = "icons/Photoshop.png"> </a> </div>
+
+
+		
+		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> </div>
+
+
 		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> </div>
 		<div class ="first_page_button"> </div>
 
 
 
-
+	
 		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Illustrator.png"> </div>
+	
 		<div class ="first_page_button"> </div>
 		<div class ="first_page_button"> </div>
 
