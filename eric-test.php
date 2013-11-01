@@ -32,7 +32,9 @@
 
 <body>
 	
-	<div class = "head_container"> <img style = "position: absolute; top:150px; left: 570px" id="logo" src="icons/logo.png" alt="tut tut revolution logo">
+<div class = "whole_container">
+
+	<div class = "head_container"> <img id="logo" src="icons/logo.png" alt="tut tut revolution logo">
 	</div>
 			
 	<div class = "container">
@@ -54,13 +56,9 @@
 
 
 
-
-
-
-
 	</div>
 
-
+</div>
 
 
 
