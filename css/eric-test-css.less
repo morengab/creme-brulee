@@ -128,6 +128,9 @@
 
 /* entire container, keeps perspective */
 .flip-container {
+    -webkit-perspective: perspective: 1000;
+    -moz-perspective:1000;
+    -o-perspective:1000;
     perspective: 1000;
     float: left;
     margin-bottom: 15px;
@@ -135,11 +138,6 @@
     margin-left: 15px;
     margin-right: 15px;
 }
-    /* flip the pane when hovered */
-    .flip-container:hover .flipper, .flip-container.hover .flipper {
-       
-        transform: rotateY(180deg);
-    }
 
 .flip-container, .front, .back {
 
@@ -149,6 +147,9 @@
 
 /* flip speed goes here */
 .flipper {
+
+    -moz-transform: perspective (1000px);
+    -moz-transform-style: preserve-3d;
     transition: 0.6s;
     transform-style: preserve-3d;
 
@@ -157,19 +158,57 @@
 
 /* hide back of pane during swap */
 .front, .back {
+    -webkit-backface-visibility: hidden;
+
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
     backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
 
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* front pane, placed above back */
-.front {
-    z-index: 2;
+.back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
-/* back, initially hidden pane */
-.back {
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
+}
+
+
+.front {
+    z-index: 2;
 }

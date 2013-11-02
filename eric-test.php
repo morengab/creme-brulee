@@ -47,7 +47,7 @@
 						<a href = "index.php">
 							<div id="first_page_photoshop_back"><img class = "resize_logo" src = "icons/Photoshop.png"> </div>
 							<div class= "play"> PLAY</div>
-						
+							
 						</a>
 					</div>
 				</div>
@@ -56,9 +56,11 @@
 
 
 		
-		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> </div>
-
-
+		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> 
+			<audio>
+				<source src="media/flipcard.mp3"> Sound </source>
+			</audio>
+		</div>
 
 		<div class ="first_page_button"> </div>
 
