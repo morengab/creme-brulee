@@ -31,6 +31,19 @@
 </head>
 
 <body>
+
+
+<audio id="sound">
+  <source src="media/flipcard.mp3" type="audio/mp3" />
+  <source src="media/flipcard.ogg" type="audio/ogg" />
+ </audio>
+
+<script type="text/javascript">
+    var sound = document.getElementById("sound");
+    document.getElementById("sound").defaultPlaybackRate = 1.1;
+</script>
+
+
 	
 <div class = "whole_container">
 
@@ -38,16 +51,15 @@
 	
 		<div class = "container">
 		
-			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
 				<div class="flipper">
-					<div class="front">
+					<div class="front" onmouseover = "sound.play()">
 						<div id ="first_page_photoshop"> <img class = "resize_logo" src = "icons/Photoshop.png"> </div>
 					</div>
-					<div class="back"> 
+					<div class="back" onmouseout = "sound.play()"> 
 						<a href = "index.php">
 							<div id="first_page_photoshop_back"><img class = "resize_logo" src = "icons/Photoshop.png"> </div>
 							<div class= "play"> PLAY</div>
-							
 						</a>
 					</div>
 				</div>
@@ -56,11 +68,7 @@
 
 
 		
-		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png"> 
-			<audio>
-				<source src="media/flipcard.mp3"> Sound </source>
-			</audio>
-		</div>
+		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png" onmouseover = "sound.play()" onmouseout = "sound.play()"> </div>
 
 		<div class ="first_page_button"> </div>
 
@@ -76,9 +84,7 @@
 
 		<div class ="first_page_button"> </div>
 		<div class ="first_page_button"> </div>
-		<div class ="first_page_button"> </div>
-
-
+		<div class ="first_page_button" onmouseover = 'sound()'> </div>
 
 
 
@@ -86,7 +92,6 @@
 	</div>
 
 </div>
-
 
 
 
