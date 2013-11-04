@@ -48,9 +48,24 @@ $database = new medoo('macadamia_cluster_02');
 
 <div class = "whole_container">
 
-	<div class = "head_container"> <img id="logo" src="icons/logo2.png" alt="tut tut revolution logo"></div>
+	<div class = "head_container"> <img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo"></div>
 	
 		<div class = "container">
+
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+				<div class="flipper">
+					<div class="front" onmouseover = "sound.play()">
+						<div id ="first_page_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
+					</div>
+					<div class="back" onmouseout = "sound.play()"> 
+						<a href = "index.php">
+							<div id="first_page_plus_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
+							<div class= "play"> PLAY</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			
 			<?php
 			$apps = $database->select("apps", "*");
 
@@ -69,9 +84,12 @@ $database = new medoo('macadamia_cluster_02');
 						</div>
 					</div>
 				</div>
+
 			<?php
 			endforeach;
 			?>
+
+		</div>
 	</div>
 
 </div>
