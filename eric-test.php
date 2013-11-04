@@ -47,7 +47,7 @@
 	
 <div class = "whole_container">
 
-	<div class = "head_container"> <img id="logo" src="icons/logo.png" alt="tut tut revolution logo"></div>
+	<div class = "head_container"> <img id="logo" src="icons/logo2.png" alt="tut tut revolution logo"></div>
 	
 		<div class = "container">
 		
