@@ -71,20 +71,20 @@ $database = new medoo('macadamia_cluster_02');
 			foreach ($apps as $app):
 			?>
 
-				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-					<div class="flipper">
-						<div class="front" onmouseover = "sound.play()">
-							<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-						</div>
-						<div class="back" onmouseout = "sound.play()"> 
-							<a href = "index.php">
-								<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-								<div class= "play"> PLAY</div>
-							</a>
-						</div>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+				<div class="flipper">
+					<div class="front" onmouseover = "sound.play()">
+						<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+					</div>
+					<div class="back" onmouseout = "sound.play()"> 
+						<a href = "index.php">
+							<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+							<div class= "play"> PLAY</div>
+						</a>
 					</div>
 				</div>
 			</div>
+		
 			<?php
 			endforeach;
 			?>
