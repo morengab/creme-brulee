@@ -55,12 +55,12 @@ $database = new medoo('macadamia_cluster_02');
 			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
 				<div class="flipper">
 					<div class="front" onmouseover = "sound.play()">
-						<div id ="first_page_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
+						<div class ="app_front_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
 					</div>
 					<div class="back" onmouseout = "sound.play()"> 
 						<a href = "index.php">
-							<div id="first_page_plus_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
-							<div class= "play"> PLAY</div>
+							<div class="app_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
+							<div class= "create"> Create your own app!</div>
 						</a>
 					</div>
 				</div>
@@ -74,11 +74,11 @@ $database = new medoo('macadamia_cluster_02');
 				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
 					<div class="flipper">
 						<div class="front" onmouseover = "sound.play()">
-							<div id ="first_page_photoshop"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+							<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
 						</div>
 						<div class="back" onmouseout = "sound.play()"> 
 							<a href = "index.php">
-								<div id="first_page_photoshop_back"><img class = "resize_logo" src = "icons/Photoshop.png"> </div>
+								<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
 								<div class= "play"> PLAY</div>
 							</a>
 						</div>

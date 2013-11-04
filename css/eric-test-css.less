@@ -1,24 +1,37 @@
 @import "base.less";
 @import "normalize.less";
 
-#first_page_photoshop {
+
+
+.app_front_plus {
     .rounded-corners;
     width: 285px;
     height: 285px;
     color: @FONT_COLOR;
-    background-color: @MEDIUM_BLUE;
+    background-color: @LIGHT_BLUE;
     font-family: @MAIN_FONT;
     border: 1px solid #666;
-    opacity: @ICON_OPACITY;
     float: left;      
 }
 
-#first_page_photoshop_back {
+
+.app_front {
     .rounded-corners;
     width: 285px;
     height: 285px;
     color: @FONT_COLOR;
-    background-color: @MEDIUM_BLUE;
+    background-color: @LIGHT_BLUE;
+    font-family: @MAIN_FONT;
+    border: 1px solid #666;
+    float: left;      
+}
+
+.app_back{
+    .rounded-corners;
+    width: 285px;
+    height: 285px;
+    color: @FONT_COLOR;
+    background-color: @LIGHT_BLUE;
     font-family: @MAIN_FONT;
     border: 1px solid #666;
     opacity: 0.3;
@@ -27,50 +40,28 @@
 
 
 
-#first_page_plus {
-    .rounded-corners;
-    width: 285px;
-    height: 285px;
-    color: @FONT_COLOR;
-    background-color: @MEDIUM_BLUE;
-    font-family: @MAIN_FONT;
-    border: 1px solid #666;
-    opacity: @ICON_OPACITY;
-    float: left;
-    
- 
-  
-
-       
-}
-
-#first_page_plus_back {
-    .rounded-corners;
-    width: 285px;
-    height: 285px;
-    color: @FONT_COLOR;
-    background-color: @MEDIUM_BLUE;
-    font-family: @MAIN_FONT;
-    border: 1px solid #666;
-    opacity: 0.3;
-    float: left;
-    
-
-
-      
-}
 
 #logo2 {
     width: 334px;
     height: 200px;
 }
 
+
+.create {
+    position: fixed;
+    top: 30%;
+    left: 23%;
+
+    color:white;
+    font-family: @MAIN_FONT;
+    font-size: 45px;
+}
+
+
+
+
 .play {
 
-   // a:link    { color: white };  /* unvisited links */
-   //a:visited { color: white }; /* visited links   */
-    //a:hover   { color: #00c };  /* user hovers     */
-   // a:active  { color: #ccc };  /* active links    */
     position: fixed;
     top: 36%;
     left: 36%;
@@ -80,6 +71,10 @@
 
     font-size: 60px;
 }
+
+
+
+
 
 .whole_container {
     .container;
