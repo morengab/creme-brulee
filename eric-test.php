@@ -47,7 +47,7 @@
 	
 <div class = "whole_container">
 
-	<div class = "head_container"> <img id="logo" src="icons/logo2.png" alt="tut tut revolution logo"></div>
+	<div class = "head_container"> <img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo"></div>
 	
 		<div class = "container">
 		
@@ -70,7 +70,19 @@
 		
 		<div class="first_page_button"> <img class = "resize_logo" src = "icons/Indesign.png" onmouseover = "sound.play()" onmouseout = "sound.play()"> </div>
 
-		<div class ="first_page_button"> </div>
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+				<div class="flipper">
+					<div class="front" onmouseover = "sound.play()">
+						<div id ="first_page_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
+					</div>
+					<div class="back" onmouseout = "sound.play()"> 
+						<a href = "index.php">
+							<div id="first_page_plus_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
+							<div class= "play"> PLAY</div>
+						</a>
+					</div>
+				</div>
+			</div>
 
 	
 		<div class ="first_page_button"> <img class = "resize_logo" src = "icons/Illustrator.png"> </div>
