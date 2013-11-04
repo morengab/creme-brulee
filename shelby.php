@@ -16,7 +16,7 @@
         <input type='text' id='input_01'/>
         <hr />
         <h3>Image URL</h3>
-        <input type='text' id='input_01'/>
+        <input type='url' id='input_01'/>
         <hr />
         <h3>Keyboard Shortcuts</h3>
         <table>
