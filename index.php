@@ -52,23 +52,17 @@ $database = new medoo('macadamia_cluster');
 					<button class="button" id="reset">Reset</button>
 
 					<img id="logo" class="logo-main" src="icons/logo.png" alt="tut tut revolution logo">
-					<h3>HACKCMU 2013</h3>
-					<strong>Project By:</strong>
-					Anthony Wong
-					Austin McCasland
-					Gaby Moreno Cesar
-					Matthew Hsieh
 				</div>
 				<div id="my-modal" class="reveal-modal">
 					<div id="modal_container">
-						<img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo">
-						<h2>Select the application and 4 shortcuts you would like to train on.</h2>
-						<div id="program_selector">
+						<h1>Photoshop</h1>
+						<!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
+						<h2>Select 4 shortcuts you would like to train on.</h2>
+						<!-- <div id="program_selector">
 							<a href="#" class="program_option" data-app-name="Photoshop"><div class="program_selection" id="photoshop_option">Photoshop</div></a>
 							<a href="#" class="program_option" data-app-name="Word"><div class="program_selection" id="word_option">Word</div></a>
 							<a href="#" class="program_option" data-app-name="Gmail"><div class="program_selection" id="gmail_option">Gmail</div></a>
-
-						</div>
+						</div> -->
 						<div id="icon_holder">
 							<?php
 							$results = $database->select("shortcuts", "*", array(
