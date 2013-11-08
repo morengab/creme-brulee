@@ -71,6 +71,8 @@
             <br><br>
             <input type="text" id="textbox1"> 
             <br><br>
+            <button class = "browse_button"> Submit </button>
+
         </div>
 
         <div class = "textbox_container2"> 
