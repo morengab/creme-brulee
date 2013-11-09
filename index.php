@@ -19,6 +19,8 @@
 	<link rel="stylesheet/less" text="text/css" href="css/normalize.less">
 	<link rel="stylesheet/less" text="text/css" href="css/base.less">
 	<link rel="stylesheet/less" text="text/css" href="css/icon.less">
+	<link rel="stylesheet/less" text="text/css" href="css/eric-test-css.less">
+
 	<!-- Uncomment if you are specifically targeting less enabled mobile browsers
 	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">  -->
 	<!-- !Modernizr - All other JS at bottom -->
@@ -27,113 +29,67 @@
 		<![endif]-->
 	<script src="js/less.js" type="text/javascript"></script>
 </head>
-<!-- !Body -->
 <?php 
 require_once 'downloads/medoo.min.php';
-$database = new medoo('macadamia_cluster');
+$database = new medoo('macadamia_cluster_02');
 ?>
 <body>
-	<div id="container">	
-		<section class="container" id="main">		
-			<div class="four columns alpha" id="left-col">
-				<div class="score">
-					<div>
-						<span class="points">0</span> points
-					</div>
-					<div>
-						<span class="scoreStreak">0</span> in a row | <span class="scoreMultiplier">1</span>x multiplier | <span class="percentage">0</span>% correct 
-					</div>
-				</div>
-				<div class="current-software" id="buttons">
-					<img id="application-logo" src="icons/software-icon.png">
-					<h2><span id="application-name">Photoshop</span></h2>
-					<button class="button" id="new-game">New Game</button>
-					
-					<button class="button" id="reset">Reset</button>
 
-					<img id="logo" class="logo-main" src="icons/logo.png" alt="tut tut revolution logo">
-				</div>
-				<div id="my-modal" class="reveal-modal">
-					<div id="modal_container">
-						<h1>Photoshop</h1>
-						<!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
-						<h2>Select 4 shortcuts you would like to train on.</h2>
-						<!-- <div id="program_selector">
-							<a href="#" class="program_option" data-app-name="Photoshop"><div class="program_selection" id="photoshop_option">Photoshop</div></a>
-							<a href="#" class="program_option" data-app-name="Word"><div class="program_selection" id="word_option">Word</div></a>
-							<a href="#" class="program_option" data-app-name="Gmail"><div class="program_selection" id="gmail_option">Gmail</div></a>
-						</div> -->
-						<div id="icon_holder">
-							<?php
-							$results = $database->select("shortcuts", "*", array(
-												"app_name" => "Photoshop"
-											));
-							
-							foreach ($results as $result) :
-							?>
-							<div 
-								class="icon_selector"
-								id="icon-<?php echo $result['id']; ?>" 
-								data-id="<?php echo $result['id']; ?>"
-								data-shortcut="<?php echo $result['shortcut']; ?>"
-								data-name="<?php echo $result['name']; ?>"
-								style="background-image:url('<?php echo $result['image']; ?>');">	
-							</div>
-							
-							<?php
-							endforeach;
-							?>
-						</div>
-						
-						
-						<ul class="active-selections">
-							Currently selected tools:
-						</ul>
 
-						<button class="button" id="start">Start</button>
+<audio id="sound">
+  <source src="media/flipcard.mp3" type="audio/mp3" />
+  <source src="media/flipcard.ogg" type="audio/ogg" />
+ </audio>
+
+<script type="text/javascript">
+    var sound = document.getElementById("sound");
+    document.getElementById("sound").defaultPlaybackRate = 1.1;
+</script>
+
+<div class = "whole_container">
+
+	<div class = "head_container"> <img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo"></div>
+	
+		<div class = "container">
+
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+				<div class="flipper">
+					<div class="front" onmouseover = "sound.play()">
+						<div class ="app_front_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
 					</div>
-					
+					<div class="back" onmouseout = "sound.play()"> 
+						<a href = "create-app.php">
+							<div class="app_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
+							<div class= "create"> Create your own app!</div>
+						</a>
+					</div>
 				</div>
 			</div>
 
-			<div class="twelve columns omega" id="main-col">
+			<?php
+			$apps = $database->select("apps", "*");
+			foreach ($apps as $app):
+			?>
 
-				<div class="row" id="top-row">
-
-					<div id="lifebar">
-						<div id="lifebar-scale"></div>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+				<div class="flipper">
+					<div class="front" onmouseover = "sound.play()">
+						<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
 					</div>
-				</div>
-				<div class="row" id="board">
-					<div class="three columns alpha" id="col1-board">
-						<div class="icon-background"></div>
-					</div>
-					<div class="three columns" id="col2-board">
-						<div class="icon-background"></div>
-					</div>
-					<div class="three columns" id="col3-board">
-						<div class="icon-background"></div>
-					</div>
-					<div class="three columns omega" id="col4-board">
-						<div class="icon-background"></div>
+					<div class="back" onmouseout = "sound.play()"> 
+						<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
+							<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+							<div class= "play"> PLAY</div>
+						</a>
 					</div>
 				</div>
 			</div>
-		</section><!-- /main -->		
-		<footer>
-		</footer><!-- /footer -->
-	</div><!--!/#container -->
-	<div id="music"></div>
-	<!-- !Javascript - at the bottom for fast page loading -->
-	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>')</script>
-	
-	<script src="js/scoring.js"></script>
-	<script src="js/hotkeys.js"></script>
-	<script src="js/jquery.reveal.js"></script>
-	<script src="js/jquery.jplayer.min.js"></script>
-	<script src="js/game.js"></script>
-	
+		
+			<?php
+			endforeach;
+			?>
+		</div>
+	</div>
+
+</div>
 </body>
-</html>
