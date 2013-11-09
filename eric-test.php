@@ -58,7 +58,7 @@ $database = new medoo('macadamia_cluster_02');
 						<div class ="app_front_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
 					</div>
 					<div class="back" onmouseout = "sound.play()"> 
-						<a href = "index.php">
+						<a href = "create-app.php">
 							<div class="app_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
 							<div class= "create"> Create your own app!</div>
 						</a>
