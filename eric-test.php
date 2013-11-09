@@ -77,7 +77,7 @@ $database = new medoo('macadamia_cluster_02');
 						<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
 					</div>
 					<div class="back" onmouseout = "sound.play()"> 
-						<a href = "index.php">
+						<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
 							<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
 							<div class= "play"> PLAY</div>
 						</a>
