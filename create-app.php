@@ -32,14 +32,14 @@
 </head>
 
 
-<audio id="sound">
-  <source src="media/flipcard.mp3" type="audio/mp3" />
-  <source src="media/flipcard.ogg" type="audio/ogg" />
- </audio>
+<audio id="sound_click">
+  <source src="media/click.mp3" type="audio/mp3" />
+  <source src="media/click.ogg" type="audio/ogg" />
+</audio>
 
 <script type="text/javascript">
-    var sound = document.getElementById("sound");
-    document.getElementById("sound").defaultPlaybackRate = 1.1;
+    var sound = document.getElementById("sound_click");
+    document.getElementById("sound_click").defaultPlaybackRate = 1.5;
 </script>
 
         
@@ -48,61 +48,40 @@
             <br><br>
             <div class = "textbox_container1"> 
                 <div class = "create_app_title"> App Title </div>
-                <input type="text" id="textbox1"> 
+                <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
             </div>
 
             <div class = "textbox_container3"> 
                 <div class = "create_app_title"> Image URL </div>
-                <input type="text" id="textbox1"> <button class = "browse_button"> Browse 
+                <input type="text" id="textbox1" onmouseover = "sound_click.play()"> <button class = "browse_button" onmouseover = "sound_click.play()"> Browse 
             </button>
             </div>
             <br><br>
             <div></div>
-        <div class = "textbox_container1"> 
-            <div class ="create_app_shortcut"> Shortcut name </div>
-            <br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-        </div>
+            <div>
+                <div class = "textbox_container1"> 
+                    <div class ="create_app_shortcut"> Shortcut name </div>
+                    <br>
+                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+                    <br><br>
+                </div>
 
-        <div class = "textbox_container2"> 
-            <div class ="create_app_shortcut"> Press shortcut here </div>
-            <br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-            <input type="text" id="textbox1"> 
-            <br><br>
-        </div>
+                <div class = "textbox_container2"> 
+                    <div class ="create_app_shortcut"> Press shortcut here </div>
+                    <br>
+                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+                    <br><br>
+                </div>
 
-        <div class = "textbox_container3"> 
-            <div class ="create_app_shortcut"> Image URL </div>
-            <br>
-            <input type="text" id="textbox1"> <button class = "browse_button"> Browse </button>
-            <br><br>
-            <input type="text" id="textbox1"> <button class = "browse_button"> Browse </button>
-            <br><br>
-            <input type="text" id="textbox1"> <button class = "browse_button"> Browse </button>
-            <br><br>
-            <input type="text" id="textbox1"> <button class = "browse_button"> Browse </button>
-            <br><br>
-            <input type="text" id="textbox1"> <button class = "browse_button"> Browse </button>
-            <br><br>
-        </div>
+                <div class = "textbox_container3"> 
+                    <div class ="create_app_shortcut"> Image URL </div>
+                    <br>
+                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> <button class = "browse_button" onmouseover = "sound_click.play()"> Browse </button>
+                    <br><br>
+                </div>
 
+            </div>
+        <button class = "browse_button"> Submit </button>
         <br>
 
 
