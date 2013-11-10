@@ -68,20 +68,100 @@
 
                 <div class = "textbox_container2"> 
                     <div class ="create_app_shortcut"> Press shortcut here </div>
-                    <br>
-                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+                                                    <br>
+                                <div id='cssmenu'>
+                                <ul>
+                                   
+                                   <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
+                                      <ul>
+                                         <li><a href='#'><span>Ctrl</span></a></li>
+                                         <li><a href='#'><span>Alt</span></a></li>
+                                         <li><a href='#'><span>Shift</span></a></li>
+                                         <li><a href='#'><span>A</span></a></li>
+                                         <li><a href='#'><span>B</span></a></li>
+                                         <li><a href='#'><span>C</span></a></li>
+                                         <li><a href='#'><span>D</span></a></li>
+                                         <li><a href='#'><span>E</span></a></li>
+                                         <li><a href='#'><span>F</span></a></li>
+                                         <li><a href='#'><span>G</span></a></li>
+                                         <li><a href='#'><span>H</span></a></li>
+                                         <li><a href='#'><span>I</span></a></li>
+                                         <li><a href='#'><span>J</span></a></li>
+                                         <li><a href='#'><span>K</span></a></li>
+                                         <li><a href='#'><span>L</span></a></li>
+                                         <li><a href='#'><span>M</span></a></li>
+                                         <li><a href='#'><span>N</span></a></li>
+                                         <li><a href='#'><span>O</span></a></li>
+                                         <li><a href='#'><span>P</span></a></li>
+                                         <li><a href='#'><span>Q</span></a></li>
+                                         <li><a href='#'><span>R</span></a></li>
+                                         <li><a href='#'><span>S</span></a></li>
+                                         <li><a href='#'><span>T</span></a></li>
+                                         <li><a href='#'><span>U</span></a></li>
+                                         <li><a href='#'><span>V</span></a></li>
+                                         <li><a href='#'><span>W</span></a></li>
+                                         <li><a href='#'><span>X</span></a></li>
+                                         <li><a href='#'><span>Y</span></a></li>
+                                         <li><a href='#'><span>Z</span></a></li>
+
+
+
+                                    
+                                      </ul>
+                                   </li>
+                                   
+                                   <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 2</span></a>
+                                      <ul>
+                                         <li><a href='#'><span>Ctrl</span></a></li>
+                                         <li><a href='#'><span>Alt</span></a></li>
+                                         <li><a href='#'><span>Shift</span></a></li>
+                                         <li><a href='#'><span>A</span></a></li>
+                                         <li><a href='#'><span>B</span></a></li>
+                                         <li><a href='#'><span>C</span></a></li>
+                                         <li><a href='#'><span>D</span></a></li>
+                                         <li><a href='#'><span>E</span></a></li>
+                                         <li><a href='#'><span>F</span></a></li>
+                                         <li><a href='#'><span>G</span></a></li>
+                                         <li><a href='#'><span>H</span></a></li>
+                                         <li><a href='#'><span>I</span></a></li>
+                                         <li><a href='#'><span>J</span></a></li>
+                                         <li><a href='#'><span>K</span></a></li>
+                                         <li><a href='#'><span>L</span></a></li>
+                                         <li><a href='#'><span>M</span></a></li>
+                                         <li><a href='#'><span>N</span></a></li>
+                                         <li><a href='#'><span>O</span></a></li>
+                                         <li><a href='#'><span>P</span></a></li>
+                                         <li><a href='#'><span>Q</span></a></li>
+                                         <li><a href='#'><span>R</span></a></li>
+                                         <li><a href='#'><span>S</span></a></li>
+                                         <li><a href='#'><span>T</span></a></li>
+                                         <li><a href='#'><span>U</span></a></li>
+                                         <li><a href='#'><span>V</span></a></li>
+                                         <li><a href='#'><span>W</span></a></li>
+                                         <li><a href='#'><span>X</span></a></li>
+                                         <li><a href='#'><span>Y</span></a></li>
+                                         <li><a href='#'><span>Z</span></a></li>
+                                    
+                                      </ul>
+                                   </li>
+                                   
+                                </ul>
+                                </div>
                     <br><br>
                 </div>
 
                 <div class = "textbox_container3"> 
                     <div class ="create_app_shortcut"> Image URL </div>
                     <br>
-                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> <button class = "browse_button" onmouseover = "sound_click.play()"> Browse </button>
+                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+                    <button class = "browse_button" onmouseover = "sound_click.play()"> Browse </button> 
+                    <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
                     <br><br>
+
                 </div>
 
             </div>
-        <button class = "browse_button"> Submit </button>
+       
         <br>
 
 
@@ -110,6 +190,108 @@ background-size:25px 25px;
 background-position:96% 62%; 
 padding:3px 32px 3px 3px; 
 } 
+
+
+
+#cssmenu {
+
+  border: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  font: 67.5%;
+  font-family: @SUB_FONT; 
+  font-weight: bold;
+
+}
+#cssmenu ul {
+ /* background: #333333;*/
+  height: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu li {
+  float: left;
+  padding: 0px;
+}
+#cssmenu li a {
+  background: #333333 url('icons/seperator.png') bottom right no-repeat;
+  display: block;
+  font-weight: normal;
+  line-height: 42px;
+  margin: 0px;
+  padding: 0px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+#cssmenu > ul > li > a {
+  color: #cccccc;
+}
+#cssmenu ul ul a {
+  color: #cccccc;
+}
+#cssmenu li > a:hover,
+#cssmenu ul li:hover > a {
+  background: #78dbff url('icons/hover.png') bottom center no-repeat;
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+  transition:500ms all ease; 
+}
+#cssmenu li ul {
+  background: #333333;
+  display: none;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 225px;
+  z-index: 200;
+  /*top:1em;
+  /*left:0;*/
+
+}
+#cssmenu li:hover ul {
+  display: block;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+    transition:500ms all ease; 
+}
+#cssmenu li li {
+  background: url('icons/sub_sep.png') bottom left no-repeat;
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: 225px;
+}
+#cssmenu li:hover li a {
+  background: none;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+  transition:500ms all ease; 
+}
+#cssmenu li ul a {
+  display: block;
+  height: 35px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
+}
+#cssmenu li ul a:hover,
+#cssmenu li ul li:hover > a {
+  background: #78dbff url('icons/hover_sub.png') center left no-repeat;
+  border: 0px;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+  transition:500ms all ease; 
+}
+#cssmenu p {
+  clear: left;
+}
 
 
 </style>
