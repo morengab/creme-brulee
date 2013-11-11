@@ -63,7 +63,7 @@ if (isset($_POST['shortcut_name'])) {
     $name = $_POST['shortcut_name'];
     $shortcut = $_POST['shortcut_shortcut'];
     $image_url = $_POST['shortcut_image_url'];
-    
+     
     addShortcut($database, $app_id, $name, $shortcut, $image_url);
     
     return;
@@ -103,8 +103,8 @@ if (isset($_POST['shortcut_name'])) {
 
                             <div id="add_shortcut_form">
                                 <form action="" method="post">
-                                    Name:  <input type="text" name="shortcut_name" />
-                                    Shortcut: <input type="text" name="shortcut_shortcut" />
+                                    Name:  <input type="text" name="shortcut_name" /><br>
+                                    Shortcut: <input type="text" name="shortcut_shortcut" /><br>
                                     Image Url: <input type="text" name="shortcut_image_url" />
                                     <input type="submit" name="submit" class="button" id="submit_btn" value="Add shortcut" />
                                 </form>
