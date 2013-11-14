@@ -25,53 +25,81 @@
     <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+
+    <style>
+    input {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border:1px solid #ccc;
+      font-size:20px;
+      width:300px;
+      min-height:30px;
+      display:block;
+      margin-bottom:15px;
+      margin-top:5px;
+      outline: none;
+
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      -o-border-radius:5px;
+      -ms-border-radius:5px;
+      border-radius:5px;
+    }
+  </style>
     <script src="js/less.js" type="text/javascript"></script>
 </head>
-<!-- !Body -->
+
 <?php 
 require_once 'downloads/medoo.min.php';
+
 $database = new medoo('macadamia_cluster_02');
 
 
 $app_id = $_GET["id"];
+
 $app = $database->get("apps", "*", ["id"=>$app_id]);
-$shortcuts = $database->select("shortcuts", [
-    "shortcuts.id",
-    "shortcuts.app_id",
-    "shortcuts.name",
-    "shortcuts.shortcut",
-    "shortcuts.image_url"
-], [
-    "shortcuts.app_id" => $app_id,
-    "ORDER" => "shortcuts.name ASC",
-    "LIMIT" => 50
-]);
 
-function addShortcut($database, $app_id, $name, $shortcut, $image_url) {
 
-    $added_app = $database->insert("shortcuts", [
+
+function getShortcuts($database, $app_id) {
+    $shortcuts = $database->select("shortcuts", [
+        "shortcuts.id",
+        "shortcuts.app_id",
+        "shortcuts.name",
+        "shortcuts.shortcut",
+        "shortcuts.image_url"
+    ], [
+        "shortcuts.app_id" => $app_id,
+        "ORDER" => "shortcuts.name ASC",
+        "LIMIT" => 50
+    ]);
+    return $shortcuts;
+}
+
+$shortcuts = getShortcuts($database, $app_id);
+
+if (isset($_POST['name'])) {
+
+    $app_id = $_POST['app_id'];
+    $name = $_POST['name'];
+    $shortcut = $_POST['shortcut'];
+
+    // validate image url
+    if(trim($_POST['image_url']) === '') {
+        $image_url = "icons/photoshop/blur.png";
+    } else {
+        $image_url = trim($_POST['image']);
+    }
+
+    $database->insert("shortcuts", [
         "app_id" => $app_id,
         "name" => $name,
         "shortcut" => $shortcut,
         "image_url" => $image_url
-    ]);
-
-    return $added_app;
+    ]);                      
 }
-
-if (isset($_POST['shortcut_name'])) {
-    $name = $_POST['shortcut_name'];
-    $shortcut = $_POST['shortcut_shortcut'];
-    $image_url = $_POST['shortcut_image_url'];
-     
-    addShortcut($database, $app_id, $name, $shortcut, $image_url);
-    
-    return;
-}
-
 ?>
 <body>
-    <div id="container">    
+    <div id="container">   
         <section class="container" id="main">       
             <div class="four columns alpha" id="left-col">
                 
@@ -99,21 +127,22 @@ if (isset($_POST['shortcut_name'])) {
                         <h1><?php echo $app["name"]; ?></h1>
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
                         <h2>Select 4 shortcuts you would like to train on.</h2>
-                        <div id="icon_holder">
-
-                            <div id="add_shortcut_form">
-                                <form action="" method="post">
-                                    Name:  <input type="text" name="shortcut_name" /><br>
-                                    Shortcut: <input type="text" name="shortcut_shortcut" /><br>
-                                    Image Url: <input type="text" name="shortcut_image_url" />
-                                    <input type="submit" name="submit" class="button" id="submit_btn" value="Add shortcut" />
-                                </form>
-                            </div>
-
+                        <div id="icon_holder">  
+                            <form method="post" action="game.php" name="create_shortcut" id="create_shortcut">
+                                <label>Name:</label>
+                                <input type="text" name="name" id="shortcut_name" required/>
+                                <label>Shortcut:</label>
+                                <input type="text" name="shortcut" id="shortcut_code" required/>
+                                <label>Image:</label>
+                                <input type="text" name="image_url" id="shortcode_image_url" />
+                                <input type="hidden" name="app_id" value="<?php echo $app_id; ?>"/>
+                                <input type="submit" value="Create Shortcut" />
+                            </form>
+                            
                             <div class="new_shortcut"></div>
 
                             <?php                            
-                            foreach ($shortcuts as $sc) :
+                            foreach ($shortcuts as $sc):
                             ?>
                             <div
                                 class="icon_selector"

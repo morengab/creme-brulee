@@ -1,0 +1,81 @@
+<?php 
+error_reporting(E_ALL ^ E_NOTICE); // hide all basic notices from PHP
+
+if(isset($_POST)) {
+
+    //form validation vars
+    $formOk = true;
+    $errors = array();
+
+    //sumbission data
+    $date = date('d/m/Y');
+    $time = date('H:i:s');
+
+    //form data
+    $name = $_POST['name'];  
+    $shortcut = $_POST['shortcut'];
+    $image = $_POST['image'];
+    
+    //form validation to go here....
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ajax Form</title>        
+    <style>
+    input {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border:1px solid #ccc;
+      font-size:20px;
+      width:300px;
+      min-height:30px;
+      display:block;
+      margin-bottom:15px;
+      margin-top:5px;
+      outline: none;
+
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      -o-border-radius:5px;
+      -ms-border-radius:5px;
+      border-radius:5px;
+    }
+  </style>
+</head>
+
+<body>
+
+    <form method="post" action="form.php" name="create_shortcut" id="create_shortcut">
+        <label>Name:</label>
+        <input type="text" id="short_name" name="name"  />
+        <label>Shortcut:</label>
+        <input type="text" id="short_hotkey" name="shortcut"  />
+        <label>Image Url:</label>
+        <input type="text" id="short_image" name="image"  />
+        <input type="submit" value="Create Shortcut" />
+    </form>
+    <div id="result"></div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('form#create_shortcut').submit(function() {
+                
+                var formInput = $(this).serialize();
+                $.post(
+                    $(this).attr('action'),
+                    formInput, 
+                    function(data, textStatus, jqXHR){
+                        console.log('success!');
+                    }
+                );
+                
+                return false;   
+            });
+        });
+    </script>
+</body>
+</html>
