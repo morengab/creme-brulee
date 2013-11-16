@@ -44,7 +44,7 @@
 
 <body>     
     <div class = "container">
-        <div class ="create_app_header"> Create Apps </div>
+        <div class ="create_app_header"> Create App </div>
             <br><br>
 
             <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
@@ -163,7 +163,8 @@
   
                       <form enctype="multipart/form-data" action="uploader.php" method="POST"> <br>
                         <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-                        or Choose a file to upload: <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
+                        or Choose a file to upload: 
+                        <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
                         <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" />
                       </form>
                     <button class = "browse_button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
