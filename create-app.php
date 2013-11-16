@@ -160,8 +160,8 @@
                         or Choose a file to upload: <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
                         <input type="submit" value="Upload File" align="right" />
                       </form>
-                      <button class = "browse_button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
-                    </form>
+                    <button class = "browse_button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
+
                     <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
                     <br><br>
 
