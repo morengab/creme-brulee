@@ -87,3 +87,124 @@ float: left;
    }
 
 
+#textbox1 
+{ 
+border: 2px solid rgb(173, 204, 204); 
+height: 31px; 
+width: 150px; 
+box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+transition:500ms all ease; 
+padding:3px 3px 3px 3px; 
+} 
+ 
+#textbox1:hover, #textbox1:focus 
+{ 
+width:200px; 
+transition:500ms all ease; 
+background: url('../icons/plus_blue.png') no-repeat right; 
+background-size:25px 25px; 
+background-position:96% 62%; 
+padding:3px 32px 3px 3px; 
+} 
+
+
+
+#cssmenu {
+
+  border: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  font: 67.5%;
+  font-family: @SUB_FONT; 
+  font-weight: bold;
+
+}
+#cssmenu ul {
+ /* background: #333333;*/
+  height: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu li {
+  float: left;
+  padding: 0px;
+}
+#cssmenu li a {
+  background: #333333 url('../icons/seperator.png') bottom right no-repeat;
+  display: block;
+  font-weight: normal;
+  line-height: 42px;
+  margin: 0px;
+  padding: 0px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+#cssmenu > ul > li > a {
+  color: #cccccc;
+}
+#cssmenu ul ul a {
+  color: #cccccc;
+}
+#cssmenu li > a:hover,
+#cssmenu ul li:hover > a {
+  background: #78dbff url('../icons/hover.png') bottom center no-repeat;
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+  transition:500ms all ease; 
+}
+#cssmenu li ul {
+  background: #333333;
+  display: none;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 225px;
+  z-index: 200;
+  /*top:1em;
+  /*left:0;*/
+
+}
+#cssmenu li:hover ul {
+  display: block;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+    transition:500ms all ease; 
+}
+#cssmenu li li {
+  background: url('../icons/sub_sep.png') bottom left no-repeat;
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: 225px;
+}
+#cssmenu li:hover li a {
+  background: none;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+  transition:500ms all ease; 
+}
+#cssmenu li ul a {
+  display: block;
+  height: 35px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
+}
+#cssmenu li ul a:hover,
+#cssmenu li ul li:hover > a {
+  background: #78dbff url('../icons/hover_sub.png') center left no-repeat;
+  border: 0px;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
+  transition:500ms all ease; 
+}
+#cssmenu p {
+  clear: left;
+}

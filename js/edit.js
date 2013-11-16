@@ -11,7 +11,7 @@ $j(function() {
         var formInput = $j(this).serialize();
         $j.post(
             $j(this).attr('action'),
-            formInput, 
+            formInput,
             function(data, textStatus, jqXHR){
                 console.log(data);
                 // clear inputs
@@ -22,21 +22,6 @@ $j(function() {
                 // hide form
                 $j("form#create_shortcut").slideUp();
             });
-
-        // $j.ajax({
-        //     url: $j(this).attr('action'),
-        //     data: formInput,
-        //     success: function(data, textStatus, jqXHR) {
-        //         console.log(textStatus);
-        //         // clear inputs
-        //         $j("input#shortcut_name").val("");
-        //         $j("input#shortcut_code").val("");
-        //         $j("input#shortcut_image_url").val("");
-
-        //         // hide form
-        //         $j("form#create_shortcut").slideUp();
-        //     }
-        // });
 
         return false;
     });
@@ -55,6 +40,19 @@ $j(function() {
             });
 
         return false;
+    });
+
+    $j('form#upload_image').submit(function(){
+        console.log('submit!');
+        var formInput = $j(this).serialize();
+        $j.post(
+            $j(this).attr('action'),
+            formInput,
+            function(data, textStatus, jqXHR){
+                console.log(textStatus);
+            }
+        );
+
     });
 });
 
