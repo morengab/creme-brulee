@@ -47,14 +47,14 @@
         <div class ="create_app_header"> Create Apps </div>
             <br><br>
 
-            <form method="post" action="create-app.php" name="create_app" id="create_app">
+            <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
                 <label class="create_app_title">App Title</label><br>
                 <input type="text" name="name" id="textbox1 app_name" />
                 <br><br>
                 <label class="create_app_title">Image Url</label><br>
                 <input type="text" name="image_url" id="textbox1 app_image_url" />
                 <input type="submit" class="browse_button" value="Create App" />
-            </form>
+            </form> -->
 
             <div class = "textbox_container1"> 
                 <div class = "create_app_title"> App Title </div>
@@ -156,16 +156,20 @@
                         </div>
                 <br><br>
             </div>
+                <div class = "textbox_container3"> 
+                    <div class ="create_app_shortcut"> Image URL </div>
+                    <br>
+                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+  
+                      <form enctype="multipart/form-data" action="uploader.php" method="POST"> <br>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+                        or Choose a file to upload: <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
+                        <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" />
+                      </form>
+                    <button class = "browse_button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
 
-            <div class = "textbox_container3"> 
-                <div class ="create_app_shortcut"> Image URL </div>
-                <br>
-                <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
-                <button class = "browse_button" onmouseover = "sound_click.play()"> Browse </button> 
-                <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
-                <br><br>
-
-            </div>
+                    <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
+                    <br><br>
 
         </div>
    
