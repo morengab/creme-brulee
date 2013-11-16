@@ -58,8 +58,6 @@ $app_id = $_GET["id"];
 
 $app = $database->get("apps", "*", ["id"=>$app_id]);
 
-
-
 function getShortcuts($database, $app_id) {
     $shortcuts = $database->select("shortcuts", [
         "shortcuts.id",
