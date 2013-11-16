@@ -26,34 +26,7 @@ $j(function() {
         return false;
     });
 
-    $j('form#create_app').submit(function() {
-        console.log("submitted!");
-        var formInput = $j(this).serialize();
-        $j.post(
-            $j(this).attr('action'),
-            formInput, 
-            function(data, textStatus, jqXHR){
-                console.log(textStatus);
-                // clear inputs
-                $j("input#app_name").val("");
-                $j("input#shortcut_image_url").val("");
-            });
 
-        return false;
-    });
-
-    $j('form#upload_image').submit(function(){
-        console.log('submit!');
-        var formInput = $j(this).serialize();
-        $j.post(
-            $j(this).attr('action'),
-            formInput,
-            function(data, textStatus, jqXHR){
-                console.log(textStatus);
-            }
-        );
-
-    });
 });
 
 
