@@ -33,7 +33,6 @@
         <label>Image Url:</label>
         <input type="text" id="short_image" name="image_url"  />
         <input type="submit" value="Create Shortcut" />
-        
     </form>
     <div id="result"></div>
 
