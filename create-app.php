@@ -166,28 +166,26 @@
                             <?php
                             // Where the file is going to be placed 
                             if (isset($_POST['uploadedfile'])){
+
+                                $target_path = "uploads/";
+
+                                /* Add the original filename to our target path.  
+                                Result is "uploads/filename.extension" */
+
+                                $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
                               
-                              $target_path = "uploads/";
+                                //echo $target_path;
 
-                              /* Add the original filename to our target path.  
-                              Result is "uploads/filename.extension" */
+                                // ($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+                                //     echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
+                                //     " has been uploaded";
+                                //     echo "<div>";
+                                //     echo "<img class= 'icon' src = $target_path>" ;
+                                //     echo "</div>";
 
-                              $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
-                              
-                              echo $target_path;
-
-
-                            ($_FILES['uploadedfile']['tmp_name'], $target_path)) {
-                              echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
-                              " has been uploaded";
-                              echo "<div>";
-                              echo "<img class= 'icon' src = $target_path>" ;
-                              echo "</div>";
-
-                            } else{
-                             echo "There was an error uploading the file, please try again!";
-                            }
-
+                                // } else{
+                                //     echo "There was an error uploading the file, please try again!";
+                                // }
                             }
 
                             ?>
