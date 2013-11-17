@@ -76,7 +76,8 @@
                 <div class ="create_app_shortcut"> Shortcut name </div>
                 <br>
                 <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
-                <br><br>
+                <br>
+                <br>
             </div>
 
             <div class = "textbox_container2"> 
@@ -195,7 +196,8 @@
                 </form>
                 <button class = "button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
                 <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
-                <br><br>
+                <br>
+                <br>
             </div>
         </div>
 
