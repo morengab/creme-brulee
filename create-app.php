@@ -78,15 +78,15 @@
                 <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
                 <br>
                 <br>
-            </div>
+            </div> <!-- end .textbox_container1 -->
 
             <div class = "textbox_container2"> 
                 <div class ="create_app_shortcut"> Press shortcut here </div>
-                    <br>
-                    <div id='cssmenu'>
-                        <ul>
-                           <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
-                              <ul>
+                <br>
+                <div id='cssmenu'>
+                    <ul>
+                       <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
+                            <ul>
                                  <li><a href='#'><span>Ctrl</span></a></li>
                                  <li><a href='#'><span>Alt</span></a></li>
                                  <li><a href='#'><span>Shift</span></a></li>
@@ -116,11 +116,11 @@
                                  <li><a href='#'><span>X</span></a></li>
                                  <li><a href='#'><span>Y</span></a></li>
                                  <li><a href='#'><span>Z</span></a></li>
-                              </ul>
-                           </li>
-                           
-                           <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 2</span></a>
-                              <ul>
+                            </ul>
+                        </li>
+                       
+                        <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 2</span></a>
+                            <ul>
                                  <li><a href='#'><span>Ctrl</span></a></li>
                                  <li><a href='#'><span>Alt</span></a></li>
                                  <li><a href='#'><span>Shift</span></a></li>
@@ -150,28 +150,27 @@
                                  <li><a href='#'><span>X</span></a></li>
                                  <li><a href='#'><span>Y</span></a></li>
                                  <li><a href='#'><span>Z</span></a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                    </div>
-                    <br><br>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <br><br> 
+            </div> <!-- end .textbox_container2 -->
 
             <div class = "textbox_container3"> 
                 <div class ="create_app_shortcut"> Image URL </div>
                 <br>
-                <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
+                <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
                 <?php
                 // Where the file is going to be placed 
-                if (isset($_POST['uploadedfile'])){
+                // if (isset($_POST['uploadedfile'])){
 
-                    $target_path = "uploads/";
+                    // $target_path = "uploads/";
 
                     /* Add the original filename to our target path.  
                     Result is "uploads/filename.extension" */
 
-                    $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
+                    // $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
                   
                     //echo $target_path;
 
@@ -185,20 +184,20 @@
                     // } else{
                     //     echo "There was an error uploading the file, please try again!";
                     // }
-                }
+                // }
 
                 ?>
                 <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> <br>
                     <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
                     or Choose a file to upload: 
-                    <!-- <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/> -->
+                    <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
                     <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" />
                 </form>
                 <button class = "button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
                 <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
-                <br>
-                <br>
-            </div>
+                <br/>
+                <br/>
+            </div> <!-- end .textbox_container3 -->
         </div>
 
     </div> <!-- end .container.plusfour -->
