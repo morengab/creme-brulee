@@ -26,7 +26,17 @@ $j(function() {
         return false;
     });
 
-
+    $j('form#create-app').submit(function() {
+        var formInput = $j(this).serialize();
+        $j.post(
+            $j(this).attr('action'),
+            formInput,
+            function(data, textStatus, jqXHR){
+                $j("#result").html(data);
+            }
+        );         
+        return false;   
+    });
 });
 
 

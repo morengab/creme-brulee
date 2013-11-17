@@ -56,10 +56,10 @@
             <input type="text" name="image_url" id="textbox1 app_image_url" />
             <input type="submit" class="browse_button" value="Create App" />
         </form> -->
-        <form action="bin/create-app.php" method="post" name="create-app" id="create-app">
+        <form method="post" action="bin/create-app.php" name="create-app" id="create-app">
             <div class = "textbox_container1"> 
-                <div class = "create_app_title"> App Title </div>
-                <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
+                <label class="create_app_title">App Title</label>
+                <input type="text" name="app_name" class="textbox1" onmouseover="sound_click.play()" autofocus> 
             </div>
 
             <div class = "textbox_container3"> 
@@ -194,11 +194,15 @@
                         <!-- <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" /> -->
                     </form>
                     <button class="browse_button" onmouseover="sound_click.play()">Browse</button> 
-                    <button class="browse_button" onmouseover="sound_click.play()">Submit</button>
-                    <br/>
-                    <br/>
+                    <input type="submit" class="browse_button" onmouseover="sound_click.play()" value="Submit">
+                    <br><br>
                 </div> <!-- end .textbox_container3 -->
             </div>
         </form>
+        <div id="result"></div>
     </div> <!-- end .container.plusfour -->
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/edit.js"></script>
 </body>
