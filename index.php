@@ -46,21 +46,21 @@ $database = new medoo('macadamia_cluster_02');
     document.getElementById("sound").defaultPlaybackRate = 1.1;
 </script>
 
-<div class = "whole_container">
+<div class="whole_container">
 
-	<div class = "head_container"> <img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo"></div>
+	<div class="head_container"> <img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo"></div>
 	
-		<div class = "container">
+		<div class="container">
 
 			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
 				<div class="flipper">
-					<div class="front" onmouseover = "sound.play()">
-						<div class ="app_front_plus"> <img class = "resize_logo" src = "icons/plus.png"> </div>
+					<div class="front" onmouseover="sound.play()">
+						<div class ="app_front_plus"><img class="resize_logo" src="icons/plus.png"></div>
 					</div>
-					<div class="back" onmouseout = "sound.play()"> 
-						<a href = "create-app.php">
-							<div class="app_back"><img class = "resize_logo" src = "icons/plus.png"> </div>
-							<div class= "create"> Create your own app!</div>
+					<div class="back" onmouseout="sound.play()"> 
+						<a href="create-app.php">
+							<div class="app_back"><img class="resize_logo" src="icons/plus.png"> </div>
+							<div class="create"> Create your own app!</div>
 						</a>
 					</div>
 				</div>
