@@ -32,17 +32,15 @@
         <label>Image</label>
         <input type="file" name="app_image" required />
     </form>
-    <div id="output"></div>
+    <div id="result"></div>
     <a href="javascript:createApp()">Create App</a>
     
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         function createApp() {
-            var result = document.getElementById("output"),
+            var result = document.getElementById("result"),
                 formData = new FormData(document.forms.namedItem("fileinfo"));
-
-            formData.append("CustomField", "This is some extra data");
 
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "stash.php", true);
