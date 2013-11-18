@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <!--[if IE]><![endif]-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>Create App</title>
     <meta name="description" content="">
     <meta name="keywords" content="" />
     <meta name="author" content="">
@@ -31,7 +31,6 @@
     <script src="js/less.js" type="text/javascript"></script>
 </head>
 
-
 <audio id="sound_click">
   <source src="media/click.mp3" type="audio/mp3" />
   <source src="media/click.ogg" type="audio/ogg" />
@@ -44,100 +43,51 @@
 
 <body>     
     <div class = "container plusfour">
-        <div class ="create_app_header"> Create Appzzz</div>
+
+
+        <div class ="create_app_header"> Create App </div>
+
+        <br><br>
+
+        <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
+            <label class="create_app_title">App Title</label><br>
+            <input type="text" name="name" id="textbox1 app_name" />
             <br><br>
-
-            <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
-                <label class="create_app_title">App Title</label><br>
-                <input type="text" name="name" id="textbox1 app_name" />
-                <br><br>
-                <label class="create_app_title">Image Url</label><br>
-                <input type="text" name="image_url" id="textbox1 app_image_url" />
-                <input type="submit" class="browse_button" value="Create App" />
-            </form> -->
-
+            <label class="create_app_title">Image Url</label><br>
+            <input type="text" name="image_url" id="textbox1 app_image_url" />
+            <input type="submit" class="browse_button" value="Create App" />
+        </form> -->
+        <form method="post" action="bin/create-app.php" name="create-app" id="create-app">
             <div class = "textbox_container1"> 
-                <div class = "create_app_title"> App Title </div>
-                <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+                <label class="create_app_title">App Title</label>
+                <input type="text" name="app_name" class="textbox1" onmouseover="sound_click.play()" autofocus> 
             </div>
 
             <div class = "textbox_container3"> 
                 <div class = "create_app_title"> Image URL </div>
-                <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
+                <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
                 <button class = "browse_button" onmouseover = "sound_click.play()">Browse</button>
             </div>
-<!-- <<<<<<< HEAD
-            <br><br>
-            <div></div>
 
+            <br>
+            <br>
+           
             <div>
                 <div class = "textbox_container1"> 
                     <div class ="create_app_shortcut"> Shortcut name </div>
                     <br>
-                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
-                    <br><br>
-                </div>
-
+                    <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
+                    <br>
+                    <br>
+                </div> <!-- end .textbox_container1 -->
 
                 <div class = "textbox_container2"> 
-                    <div class ="create_app_shortcut"> Press shortcut here </div>
-                                                    <br>
-                                <div id='cssmenu'>
+                    <div class ="create_app_shortcut"> Select shortcut here </div>
+                    <br>
+                    <div id='cssmenu'>
+                        <ul>
+                           <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
                                 <ul>
-                                   
-                                   <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
-                                      <ul>
-                                         <li><a href='#'><span>Ctrl</span></a></li>
-                                         <li><a href='#'><span>Alt</span></a></li>
-                                         <li><a href='#'><span>Shift</span></a></li>
-                                         <li><a href='#'><span>A</span></a></li>
-                                         <li><a href='#'><span>B</span></a></li>
-                                         <li><a href='#'><span>C</span></a></li>
-                                         <li><a href='#'><span>D</span></a></li>
-                                         <li><a href='#'><span>E</span></a></li>
-                                         <li><a href='#'><span>F</span></a></li>
-                                         <li><a href='#'><span>G</span></a></li>
-                                         <li><a href='#'><span>H</span></a></li>
-                                         <li><a href='#'><span>I</span></a></li>
-                                         <li><a href='#'><span>J</span></a></li>
-                                         <li><a href='#'><span>K</span></a></li>
-                                         <li><a href='#'><span>L</span></a></li>
-                                         <li><a href='#'><span>M</span></a></li>
-                                         <li><a href='#'><span>N</span></a></li>
-                                         <li><a href='#'><span>O</span></a></li>
-                                         <li><a href='#'><span>P</span></a></li>
-                                         <li><a href='#'><span>Q</span></a></li>
-                                         <li><a href='#'><span>R</span></a></li>
-                                         <li><a href='#'><span>S</span></a></li>
-                                         <li><a href='#'><span>T</span></a></li>
-                                         <li><a href='#'><span>U</span></a></li>
-                                         <li><a href='#'><span>V</span></a></li>
-                                         <li><a href='#'><span>W</span></a></li>
-                                         <li><a href='#'><span>X</span></a></li>
-                                         <li><a href='#'><span>Y</span></a></li>
-                                         <li><a href='#'><span>Z</span></a></li>
-
-=======
->>>>>>> 4419b3aa3e0ad8a3a179e6c655ae74fe9772fbc8 -->
-
-        <br><br>
-        <div></div>
-        <div>
-            <div class = "textbox_container1"> 
-                <div class ="create_app_shortcut"> Shortcut name </div>
-                <br>
-                <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
-                <br><br>
-            </div>
-
-            <div class = "textbox_container2"> 
-                <div class ="create_app_shortcut"> Press shortcut here </div>
-                                                <br>
-                            <div id='cssmenu'>
-                            <ul>
-                               
-                               <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
-                                  <ul>
                                      <li><a href='#'><span>Ctrl</span></a></li>
                                      <li><a href='#'><span>Alt</span></a></li>
                                      <li><a href='#'><span>Shift</span></a></li>
@@ -167,11 +117,11 @@
                                      <li><a href='#'><span>X</span></a></li>
                                      <li><a href='#'><span>Y</span></a></li>
                                      <li><a href='#'><span>Z</span></a></li>
-                                  </ul>
-                               </li>
-                               
-                               <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 2</span></a>
-                                  <ul>
+                                </ul>
+                            </li>
+                           
+                            <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 2</span></a>
+                                <ul>
                                      <li><a href='#'><span>Ctrl</span></a></li>
                                      <li><a href='#'><span>Alt</span></a></li>
                                      <li><a href='#'><span>Shift</span></a></li>
@@ -201,194 +151,59 @@
                                      <li><a href='#'><span>X</span></a></li>
                                      <li><a href='#'><span>Y</span></a></li>
                                      <li><a href='#'><span>Z</span></a></li>
-                                
-                                  </ul>
-                               </li>
-                               
-                            </ul>
-                        </div>
-                <br><br>
-            </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <br><br> 
+                </div> <!-- end .textbox_container2 -->
+
                 <div class = "textbox_container3"> 
                     <div class ="create_app_shortcut"> Image URL </div>
                     <br>
-                    <input type="text" id="textbox1" onmouseover = "sound_click.play()"> 
-<?php
-// Where the file is going to be placed 
-//if (isset($_POST['uploadedfile'])){
-  echo "hello, world";
-  $target_path = "uploads/";
+                    <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
+                    <?php
+                    // Where the file is going to be placed 
+                    // if (isset($_POST['uploadedfile'])){
 
-  /* Add the original filename to our target path.  
-  Result is "uploads/filename.extension" */
+                        // $target_path = "uploads/";
 
-  $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
+                        /* Add the original filename to our target path.  
+                        Result is "uploads/filename.extension" */
 
+                        // $target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
+                      
+                        //echo $target_path;
 
+                        // ($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+                        //     echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
+                        //     " has been uploaded";
+                        //     echo "<div>";
+                        //     echo "<img class= 'icon' src = $target_path>" ;
+                        //     echo "</div>";
 
-// if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
-//   echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
-//   " has been uploaded";
-//   echo "<div>";
-//   echo "<img class= 'icon' src = $target_path>" ;
-//   echo "</div>";
+                        // } else{
+                        //     echo "There was an error uploading the file, please try again!";
+                        // }
+                    // }
 
-// } else{
-//  echo "There was an error uploading the file, please try again!";
-// }
-
-//}
-
-
-?>
-                      <form enctype="multipart/form-data" action="create-app.php" method="POST"> <br>
+                    ?>
+                    <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> <br>
                         <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
                         or Choose a file to upload: 
                         <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
-                        <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" />
-                      </form>
-                    <button class = "browse_button" onmouseover = "sound_click.play()" type = 'submit'  > Browse </button> 
-
-                    <button class = "browse_button" onmouseover = "sound_click.play()"> Submit </button>
+                        <!-- <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" /> -->
+                    </form>
+                    <button class="browse_button" onmouseover="sound_click.play()">Browse</button> 
+                    <input type="submit" class="browse_button" onmouseover="sound_click.play()" value="Submit">
                     <br><br>
+                </div> <!-- end .textbox_container3 -->
+            </div>
+        </form>
+        <div id="result"></div>
+    </div> <!-- end .container.plusfour -->
+    
 
-        </div>
-   
-    <br>
-
-
-
-
-
-
-
-<style> 
-#textbox1 
-{ 
-border: 2px solid rgb(173, 204, 204); 
-height: 31px; 
-width: 150px; 
-box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
-transition:500ms all ease; 
-padding:3px 3px 3px 3px; 
-} 
- 
-#textbox1:hover, #textbox1:focus 
-{ 
-width:200px; 
-transition:500ms all ease; 
-background: url('icons/plus_blue.png') no-repeat right; 
-background-size:25px 25px; 
-background-position:96% 62%; 
-padding:3px 32px 3px 3px; 
-} 
-
-
-
-#cssmenu {
-
-  border: none;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  font: 67.5%;
-  font-family: @SUB_FONT; 
-  font-weight: bold;
-
-}
-#cssmenu ul {
- /* background: #333333;*/
-  height: 42px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#cssmenu li {
-  float: left;
-  padding: 0px;
-}
-#cssmenu li a {
-  background: #333333 url('icons/seperator.png') bottom right no-repeat;
-  display: block;
-  font-weight: normal;
-  line-height: 42px;
-  margin: 0px;
-  padding: 0px 25px;
-  text-align: center;
-  text-decoration: none;
-}
-#cssmenu > ul > li > a {
-  color: #cccccc;
-}
-#cssmenu ul ul a {
-  color: #cccccc;
-}
-#cssmenu li > a:hover,
-#cssmenu ul li:hover > a {
-  background: #78dbff url('icons/hover.png') bottom center no-repeat;
-  color: #FFFFFF;
-  text-decoration: none;
-  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
-  transition:500ms all ease; 
-}
-#cssmenu li ul {
-  background: #333333;
-  display: none;
-  height: auto;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  position: absolute;
-  width: 225px;
-  z-index: 200;
-  /*top:1em;
-  /*left:0;*/
-
-}
-#cssmenu li:hover ul {
-  display: block;
-  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
-    transition:500ms all ease; 
-}
-#cssmenu li li {
-  background: url('icons/sub_sep.png') bottom left no-repeat;
-  display: block;
-  float: none;
-  margin: 0px;
-  padding: 0px;
-  width: 225px;
-}
-#cssmenu li:hover li a {
-  background: none;
-  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
-  transition:500ms all ease; 
-}
-#cssmenu li ul a {
-  display: block;
-  height: 35px;
-  font-size: 12px;
-  font-style: normal;
-  margin: 0px;
-  padding: 0px 10px 0px 15px;
-  text-align: left;
-}
-#cssmenu li ul a:hover,
-#cssmenu li ul li:hover > a {
-  background: #78dbff url('icons/hover_sub.png') center left no-repeat;
-  border: 0px;
-  color: #ffffff;
-  text-decoration: none;
-  box-shadow: 0px 0px 20px rgb(204, 204, 204) inset; 
-  transition:500ms all ease; 
-}
-#cssmenu p {
-  clear: left;
-}
-
-
-</style>
-
-
-   
-  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/edit.js"></script>
 </body>

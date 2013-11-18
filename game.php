@@ -19,6 +19,8 @@
     <link rel="stylesheet/less" text="text/css" href="css/normalize.less">
     <link rel="stylesheet/less" text="text/css" href="css/base.less">
     <link rel="stylesheet/less" text="text/css" href="css/icon.less">
+    <link rel="stylesheet/less" text="text/css" href="css/eric-test-css.less">
+    <link rel="stylesheet/less" text="text/css" href="css/create-app.less">
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
     <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">  -->
     <!-- !Modernizr - All other JS at bottom -->
@@ -127,10 +129,10 @@ if (isset($_POST['name'])) {
                         <h2>Select 4 shortcuts you would like to train on.</h2>
                         <div id="icon_holder">  
                             <form method="post" action="game.php" name="create_shortcut" id="create_shortcut">
-                                <label>Name:</label>
-                                <input type="text" name="name" id="shortcut_name" required/>
-                                <label>Shortcut:</label>
-                                <input type="text" name="shortcut" id="shortcut_code" required/>
+                               
+                                <div class ="create_app_shortcut"> Shortcut name </div><br>
+                                <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
+                                <!-- <input type="text" name="shortcut" id="shortcut_code" required/> -->
                                 <label>Image:</label>
                                 <input type="text" name="image_url" id="shortcode_image_url" />
                                 <input type="hidden" name="app_id" value="<?php echo $app_id; ?>"/>
