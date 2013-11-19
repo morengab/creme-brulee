@@ -1,20 +1,24 @@
 <?php 
 
-//form validation vars
-$formOk = true;
-$errors = array();
+$app_name = $_POST['app_name'];
 
-//sumbission data
-$date = date('d/m/Y');
-$time = date('H:i:s');
+$fileName = $_FILES['app_image']['name'];
+$fileType = $_FILES['app_image']['type'];
+$fileTemp = $_FILES['app_image']['tmp_name'];
 
-//form data
-$name = $_POST['app_name'];  
-//$shortcut = $_POST['shortcut'];
-//$image = $_POST['image_url'];
+$target_path = "uploads/";
 
-// Send the data back
-echo "You've created a new app: " . $name ."<br>";
-echo "Date: " . $date ."<br>";
-echo "Time: " . $time ."<br>";
+$target_path = $target_path . basename( $_FILES['app_image']['name']); 
+
+echo "Your new app: " . $app_name ."<br>";
+echo "Uploaded image: " . $fileName ."<br>";
+echo "File type: " . $fileType ."<br>";
+echo "File Temp: " . $fileTemp ."<br>";
+echo "Target Path: " . $target_path ."<br>";
+
+// if(move_uploaded_file($_FILES['app_image']['tmp_name'], $target_path)) {
+//     echo "<img src='".$target_path."' width='250'>";
+// } else{
+//     echo "There was an error uploading the file, please try again!";
+// }
 ?>

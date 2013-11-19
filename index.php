@@ -34,12 +34,10 @@ require_once 'downloads/medoo.min.php';
 $database = new medoo('macadamia_cluster_02');
 ?>
 <body>
-
-
 <audio id="sound">
   <source src="media/flipcard.mp3" type="audio/mp3" />
   <source src="media/flipcard.ogg" type="audio/ogg" />
- </audio>
+</audio>
 
 <script type="text/javascript">
     var sound = document.getElementById("sound");
@@ -48,48 +46,70 @@ $database = new medoo('macadamia_cluster_02');
 
 <div class="whole_container">
 
-	<div class="head_container"> <img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo"></div>
-	
-		<div class="container">
-
-			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-				<div class="flipper">
-					<div class="front" onmouseover="sound.play()">
-						<div class ="app_front_plus"><img class="resize_logo" src="icons/plus.png"></div>
-					</div>
-					<div class="back" onmouseout="sound.play()"> 
-						<a href="create-app.php">
-							<div class="app_back"><img class="resize_logo" src="icons/plus.png"> </div>
-							<div class="create"> Create your own app!</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<?php
-			$apps = $database->select("apps", "*");
-			foreach ($apps as $app):
-			?>
-
-			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-				<div class="flipper">
-					<div class="front" onmouseover = "sound.play()">
-						<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-					</div>
-					<div class="back" onmouseout = "sound.play()"> 
-						<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
-							<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-							<div class= "play"> PLAY</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		
-			<?php
-			endforeach;
-			?>
-		</div>
+	<div class="head_container"> 
+		<img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo">
 	</div>
 
+	<div class="container">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+			<div class="flipper">
+				<div class="front" onmouseover="sound.play()">
+					<div class ="app_front_plus"><img class="resize_logo" src="icons/plus.png"></div>
+				</div>
+				<div class="back" onmouseout="sound.play()"> 
+					<a href="javascript:showAppModal()">
+						<div class="app_back"><img class="resize_logo" src="icons/plus.png"> </div>
+						<div class="create"> Create your own app!</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<?php
+		$apps = $database->select("apps", "*");
+		foreach ($apps as $app):
+		?>
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+			<div class="flipper">
+				<div class="front" onmouseover = "sound.play()">
+					<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+				</div>
+				<div class="back" onmouseout = "sound.play()"> 
+					<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
+						<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+						<div class= "play"> PLAY</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<?php
+		endforeach;
+		?>
+
+		<div id="my-modal" class="reveal-modal app-modal">
+            
+            <form enctype="multipart/form-data" method="post" name="fileinfo" id="create_app">
+            	<label>Name</label>
+		        <input type="text" name="app_name" autocomplete="on" maxlength="64" value="Illustrator" id="app_name" required />
+
+            	<div id="app_image_preview"></div>
+            	
+            	<label>Image</label>
+		        <input type="file" name="app_image" id="app_image"/>
+		    </form>
+		    <div id="result"></div>
+		    <a href="javascript:createApp()">Create</a>
+		    <a href="javascript:hideAppModal()">Cancel</a>
+        </div>
+
+	</div> 
+	<!-- end .container -->
 </div>
+<!-- end .whole_container -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.reveal.js"></script>
+<script src="js/app.js"></script>
+
 </body>
+</html>
