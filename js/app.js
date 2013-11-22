@@ -26,7 +26,6 @@ function previewFile(file) {
 }
 
 function showAppModal() {
-    // show modal on page load
     $j('#my-modal').reveal({
         animation: 'fade',                   //fade, fadeAndPop, none
         animationspeed: 300,                 //how fast animtions are
@@ -47,6 +46,8 @@ function createApp() {
     xhr.open("POST", "bin/create-app.php", true);
     xhr.onload = function(e) {
         if (xhr.status == 200) {
+            hideAppModal();
+            console.log(xhr.responseText);
             result.innerHTML = xhr.responseText;
         } else {
             result.innerHTML = "Error " + xhr.status + " occurred uploading your file.<br \/>";

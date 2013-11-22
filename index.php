@@ -64,42 +64,46 @@ $database = new medoo('macadamia_cluster_02');
 				</div>
 			</div>
 		</div>
-
-		<?php
-		$apps = $database->select("apps", "*");
-		foreach ($apps as $app):
-		?>
-		<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-			<div class="flipper">
-				<div class="front" onmouseover = "sound.play()">
-					<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-				</div>
-				<div class="back" onmouseout = "sound.play()"> 
-					<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
-						<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-						<div class= "play"> PLAY</div>
-					</a>
+		
+		<div id="app_container">
+			<?php
+			$apps = $database->select("apps", "*");
+			foreach ($apps as $app):
+			?>
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
+				<div class="flipper">
+					<div class="front" onmouseover = "sound.play()">
+						<div class ="app_front"> <img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+					</div>
+					<div class="back" onmouseout = "sound.play()"> 
+						<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
+							<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
+							<div class= "play"> PLAY</div>
+						</a>
+					</div>
 				</div>
 			</div>
+			<?php
+			endforeach;
+			?>
 		</div>
-		<?php
-		endforeach;
-		?>
-
+		
 		<div id="my-modal" class="reveal-modal app-modal">
             
             <form enctype="multipart/form-data" method="post" name="fileinfo" id="create_app">
             	<label>Name</label>
 		        <input type="text" name="app_name" autocomplete="on" maxlength="64" value="Illustrator" id="app_name" required />
-
-            	<div id="app_image_preview"></div>
             	
             	<label>Image</label>
 		        <input type="file" name="app_image" id="app_image"/>
+		    	
+            	<div id="app_image_preview"></div>
+
+		    	<a href="javascript:createApp()">Create</a>
+		    	<a href="javascript:hideAppModal()">Cancel</a>
 		    </form>
 		    <div id="result"></div>
-		    <a href="javascript:createApp()">Create</a>
-		    <a href="javascript:hideAppModal()">Cancel</a>
+		    
         </div>
 
 	</div> 
