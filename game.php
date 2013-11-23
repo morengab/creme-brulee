@@ -108,7 +108,7 @@ $shortcuts = getShortcuts($database, $app_id);
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
                         <h2>Select 4 shortcuts you would like to train on.</h2>
                         <div id="icon_holder">  
-                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut">           
+                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" height = "200px">           
                                     <div>
                                         <div class = "textbox_container1"> 
                                             <div class ="text"> Shortcut name </div>
@@ -137,10 +137,16 @@ $shortcuts = getShortcuts($database, $app_id);
                                             <button class="button" onmouseover="sound_click.play()">Browse</button>  
                                             <br><br>
                                         </div>
+                                    <br><br>
 
+                                    <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
+                                    <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
+                                    <a class = "interactive_button" href="javascript:createApp()">Create</a>
+                                    <a href="javascript:hideAppModal()">Cancel</a>
                                     </div>
 
                                 </form>
+
                             
                             <div class="new_shortcut"></div>
 
@@ -159,6 +165,7 @@ $shortcuts = getShortcuts($database, $app_id);
                             endforeach;
                             ?>
                         </div>
+                        
                         
                         <ul class="active-selections">
                             Currently selected tools:
