@@ -161,14 +161,17 @@ Array.prototype.remove = function() {
 function incPlayCount () {
 	$j.ajax({
 		url: "bin/inc-plays.php",
-		// data: {
-		// 	// app_id: app_id
-		// },
-		success: function (data, textStatus, jqXHR) {
-			console.log(textStatus);
+		data: {
+			app_id: document.location.search.match("\\d+")[0]
+		},
+		success: function (data, textStatus, xhr) {
+			console.log(xhr.responseText);
 		}, 
-		error: function (jqXHR, textStatus, error) {
+		error: function (xhr, textStatus, error) {
+			console.log(xhr.responseText);
+			console.log(textStatus);
 			console.log(error);
+			debugger;
 		},
 		dataType: "json"
 	});

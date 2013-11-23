@@ -17,7 +17,6 @@ if (isset($_GET['app_id'])) {
             "id" => $id
         ]
     );
-    
     echo $id;
 } else {
     echo "Error: $_GET failed to return app_id";
