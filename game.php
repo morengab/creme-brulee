@@ -93,8 +93,8 @@ $shortcuts = getShortcuts($database, $app_id);
                 </div>
                 
                 <div class="current-software" id="buttons">
-                    <img id="application-logo" src="icons/software-icon.png">
-                    <h2><span id="application-name">Photoshop</span></h2>
+                    <img id="application-logo" src="<?php echo $app["image_url"]; ?>">
+                    <h2><span id="application-name"><?php echo $app["name"]; ?></span></h2>
                     <button class="button" id="new-game">New Game</button>
                     
                     <button class="button" id="reset">Reset</button>

@@ -13,9 +13,7 @@ if (isset($_GET['app_id'])) {
 	        "shortcuts.shortcut",
 	        "shortcuts.image_url"
     	], [
-	        "shortcuts.app_id" => $_GET['app_id'],
-	        "ORDER" => "shortcuts.name ASC",
-	        "LIMIT" => 50
+	        "shortcuts.app_id" => $_GET['app_id']
     	]
     );
 
