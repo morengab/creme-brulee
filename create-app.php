@@ -165,11 +165,11 @@
                     <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> <br>
                         <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
                         or Choose a file to upload: 
-                        <input name="uploadedfile"  type="file" class = "browse_button" onmouseover = "sound_click.play()"/>
-                        <!-- <input type="submit" value="Upload File" align="right" class = "browse_button" onmouseover = "sound_click.play()" /> -->
+                        <input name="uploadedfile"  type="file" class = "interactive_button" onmouseover = "sound_click.play()"/>
+                        <!-- <input type="submit" value="Upload File" align="right" class = "interactive_button" onmouseover = "sound_click.play()" /> -->
                     </form>
-                    <button class="browse_button" onmouseover="sound_click.play()">Browse</button> 
-                    <input type="submit" class="browse_button" onmouseover="sound_click.play()" value="Submit">
+                    <button class="interactive_button" onmouseover="sound_click.play()">Browse</button> 
+                    <input type="submit" class="interactive_button" onmouseover="sound_click.play()" value="Submit">
                     <br><br>
                 </div> <!-- end .textbox_container3 -->
             </div>

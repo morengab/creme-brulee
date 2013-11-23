@@ -109,11 +109,10 @@ $shortcuts = getShortcuts($database, $app_id);
                         <h2>Select 4 shortcuts you would like to train on.</h2>
                         <div id="icon_holder">  
                             <form method="post" action="game.php" name="create_shortcut" id="create_shortcut">
-                               
-                                <div class ="text"> Name </div><br>
+                               <!--  <div class ="text"> Name </div><br> -->
                                 <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
-                                <div class ="text"> Press here </div><br>
-                                <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
+                              <!--   <div class ="text"> Press here </div><br> -->
+                                <input type="text" name="shortcut" id="shortcut_press" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
                                 <label>Image:</label>
                                 <input type="text" name="image_url" id="shortcode_image_url" />
                                 <input type="hidden" name="app_id" value="<?php echo $app_id; ?>"/>
