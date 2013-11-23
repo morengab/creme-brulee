@@ -74,7 +74,7 @@
            
             <div>
                 <div class = "textbox_container1"> 
-                    <div class ="create_app_shortcut"> Shortcut name </div>
+                    <div class ="text"> Shortcut name </div>
                     <br>
                     <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
                     <br>
@@ -82,7 +82,7 @@
                 </div> <!-- end .textbox_container1 -->
 
                 <div class = "textbox_container2"> 
-                    <div class ="create_app_shortcut"> Select shortcut here </div>
+                    <div class ="text"> Select shortcut here </div>
                     <br>
                     <div id='cssmenu'>
                         <ul>
@@ -159,7 +159,7 @@
                 </div> <!-- end .textbox_container2 -->
 
                 <div class = "textbox_container3"> 
-                    <div class ="create_app_shortcut"> Image URL </div>
+                    <div class ="text"> Image URL </div>
                     <br>
                     <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
                     <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> <br>

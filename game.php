@@ -130,9 +130,10 @@ if (isset($_POST['name'])) {
                         <div id="icon_holder">  
                             <form method="post" action="game.php" name="create_shortcut" id="create_shortcut">
                                
-                                <div class ="create_app_shortcut"> Shortcut name </div><br>
+                                <div class ="text"> Name </div><br>
                                 <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
-                                <!-- <input type="text" name="shortcut" id="shortcut_code" required/> -->
+                                <div class ="text"> Press here </div><br>
+                                <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
                                 <label>Image:</label>
                                 <input type="text" name="image_url" id="shortcode_image_url" />
                                 <input type="hidden" name="app_id" value="<?php echo $app_id; ?>"/>

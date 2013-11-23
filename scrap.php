@@ -15,13 +15,23 @@ http://www.tizag.com/phpT/fileupload.php
 
 test 1
 test 2
-test 3
-test 4
-test 5
 
-<form enctype="multipart/form-data" action="uploader.php" method="POST">
-<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-Choose a file to upload: <input name="uploadedfile" type="file" /><br />
-<input type="submit" value="Upload File" />
-</form>
 
+
+
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write('<script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>')</script>
+    
+<script src="js/hotkeys.js">
+
+	document.write("<div>uigu</div>") keyHandler
+
+
+</script>
+
+dfds
+
+ </script>
