@@ -25,22 +25,26 @@ $j(document).ready(function () {
 	$j('#my-modal').trigger('reveal:open');
 
 	//create game objects
-	//selectedIcons = $j.get("getShortcuts.php", { app_name: "Photoshop" }, {} ,  );
-	
 	$j.ajax({
 		url: "getShortcuts.php",
-		data: {app_name: "Photoshop"},
-		success: function (response) {
-			selectedIcons = response;
+		data: {
+			app_name: "Photoshop",
+			app_id: document.location.search.match("\\d+")[0]
+		},
+		success: function (data, textStatus, jqXHR) {
+			// console.log(textStatus);
+			// console.log(data);
+			// console.log(jqXHR.responseText);
+			
+			selectedIcons = data;
+		},
+		error: function (jqXHR, textStatus, error) {
+			console.log("textStatus : "+textStatus);
+			console.log("error : " + error);
+			console.log(jqXHR.responseText);
 		},
 		dataType: "json"
-	});
-	
-	$j('.program_option').click(function(event) {
-	    event.preventDefault();
-	    changeProgram($j(this).attr("data-app-name"));
-	  });
-	
+	});	
 	
 	$j("#music").jPlayer({
 		ready: function () {
@@ -143,7 +147,7 @@ $j(document).ready(function () {
 			currentIcon--;
 		}
 		
-		console.log(userSelected);
+		// console.log(userSelected);
 	});
 });
 

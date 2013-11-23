@@ -77,26 +77,6 @@ function getShortcuts($database, $app_id) {
 
 $shortcuts = getShortcuts($database, $app_id);
 
-if (isset($_POST['name'])) {
-
-    $app_id = $_POST['app_id'];
-    $name = $_POST['name'];
-    $shortcut = $_POST['shortcut'];
-
-    // validate image url
-    if(trim($_POST['image_url']) === '') {
-        $image_url = "icons/photoshop/blur.png";
-    } else {
-        $image_url = trim($_POST['image']);
-    }
-
-    $database->insert("shortcuts", [
-        "app_id" => $app_id,
-        "name" => $name,
-        "shortcut" => $shortcut,
-        "image_url" => $image_url
-    ]);                      
-}
 ?>
 <body>
     <div id="container">   

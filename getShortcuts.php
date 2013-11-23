@@ -1,45 +1,39 @@
 <?php
+// ini_set('display_errors',1);
+// error_reporting(E_ALL);
+
 require_once 'downloads/medoo.min.php';
+$database = new medoo('macadamia_cluster_02');
 
-$database = new medoo('macadamia_cluster');
+if (isset($_GET['app_id'])) {
+	$results = $database->select("shortcuts", [
+	        "shortcuts.id",
+	        "shortcuts.app_id",
+	        "shortcuts.name",
+	        "shortcuts.shortcut",
+	        "shortcuts.image_url"
+    	], [
+	        "shortcuts.app_id" => $_GET['app_id'],
+	        "ORDER" => "shortcuts.name ASC",
+	        "LIMIT" => 50
+    	]
+    );
 
-if (isset($_GET['app_name'])) {
-	if (isset($_GET['name'])) {
-// Get a shortcut by name and app
-		$results = $database->select("shortcuts",
-			"*",
-			array(
-				"AND" => 
-				array(
-					"app_name" => $_GET['app_name'],
-					"name" => $_GET['name']
-					)
-				));
-
-
-	} else {
-// Get all shortcuts for one app
-		$results = $database->select("shortcuts",
-			"*",
-			array(
-				"app_name" => $_GET['app_name']
-				));
-
-	}		
-} else {
-// Get all shortcuts for all apps
+} else {	
 	$results = $database->select("shortcuts", "*");
-
 }
 
 $response = array();
 foreach ($results as $result) {
-
-	$response[$result['id']] = array('app_name' => $result['app_name'], 'name' => $result['name'], 'shortcut' => $result['shortcut'], 'image' => $result['image']);
-
-
+	$response[$result['id']] = array(
+		// 'app_name' => $result['app_name'], 
+		'app_id' => $result['app_id'], // < -- new 
+		'name' => $result['name'], 
+		'shortcut' => $result['shortcut'], 
+		'image' => $result['image_url']
+	);
 }
-echo json_encode($response);
 
+echo json_encode($response);
 
 ?>
