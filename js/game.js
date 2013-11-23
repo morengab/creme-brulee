@@ -71,25 +71,24 @@ $j(document).ready(function () {
 	//clicking start will close the modal
 	// and start the game
 	$j("#start").click(function () {
-		if (userSelected.length == 4)
-		{
-		$j("#my-modal").trigger('reveal:close');
-		resetScoring();
-		$j("#lifebar").css("background", "rgba(13, 33, 54, 1.0)");
-		$j("#gameOver").remove();
-		$j("#music").jPlayer("play", 0);
+		if (userSelected.length == 4) {
+			$j("#my-modal").trigger('reveal:close');
+			
+			resetScoring();
+			$j("#lifebar").css("background", "rgba(13, 33, 54, 1.0)");
+			$j("#gameOver").remove();
+			$j("#music").jPlayer("play", 0);
 
-		$j("#col1-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[0]].image + "')" );
-		$j("#col2-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[1]].image + "')" );
-		$j("#col3-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[2]].image + "')" );
-		$j("#col4-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[3]].image + "')" );
-		
-		game = new Game();
-		game.runGame();
-		started = true;
+			$j("#col1-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[0]].image + "')" );
+			$j("#col2-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[1]].image + "')" );
+			$j("#col3-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[2]].image + "')" );
+			$j("#col4-board .icon-background").css("background-image", "url('" + selectedIcons[userSelected[3]].image + "')" );
+			
+			game = new Game();
+			game.runGame();
+			started = true;
 		}
-		else
-		{
+		else {
 			alert("Choose 4 icons");
 		}
 	});
@@ -118,18 +117,15 @@ $j(document).ready(function () {
 	//create modal handler
 	$j("#reset").click(function () {
 		//$("#my-modal").modal(); 
-		
-		
-			game.endGame();
-			$j(".icon").remove();
-			resetScoring();
-			$j("#lifebar").css("background", "rgba(13, 33, 54, 1.0)");
-			$j("#gameOver").remove();
-			game = new Game();
-			game.runGame();
-			$j("#music").jPlayer("play", 0);
-			started = true;
-
+		game.endGame();
+		$j(".icon").remove();
+		resetScoring();
+		$j("#lifebar").css("background", "rgba(13, 33, 54, 1.0)");
+		$j("#gameOver").remove();
+		game = new Game();
+		game.runGame();
+		$j("#music").jPlayer("play", 0);
+		started = true;
 	});
 	
 	$j("#icon_holder").on("click", ".icon_selector", function () {
@@ -161,7 +157,23 @@ Array.prototype.remove = function() {
     }
     return this;
 };
-	
+
+function incPlayCount () {
+	$j.ajax({
+		url: "inc-plays.php",
+		data: {
+			// app_id: app_id
+		},
+		success: function (data, textStatus, jqXHR) {
+			console.log(textStatus);
+		}, 
+		error: function (jqXHR, textStatus, error) {
+			console.log(error);
+		},
+		dataType: "json"
+	});
+}
+
 function changeProgram(program) {
 	$j.ajax({
 		url: "getShortcuts.php",
@@ -229,14 +241,9 @@ Game.prototype.animate = function(current) {
 						started = false;
 					}
 				}
-			
 			}	
-			
 		});		
-		 
-		
 }
-
 
 Game.prototype.endGame = function () {
 	
@@ -245,14 +252,13 @@ Game.prototype.endGame = function () {
 	{
 		clearTimeout(tupleloop[i]);
 	}
-	
-	
 }
-
 
 Game.prototype.runGame = function () {
 		var self = this;
 		gameloop = setInterval(function () {self.setLoop()}, beat * 4);
+
+		incPlayCount();
 }
 
 Game.prototype.speedUp = function () {
