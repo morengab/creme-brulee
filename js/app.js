@@ -1,7 +1,6 @@
 $j = jQuery.noConflict();
 
 $j(document).ready(function() {
-    showAppModal();
     
     $j("input#app_image").change(function (event){
         previewFile(event.target.files[0]);
@@ -46,13 +45,13 @@ function createApp() {
     xhr.open("POST", "bin/create-app.php", true);
     xhr.onload = function(e) {
         if (xhr.status == 200) {
-            //hideAppModal();
-            console.log(xhr.responseText);
-            result.innerHTML = xhr.responseText;
+            hideAppModal();
+            
+            var app_id = xhr.responseText;
+            window.location.href = "game.php?id="+app_id;
         } else {
             result.innerHTML = "Error " + xhr.status + " occurred.<br \/>";
         }
     };
-    debugger;
     xhr.send(formData);
 }
