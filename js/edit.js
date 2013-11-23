@@ -1,10 +1,10 @@
 $j = jQuery.noConflict();
 
 $j(function() { 
-    $j("form#create_shortcut").hide();
+    $j("form#create-shortcut").hide();
 
     $j(".new_shortcut").click(function(){
-        $j("form#create_shortcut").slideDown();
+        $j("form#create-shortcut").slideToggle();
     });
 
     $j('form#create_shortcut').submit(function() {

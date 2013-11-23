@@ -160,10 +160,10 @@ Array.prototype.remove = function() {
 
 function incPlayCount () {
 	$j.ajax({
-		url: "inc-plays.php",
-		data: {
-			// app_id: app_id
-		},
+		url: "bin/inc-plays.php",
+		// data: {
+		// 	// app_id: app_id
+		// },
 		success: function (data, textStatus, jqXHR) {
 			console.log(textStatus);
 		}, 
