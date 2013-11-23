@@ -108,16 +108,39 @@ $shortcuts = getShortcuts($database, $app_id);
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
                         <h2>Select 4 shortcuts you would like to train on.</h2>
                         <div id="icon_holder">  
-                            <form method="post" action="game.php" name="create_shortcut" id="create_shortcut">
-                               <!--  <div class ="text"> Name </div><br> -->
-                                <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
-                              <!--   <div class ="text"> Press here </div><br> -->
-                                <input type="text" name="shortcut" id="shortcut_press" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
-                                <label>Image:</label>
-                                <input type="text" name="image_url" id="shortcode_image_url" />
-                                <input type="hidden" name="app_id" value="<?php echo $app_id; ?>"/>
-                                <input type="submit" value="Create Shortcut" />
-                            </form>
+                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut">           
+                                    <div>
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Shortcut name </div>
+                                            <br>
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name"> 
+                                            <br>
+                                            <br>
+                                        </div> <!-- end .textbox_container1 -->
+
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Press shortcut </div>
+                                            <br>
+                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="1st key" maxlength = "1" />
+                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" />
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                        <div class = "textbox_container1">    
+                                            <div class ="text"> Image URL </div>
+                                            <br>
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
+                                            <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
+                                               <!-- form should of uploading img be here -->
+                                            </form>
+                                            OR 
+                                            <button class="button" onmouseover="sound_click.play()">Browse</button>  
+                                            <br><br>
+                                        </div>
+
+                                    </div>
+
+                                </form>
                             
                             <div class="new_shortcut"></div>
 
