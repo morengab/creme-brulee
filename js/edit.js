@@ -28,4 +28,6 @@ $j(function() {
 });
 
 
-
+function hideShortcutModal() {
+    $j('form#create-shortcut').hide();
+}

@@ -50,6 +50,13 @@
     <script src="js/less.js" type="text/javascript"></script>
 </head>
 
+
+<audio id="sound_click">
+  <source src="media/click.mp3" type="audio/mp3" />
+  <source src="media/click.ogg" type="audio/ogg" />
+</audio>
+
+
 <?php 
 require_once 'downloads/medoo.min.php';
 
@@ -141,8 +148,8 @@ $shortcuts = getShortcuts($database, $app_id);
 
                                     <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
                                     <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
-                                    <a class = "button" href="javascript:createApp()">Create</a>
-                                    <a class = "button" href="javascript:hideAppModal()">Cancel</a>
+                                    <a class = "button" href="javascript:createShortcut()" onmouseover = "sound_click.play()" >Create</a>
+                                    <a class = "button" href="javascript:hideShortcutModal()" onmouseover = "sound_click.play()" >Cancel</a>
                                     </div>
 
                                 </form>
