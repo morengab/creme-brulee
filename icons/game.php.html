@@ -1,0 +1,3870 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--[if IE]><![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- !CSS -->
+    <link href="game.php_files/css.css" rel="stylesheet" type="text/css">
+    <link href="game.php_files/css_002.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet/less" text="text/css" href="http://localhost:8888/creme-brulee/css/normalize.less"><style id="less:creme-brulee-css-normalize" type="text/css">/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+::-moz-selection {
+  background: #cccccc;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #cccccc;
+  color: #fff;
+  text-shadow: none;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 85%;
+}
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+/*
+ * Correct overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+/*
+ * Consistent box sizing and appearance
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+.ir br {
+  display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Clearing */
+/* #Base 960 Grid
+================================================== */
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+.container.plusfour {
+  position: relative;
+  width: 1200px;
+}
+.container.pluseight {
+  width: 1440px;
+}
+.column,
+.columns {
+  float: left;
+  display: inline;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.row {
+  margin-bottom: 20px;
+}
+/* Nested Column Classes */
+.column.alpha,
+.columns.alpha {
+  margin-left: 0!important;
+}
+.column.omega,
+.columns.omega {
+  margin-right: 0!important;
+}
+.column.alpha.omega,
+.columns.alpha.omega {
+  margin: 0!important;
+}
+.container {
+  /* Base Grid */
+
+  /* Offsets */
+
+}
+.container .one.column {
+  width: 40px;
+}
+.container .columns.two {
+  width: 100px;
+}
+.container .columns.three {
+  width: 160px;
+}
+.container .columns.four {
+  width: 220px;
+}
+.container .columns.five {
+  width: 280px;
+}
+.container .columns.six {
+  width: 340px;
+}
+.container .columns.seven {
+  width: 400px;
+}
+.container .columns.eight {
+  width: 460px;
+}
+.container .columns.nine {
+  width: 520px;
+}
+.container .columns.ten {
+  width: 580px;
+}
+.container .columns.eleven {
+  width: 640px;
+}
+.container .columns.twelve {
+  width: 700px;
+}
+.container .columns.thirteen {
+  width: 760px;
+}
+.container .columns.fourteen {
+  width: 820px;
+}
+.container .columns.fifteen {
+  width: 880px;
+}
+.container .columns.sixteen {
+  width: 940px;
+}
+.container .columns.twenty {
+  width: 1200px;
+}
+.container .columns.twentyfour {
+  width: 1420px;
+}
+.container .one-third.column {
+  width: 300px;
+}
+.container .two-thirds.column {
+  width: 620px;
+}
+.container .offset-by-one {
+  padding-left: 60px;
+}
+.container .offset-by-two {
+  padding-left: 120px;
+}
+.container .offset-by-three {
+  padding-left: 180px;
+}
+.container .offset-by-four {
+  padding-left: 240px;
+}
+.container .offset-by-five {
+  padding-left: 300px;
+}
+.container .offset-by-six {
+  padding-left: 360px;
+}
+.container .offset-by-seven {
+  padding-left: 420px;
+}
+.container .offset-by-eight {
+  padding-left: 480px;
+}
+.container .offset-by-nine {
+  padding-left: 540px;
+}
+.container .offset-by-ten {
+  padding-left: 600px;
+}
+.container .offset-by-eleven {
+  padding-left: 660px;
+}
+.container .offset-by-twelve {
+  padding-left: 720px;
+}
+.container .offset-by-thirteen {
+  padding-left: 780px;
+}
+.container .offset-by-fourteen {
+  padding-left: 840px;
+}
+.container .offset-by-fifteen {
+  padding-left: 900px;
+}
+/* #Clearing
+================================================== */
+/* Self Clearing Goodness */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+.row,
+.clearfix {
+  zoom: 1;
+}
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+</style>
+    <link rel="stylesheet/less" text="text/css" href="http://localhost:8888/creme-brulee/css/base.less"><style id="less:creme-brulee-css-base" type="text/css">/***************
+ * GLOBAL VARS *
+ ***************/
+html {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/testbackground-1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  color: rgba(194, 222, 230, 0.9);
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#left-col {
+  margin-top: 20px;
+}
+#main-col {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#my-modal {
+  width: 700px;
+  overflow: hidden;
+}
+#modal_container {
+  background-color: #0f1215;
+  opacity: .9;
+  position: relative;
+  overflow: hidden;
+}
+.program_selection {
+  display: block;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+/* unvisited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+/* visited link */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* mouse over link */
+a:active {
+  color: white;
+  text-decoration: none;
+}
+#program_selector {
+  width: 150px;
+  border: 1px solid white;
+  float: left;
+  margin: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  height: 150px;
+}
+#icon_holder {
+  display: block;
+  margin-top: 10px;
+  min-height: 400px;
+  float: left;
+}
+#logo {
+  width: 200px;
+  height: 60px;
+}
+.logo-main {
+  position: relative;
+  top: 100px;
+}
+.logo-modal {
+  margin: 0 auto;
+  text-align: center;
+}
+#start {
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
+}
+@keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+@-webkit-keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+#gameOver {
+  animation-name: flash_kf;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* Safari and Chrome: */
+
+  -webkit-animation-name: flash_kf;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  margin-top: 400px;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+.active-selections {
+  position: absolute;
+  text-align: left;
+  bottom: 50px;
+  left: -22px;
+}
+.active-selections li {
+  list-style: none;
+}
+.icon_selector {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.icon_selector:hover,
+.icon_selector.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+.new_shortcut {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  border-color: black;
+  background-image: url('http://localhost:8888/creme-brulee/css/../icons/plus_blue.png');
+}
+.new_shortcut:hover,
+.new_shortcut.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+#add-new-shortcut {
+  position: absolute;
+  bottom: 10px;
+  right: 17px;
+}
+.score {
+  height: 30px;
+  margin-bottom: 80px;
+}
+.score .points {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+.current-software #application-logo {
+  width: 200px;
+  height: 200px;
+}
+#lifebar {
+  width: 100%;
+  height: 30px;
+  background-color: #0d2136;
+}
+#lifebar-scale {
+  width: 0%;
+  height: 30px;
+  background: #5da5d4;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in, width 0.3s ease-in;
+}
+#lifebar-scale:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  width: 55%;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #235373;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  border: 1px solid #666;
+  opacity: 0.8;
+}
+.button:hover {
+  background-color: #5da5d4;
+}
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0;
+}
+.reveal-modal {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  width: 520px;
+  position: absolute;
+  z-index: 101;
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.reveal-modal.small {
+  width: 200px;
+  margin-left: -140px;
+}
+.reveal-modal.medium {
+  width: 400px;
+  margin-left: -240px;
+}
+.reveal-modal.large {
+  width: 600px;
+  margin-left: -340px;
+}
+.reveal-modal.xlarge {
+  width: 800px;
+  margin-left: -440px;
+}
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer;
+}
+.app-modal {
+  top: -213px;
+  background-color: #0f1215;
+}
+.app-modal form {
+  width: 285px;
+  margin: 20px auto;
+}
+.app-modal input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  width: 285px;
+  min-height: 30px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+.app-modal #result {
+  width: 285px;
+  margin: 20px auto;
+}
+#app_image_preview {
+  background-color: #777;
+  width: 285px;
+  min-height: 285px;
+  margin: 20px auto;
+}
+#app_image_preview img {
+  display: block;
+  margin: 0px auto;
+}
+#app_image_preview p {
+  margin: 10px;
+  font-size: 14px;
+}
+</style>
+    <link rel="stylesheet/less" text="text/css" href="http://localhost:8888/creme-brulee/css/icon.less"><style id="less:creme-brulee-css-icon" type="text/css">/***************
+ * GLOBAL VARS *
+ ***************/
+html {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/testbackground-1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  color: rgba(194, 222, 230, 0.9);
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#left-col {
+  margin-top: 20px;
+}
+#main-col {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#my-modal {
+  width: 700px;
+  overflow: hidden;
+}
+#modal_container {
+  background-color: #0f1215;
+  opacity: .9;
+  position: relative;
+  overflow: hidden;
+}
+.program_selection {
+  display: block;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+/* unvisited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+/* visited link */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* mouse over link */
+a:active {
+  color: white;
+  text-decoration: none;
+}
+#program_selector {
+  width: 150px;
+  border: 1px solid white;
+  float: left;
+  margin: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  height: 150px;
+}
+#icon_holder {
+  display: block;
+  margin-top: 10px;
+  min-height: 400px;
+  float: left;
+}
+#logo {
+  width: 200px;
+  height: 60px;
+}
+.logo-main {
+  position: relative;
+  top: 100px;
+}
+.logo-modal {
+  margin: 0 auto;
+  text-align: center;
+}
+#start {
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
+}
+@keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+@-webkit-keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+#gameOver {
+  animation-name: flash_kf;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* Safari and Chrome: */
+
+  -webkit-animation-name: flash_kf;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  margin-top: 400px;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+.active-selections {
+  position: absolute;
+  text-align: left;
+  bottom: 50px;
+  left: -22px;
+}
+.active-selections li {
+  list-style: none;
+}
+.icon_selector {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.icon_selector:hover,
+.icon_selector.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+.new_shortcut {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  border-color: black;
+  background-image: url('http://localhost:8888/creme-brulee/css/../icons/plus_blue.png');
+}
+.new_shortcut:hover,
+.new_shortcut.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+#add-new-shortcut {
+  position: absolute;
+  bottom: 10px;
+  right: 17px;
+}
+.score {
+  height: 30px;
+  margin-bottom: 80px;
+}
+.score .points {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+.current-software #application-logo {
+  width: 200px;
+  height: 200px;
+}
+#lifebar {
+  width: 100%;
+  height: 30px;
+  background-color: #0d2136;
+}
+#lifebar-scale {
+  width: 0%;
+  height: 30px;
+  background: #5da5d4;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in, width 0.3s ease-in;
+}
+#lifebar-scale:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  width: 55%;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #235373;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  border: 1px solid #666;
+  opacity: 0.8;
+}
+.button:hover {
+  background-color: #5da5d4;
+}
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0;
+}
+.reveal-modal {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  width: 520px;
+  position: absolute;
+  z-index: 101;
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.reveal-modal.small {
+  width: 200px;
+  margin-left: -140px;
+}
+.reveal-modal.medium {
+  width: 400px;
+  margin-left: -240px;
+}
+.reveal-modal.large {
+  width: 600px;
+  margin-left: -340px;
+}
+.reveal-modal.xlarge {
+  width: 800px;
+  margin-left: -440px;
+}
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer;
+}
+.app-modal {
+  top: -213px;
+  background-color: #0f1215;
+}
+.app-modal form {
+  width: 285px;
+  margin: 20px auto;
+}
+.app-modal input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  width: 285px;
+  min-height: 30px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+.app-modal #result {
+  width: 285px;
+  margin: 20px auto;
+}
+#app_image_preview {
+  background-color: #777;
+  width: 285px;
+  min-height: 285px;
+  margin: 20px auto;
+}
+#app_image_preview img {
+  display: block;
+  margin: 0px auto;
+}
+#app_image_preview p {
+  margin: 10px;
+  font-size: 14px;
+}
+#board {
+  height: 750px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.icon-background {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/ps_arrow.png') top left no-repeat transparent;
+  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  opacity: .5;
+  z-index: 3;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.icon {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/ps_arrow.png') top left no-repeat transparent;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in;
+  position: absolute;
+  z-index: 2;
+  -webkit-transition: box-shadow 0.4s ease;
+  -moz-transition: box-shadow 0.4s ease;
+  -ms-transition: box-shadow 0.4s ease;
+  -o-transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  -webkit-transition: opacity .2s ease;
+  -moz-transition: opacity .2s ease;
+  -ms-transition: opacity .2s ease;
+  -o-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.icon.press {
+  opacity: 0 !important;
+  -moz-transition: 0.3s ease-out;
+  -moz-transform: scale(1.2, 1.2);
+  -webkit-transition: 0.3s ease-out;
+  -webkit-transform: scale(1.4, 1.4);
+  -o-transition: 0.3s ease-out;
+  -o-transform: scale(1.2, 1.2);
+  -ms-transition: 0.3s ease-out;
+  -ms-transform: scale(1.2, 1.2);
+  transition: 0.3s ease-out;
+  transform: scale(1.2, 1.2);
+}
+.icon:hover {
+  opacity: 1.0;
+  cursor: pointer;
+}
+.icon.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  opacity: .9;
+}
+.icon span {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.super {
+  font-size: 30px;
+  width: 100px;
+  font-family: "Source Sans Pro";
+  color: #FFF;
+  position: absolute;
+  text-align: center;
+  top: 110px;
+  opacity: .5;
+  z-index: 100;
+}
+</style>
+    <link rel="stylesheet/less" text="text/css" href="http://localhost:8888/creme-brulee/css/eric-test-css.less"><style id="less:creme-brulee-css-eric-test-css" type="text/css">/***************
+ * GLOBAL VARS *
+ ***************/
+html {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/testbackground-1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  color: rgba(194, 222, 230, 0.9);
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#left-col {
+  margin-top: 20px;
+}
+#main-col {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#my-modal {
+  width: 700px;
+  overflow: hidden;
+}
+#modal_container {
+  background-color: #0f1215;
+  opacity: .9;
+  position: relative;
+  overflow: hidden;
+}
+.program_selection {
+  display: block;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+/* unvisited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+/* visited link */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* mouse over link */
+a:active {
+  color: white;
+  text-decoration: none;
+}
+#program_selector {
+  width: 150px;
+  border: 1px solid white;
+  float: left;
+  margin: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  height: 150px;
+}
+#icon_holder {
+  display: block;
+  margin-top: 10px;
+  min-height: 400px;
+  float: left;
+}
+#logo {
+  width: 200px;
+  height: 60px;
+}
+.logo-main {
+  position: relative;
+  top: 100px;
+}
+.logo-modal {
+  margin: 0 auto;
+  text-align: center;
+}
+#start {
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
+}
+@keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+@-webkit-keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+#gameOver {
+  animation-name: flash_kf;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* Safari and Chrome: */
+
+  -webkit-animation-name: flash_kf;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  margin-top: 400px;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+.active-selections {
+  position: absolute;
+  text-align: left;
+  bottom: 50px;
+  left: -22px;
+}
+.active-selections li {
+  list-style: none;
+}
+.icon_selector {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.icon_selector:hover,
+.icon_selector.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+.new_shortcut {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  border-color: black;
+  background-image: url('http://localhost:8888/creme-brulee/css/../icons/plus_blue.png');
+}
+.new_shortcut:hover,
+.new_shortcut.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+#add-new-shortcut {
+  position: absolute;
+  bottom: 10px;
+  right: 17px;
+}
+.score {
+  height: 30px;
+  margin-bottom: 80px;
+}
+.score .points {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+.current-software #application-logo {
+  width: 200px;
+  height: 200px;
+}
+#lifebar {
+  width: 100%;
+  height: 30px;
+  background-color: #0d2136;
+}
+#lifebar-scale {
+  width: 0%;
+  height: 30px;
+  background: #5da5d4;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in, width 0.3s ease-in;
+}
+#lifebar-scale:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  width: 55%;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #235373;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  border: 1px solid #666;
+  opacity: 0.8;
+}
+.button:hover {
+  background-color: #5da5d4;
+}
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0;
+}
+.reveal-modal {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  width: 520px;
+  position: absolute;
+  z-index: 101;
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.reveal-modal.small {
+  width: 200px;
+  margin-left: -140px;
+}
+.reveal-modal.medium {
+  width: 400px;
+  margin-left: -240px;
+}
+.reveal-modal.large {
+  width: 600px;
+  margin-left: -340px;
+}
+.reveal-modal.xlarge {
+  width: 800px;
+  margin-left: -440px;
+}
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer;
+}
+.app-modal {
+  top: -213px;
+  background-color: #0f1215;
+}
+.app-modal form {
+  width: 285px;
+  margin: 20px auto;
+}
+.app-modal input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  width: 285px;
+  min-height: 30px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+.app-modal #result {
+  width: 285px;
+  margin: 20px auto;
+}
+#app_image_preview {
+  background-color: #777;
+  width: 285px;
+  min-height: 285px;
+  margin: 20px auto;
+}
+#app_image_preview img {
+  display: block;
+  margin: 0px auto;
+}
+#app_image_preview p {
+  margin: 10px;
+  font-size: 14px;
+}
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+::-moz-selection {
+  background: #cccccc;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #cccccc;
+  color: #fff;
+  text-shadow: none;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 85%;
+}
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+/*
+ * Correct overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+/*
+ * Consistent box sizing and appearance
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+.ir br {
+  display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Clearing */
+/* #Base 960 Grid
+================================================== */
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+.container.plusfour {
+  position: relative;
+  width: 1200px;
+}
+.container.pluseight {
+  width: 1440px;
+}
+.column,
+.columns {
+  float: left;
+  display: inline;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.row {
+  margin-bottom: 20px;
+}
+/* Nested Column Classes */
+.column.alpha,
+.columns.alpha {
+  margin-left: 0!important;
+}
+.column.omega,
+.columns.omega {
+  margin-right: 0!important;
+}
+.column.alpha.omega,
+.columns.alpha.omega {
+  margin: 0!important;
+}
+.container {
+  /* Base Grid */
+
+  /* Offsets */
+
+}
+.container .one.column {
+  width: 40px;
+}
+.container .columns.two {
+  width: 100px;
+}
+.container .columns.three {
+  width: 160px;
+}
+.container .columns.four {
+  width: 220px;
+}
+.container .columns.five {
+  width: 280px;
+}
+.container .columns.six {
+  width: 340px;
+}
+.container .columns.seven {
+  width: 400px;
+}
+.container .columns.eight {
+  width: 460px;
+}
+.container .columns.nine {
+  width: 520px;
+}
+.container .columns.ten {
+  width: 580px;
+}
+.container .columns.eleven {
+  width: 640px;
+}
+.container .columns.twelve {
+  width: 700px;
+}
+.container .columns.thirteen {
+  width: 760px;
+}
+.container .columns.fourteen {
+  width: 820px;
+}
+.container .columns.fifteen {
+  width: 880px;
+}
+.container .columns.sixteen {
+  width: 940px;
+}
+.container .columns.twenty {
+  width: 1200px;
+}
+.container .columns.twentyfour {
+  width: 1420px;
+}
+.container .one-third.column {
+  width: 300px;
+}
+.container .two-thirds.column {
+  width: 620px;
+}
+.container .offset-by-one {
+  padding-left: 60px;
+}
+.container .offset-by-two {
+  padding-left: 120px;
+}
+.container .offset-by-three {
+  padding-left: 180px;
+}
+.container .offset-by-four {
+  padding-left: 240px;
+}
+.container .offset-by-five {
+  padding-left: 300px;
+}
+.container .offset-by-six {
+  padding-left: 360px;
+}
+.container .offset-by-seven {
+  padding-left: 420px;
+}
+.container .offset-by-eight {
+  padding-left: 480px;
+}
+.container .offset-by-nine {
+  padding-left: 540px;
+}
+.container .offset-by-ten {
+  padding-left: 600px;
+}
+.container .offset-by-eleven {
+  padding-left: 660px;
+}
+.container .offset-by-twelve {
+  padding-left: 720px;
+}
+.container .offset-by-thirteen {
+  padding-left: 780px;
+}
+.container .offset-by-fourteen {
+  padding-left: 840px;
+}
+.container .offset-by-fifteen {
+  padding-left: 900px;
+}
+/* #Clearing
+================================================== */
+/* Self Clearing Goodness */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+.row,
+.clearfix {
+  zoom: 1;
+}
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.app_front_plus {
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  width: 285px;
+  height: 285px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #5da5d4;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border: 1px solid #666;
+  float: left;
+}
+.app_front {
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  width: 285px;
+  height: 285px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #5da5d4;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border: 1px solid #666;
+  float: left;
+}
+.app_back {
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  width: 285px;
+  height: 285px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #5da5d4;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border: 1px solid #666;
+  opacity: 0.3;
+  float: left;
+}
+#logo2 {
+  width: 334px;
+  height: 200px;
+}
+.create {
+  position: fixed;
+  top: 30%;
+  left: 23%;
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 45px;
+}
+.play {
+  position: fixed;
+  top: 36%;
+  left: 36%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  font-size: 60px;
+}
+.whole_container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  /* Base Grid */
+
+  /* Offsets */
+
+}
+.whole_container .one.column {
+  width: 40px;
+}
+.whole_container .columns.two {
+  width: 100px;
+}
+.whole_container .columns.three {
+  width: 160px;
+}
+.whole_container .columns.four {
+  width: 220px;
+}
+.whole_container .columns.five {
+  width: 280px;
+}
+.whole_container .columns.six {
+  width: 340px;
+}
+.whole_container .columns.seven {
+  width: 400px;
+}
+.whole_container .columns.eight {
+  width: 460px;
+}
+.whole_container .columns.nine {
+  width: 520px;
+}
+.whole_container .columns.ten {
+  width: 580px;
+}
+.whole_container .columns.eleven {
+  width: 640px;
+}
+.whole_container .columns.twelve {
+  width: 700px;
+}
+.whole_container .columns.thirteen {
+  width: 760px;
+}
+.whole_container .columns.fourteen {
+  width: 820px;
+}
+.whole_container .columns.fifteen {
+  width: 880px;
+}
+.whole_container .columns.sixteen {
+  width: 940px;
+}
+.whole_container .columns.twenty {
+  width: 1200px;
+}
+.whole_container .columns.twentyfour {
+  width: 1420px;
+}
+.whole_container .one-third.column {
+  width: 300px;
+}
+.whole_container .two-thirds.column {
+  width: 620px;
+}
+.whole_container .offset-by-one {
+  padding-left: 60px;
+}
+.whole_container .offset-by-two {
+  padding-left: 120px;
+}
+.whole_container .offset-by-three {
+  padding-left: 180px;
+}
+.whole_container .offset-by-four {
+  padding-left: 240px;
+}
+.whole_container .offset-by-five {
+  padding-left: 300px;
+}
+.whole_container .offset-by-six {
+  padding-left: 360px;
+}
+.whole_container .offset-by-seven {
+  padding-left: 420px;
+}
+.whole_container .offset-by-eight {
+  padding-left: 480px;
+}
+.whole_container .offset-by-nine {
+  padding-left: 540px;
+}
+.whole_container .offset-by-ten {
+  padding-left: 600px;
+}
+.whole_container .offset-by-eleven {
+  padding-left: 660px;
+}
+.whole_container .offset-by-twelve {
+  padding-left: 720px;
+}
+.whole_container .offset-by-thirteen {
+  padding-left: 780px;
+}
+.whole_container .offset-by-fourteen {
+  padding-left: 840px;
+}
+.whole_container .offset-by-fifteen {
+  padding-left: 900px;
+}
+.head_container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  /* Base Grid */
+
+  /* Offsets */
+
+  padding-top: 50px;
+  text-align: center;
+}
+.head_container .one.column {
+  width: 40px;
+}
+.head_container .columns.two {
+  width: 100px;
+}
+.head_container .columns.three {
+  width: 160px;
+}
+.head_container .columns.four {
+  width: 220px;
+}
+.head_container .columns.five {
+  width: 280px;
+}
+.head_container .columns.six {
+  width: 340px;
+}
+.head_container .columns.seven {
+  width: 400px;
+}
+.head_container .columns.eight {
+  width: 460px;
+}
+.head_container .columns.nine {
+  width: 520px;
+}
+.head_container .columns.ten {
+  width: 580px;
+}
+.head_container .columns.eleven {
+  width: 640px;
+}
+.head_container .columns.twelve {
+  width: 700px;
+}
+.head_container .columns.thirteen {
+  width: 760px;
+}
+.head_container .columns.fourteen {
+  width: 820px;
+}
+.head_container .columns.fifteen {
+  width: 880px;
+}
+.head_container .columns.sixteen {
+  width: 940px;
+}
+.head_container .columns.twenty {
+  width: 1200px;
+}
+.head_container .columns.twentyfour {
+  width: 1420px;
+}
+.head_container .one-third.column {
+  width: 300px;
+}
+.head_container .two-thirds.column {
+  width: 620px;
+}
+.head_container .offset-by-one {
+  padding-left: 60px;
+}
+.head_container .offset-by-two {
+  padding-left: 120px;
+}
+.head_container .offset-by-three {
+  padding-left: 180px;
+}
+.head_container .offset-by-four {
+  padding-left: 240px;
+}
+.head_container .offset-by-five {
+  padding-left: 300px;
+}
+.head_container .offset-by-six {
+  padding-left: 360px;
+}
+.head_container .offset-by-seven {
+  padding-left: 420px;
+}
+.head_container .offset-by-eight {
+  padding-left: 480px;
+}
+.head_container .offset-by-nine {
+  padding-left: 540px;
+}
+.head_container .offset-by-ten {
+  padding-left: 600px;
+}
+.head_container .offset-by-eleven {
+  padding-left: 660px;
+}
+.head_container .offset-by-twelve {
+  padding-left: 720px;
+}
+.head_container .offset-by-thirteen {
+  padding-left: 780px;
+}
+.head_container .offset-by-fourteen {
+  padding-left: 840px;
+}
+.head_container .offset-by-fifteen {
+  padding-left: 900px;
+}
+.resize_logo {
+  width: 285px;
+  height: 285px;
+  padding-top: 6px;
+}
+.dark_shadow {
+  width: 285px;
+  height: 285px;
+  opacity: 0.5;
+}
+/* entire container, keeps perspective */
+.flip-container {
+  -webkit-perspective: perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  float: left;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.flip-container,
+.front,
+.back {
+  width: 285px;
+  height: 350px;
+  position: relative;
+}
+.flip-container h2,
+.front h2,
+.back h2 {
+  position: absolute;
+  bottom: 0px;
+}
+.flip-container .plays,
+.front .plays,
+.back .plays {
+  position: absolute;
+  bottom: 7px;
+  right: 0px;
+}
+/* flip speed goes here */
+.flipper {
+  -moz-transform: perspective 1000px;
+  -moz-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* hide back of pane during swap */
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 0.6s;
+  -ms-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.flip-container:hover .back,
+.flip-container.hover .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flip-container:hover .front,
+.flip-container.hover .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.front {
+  z-index: 2;
+}
+</style>
+    <link rel="stylesheet/less" text="text/css" href="http://localhost:8888/creme-brulee/css/create-app.less"><style id="less:creme-brulee-css-create-app" type="text/css">/***************
+ * GLOBAL VARS *
+ ***************/
+html {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/testbackground-1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  color: rgba(194, 222, 230, 0.9);
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#left-col {
+  margin-top: 20px;
+}
+#main-col {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.1);
+}
+#my-modal {
+  width: 700px;
+  overflow: hidden;
+}
+#modal_container {
+  background-color: #0f1215;
+  opacity: .9;
+  position: relative;
+  overflow: hidden;
+}
+.program_selection {
+  display: block;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+/* unvisited link */
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+/* visited link */
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* mouse over link */
+a:active {
+  color: white;
+  text-decoration: none;
+}
+#program_selector {
+  width: 150px;
+  border: 1px solid white;
+  float: left;
+  margin: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  height: 150px;
+}
+#icon_holder {
+  display: block;
+  margin-top: 10px;
+  min-height: 400px;
+  float: left;
+}
+#logo {
+  width: 200px;
+  height: 60px;
+}
+.logo-main {
+  position: relative;
+  top: 100px;
+}
+.logo-modal {
+  margin: 0 auto;
+  text-align: center;
+}
+#start {
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
+}
+@keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+@-webkit-keyframes flash_kf {
+  from {
+    color: black;
+  }
+  to {
+    color: #be1e2d;
+  }
+}
+#gameOver {
+  animation-name: flash_kf;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  /* Safari and Chrome: */
+
+  -webkit-animation-name: flash_kf;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  margin-top: 400px;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+.active-selections {
+  position: absolute;
+  text-align: left;
+  bottom: 50px;
+  left: -22px;
+}
+.active-selections li {
+  list-style: none;
+}
+.icon_selector {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.icon_selector:hover,
+.icon_selector.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+.new_shortcut {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+  display: block;
+  border: 1px solid white;
+  float: left;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/photoshop/crop.png') repeat center;
+  background-size: 60px 60px;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  border-color: black;
+  background-image: url('http://localhost:8888/creme-brulee/css/../icons/plus_blue.png');
+}
+.new_shortcut:hover,
+.new_shortcut.active {
+  -webkit-box-shadow: 0 0 15px #FFF;
+  -moz-box-shadow: 0 0 15px #FFF;
+  box-shadow: 0 0 15px #FFF;
+  border: 1px solid #0d2136;
+  opacity: .8;
+  cursor: pointer;
+}
+#add-new-shortcut {
+  position: absolute;
+  bottom: 10px;
+  right: 17px;
+}
+.score {
+  height: 30px;
+  margin-bottom: 80px;
+}
+.score .points {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+.current-software #application-logo {
+  width: 200px;
+  height: 200px;
+}
+#lifebar {
+  width: 100%;
+  height: 30px;
+  background-color: #0d2136;
+}
+#lifebar-scale {
+  width: 0%;
+  height: 30px;
+  background: #5da5d4;
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in, width 0.3s ease-in;
+}
+#lifebar-scale:hover {
+  opacity: 1.0;
+  cursor: pointer;
+  width: 55%;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  color: rgba(194, 222, 230, 0.9);
+  background-color: #235373;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  border: 1px solid #666;
+  opacity: 0.8;
+}
+.button:hover {
+  background-color: #5da5d4;
+}
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0;
+}
+.reveal-modal {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  width: 520px;
+  position: absolute;
+  z-index: 101;
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.reveal-modal.small {
+  width: 200px;
+  margin-left: -140px;
+}
+.reveal-modal.medium {
+  width: 400px;
+  margin-left: -240px;
+}
+.reveal-modal.large {
+  width: 600px;
+  margin-left: -340px;
+}
+.reveal-modal.xlarge {
+  width: 800px;
+  margin-left: -440px;
+}
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer;
+}
+.app-modal {
+  top: -213px;
+  background-color: #0f1215;
+}
+.app-modal form {
+  width: 285px;
+  margin: 20px auto;
+}
+.app-modal input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  width: 285px;
+  min-height: 30px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+.app-modal #result {
+  width: 285px;
+  margin: 20px auto;
+}
+#app_image_preview {
+  background-color: #777;
+  width: 285px;
+  min-height: 285px;
+  margin: 20px auto;
+}
+#app_image_preview img {
+  display: block;
+  margin: 0px auto;
+}
+#app_image_preview p {
+  margin: 10px;
+  font-size: 14px;
+}
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+::-moz-selection {
+  background: #cccccc;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #cccccc;
+  color: #fff;
+  text-shadow: none;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+a:focus {
+  outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 85%;
+}
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+/*
+ * Correct overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+/*
+ * Consistent box sizing and appearance
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+.ir br {
+  display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Clearing */
+/* #Base 960 Grid
+================================================== */
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+.container.plusfour {
+  position: relative;
+  width: 1200px;
+}
+.container.pluseight {
+  width: 1440px;
+}
+.column,
+.columns {
+  float: left;
+  display: inline;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.row {
+  margin-bottom: 20px;
+}
+/* Nested Column Classes */
+.column.alpha,
+.columns.alpha {
+  margin-left: 0!important;
+}
+.column.omega,
+.columns.omega {
+  margin-right: 0!important;
+}
+.column.alpha.omega,
+.columns.alpha.omega {
+  margin: 0!important;
+}
+.container {
+  /* Base Grid */
+
+  /* Offsets */
+
+}
+.container .one.column {
+  width: 40px;
+}
+.container .columns.two {
+  width: 100px;
+}
+.container .columns.three {
+  width: 160px;
+}
+.container .columns.four {
+  width: 220px;
+}
+.container .columns.five {
+  width: 280px;
+}
+.container .columns.six {
+  width: 340px;
+}
+.container .columns.seven {
+  width: 400px;
+}
+.container .columns.eight {
+  width: 460px;
+}
+.container .columns.nine {
+  width: 520px;
+}
+.container .columns.ten {
+  width: 580px;
+}
+.container .columns.eleven {
+  width: 640px;
+}
+.container .columns.twelve {
+  width: 700px;
+}
+.container .columns.thirteen {
+  width: 760px;
+}
+.container .columns.fourteen {
+  width: 820px;
+}
+.container .columns.fifteen {
+  width: 880px;
+}
+.container .columns.sixteen {
+  width: 940px;
+}
+.container .columns.twenty {
+  width: 1200px;
+}
+.container .columns.twentyfour {
+  width: 1420px;
+}
+.container .one-third.column {
+  width: 300px;
+}
+.container .two-thirds.column {
+  width: 620px;
+}
+.container .offset-by-one {
+  padding-left: 60px;
+}
+.container .offset-by-two {
+  padding-left: 120px;
+}
+.container .offset-by-three {
+  padding-left: 180px;
+}
+.container .offset-by-four {
+  padding-left: 240px;
+}
+.container .offset-by-five {
+  padding-left: 300px;
+}
+.container .offset-by-six {
+  padding-left: 360px;
+}
+.container .offset-by-seven {
+  padding-left: 420px;
+}
+.container .offset-by-eight {
+  padding-left: 480px;
+}
+.container .offset-by-nine {
+  padding-left: 540px;
+}
+.container .offset-by-ten {
+  padding-left: 600px;
+}
+.container .offset-by-eleven {
+  padding-left: 660px;
+}
+.container .offset-by-twelve {
+  padding-left: 720px;
+}
+.container .offset-by-thirteen {
+  padding-left: 780px;
+}
+.container .offset-by-fourteen {
+  padding-left: 840px;
+}
+.container .offset-by-fifteen {
+  padding-left: 900px;
+}
+/* #Clearing
+================================================== */
+/* Self Clearing Goodness */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+.row,
+.clearfix {
+  zoom: 1;
+}
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.create_app_header {
+  padding-top: 50px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
+  font-size: 80px;
+}
+.head_container_left {
+  padding: 10px;
+  float: left;
+}
+.create_app_title {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+}
+.text {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+.textbox_container1 {
+  float: left;
+  width: 170px;
+  height: 200px;
+}
+.interactive_button {
+  border-top: 1px solid #96d1f8;
+  background: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2eabff), to(#000000));
+  background: -webkit-linear-gradient(top, #2eabff, #000000);
+  background: -moz-linear-gradient(top, #2eabff, #000000);
+  background: -ms-linear-gradient(top, #2eabff, #000000);
+  background: -o-linear-gradient(top, #2eabff, #000000);
+  padding: 10px 20px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  -webkit-box-shadow: #000000 0 1px 0;
+  -moz-box-shadow: #000000 0 1px 0;
+  box-shadow: #000000 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.interactive_button:hover {
+  border-top-color: #3999d4;
+  background: #3999d4;
+  color: #ffffff;
+}
+.interactive_button:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+}
+.textbox1 {
+  border: 2px solid #000000;
+  height: 31px;
+  width: 100px;
+  box-shadow: 0px 0px 20px #000000 inset;
+  transition: 500ms all ease;
+  padding: 3px 3px 3px 3px;
+}
+.textbox1:hover,
+.textbox1:focus {
+  width: 110px;
+  transition: 500ms all ease;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/plus_blue.png') no-repeat right;
+  background-size: 25px 25px;
+  background-position: 96% 62%;
+  padding: 3px 32px 3px 3px;
+  color: white;
+}
+.textbox.short {
+  border: 2px solid #000000;
+  height: 31px;
+  width: 50px;
+  box-shadow: 0px 0px 20px #000000 inset;
+  transition: 500ms all ease;
+  padding: 3px 3px 3px 3px;
+  font-size: 12px;
+  float: left;
+}
+.textbox.short:hover,
+.textbox.short:focus {
+  width: 50px;
+  transition: 500ms all ease;
+  background: url('http://localhost:8888/creme-brulee/css/../icons/plus_blue.png') no-repeat right;
+  background-size: 25px 25px;
+  background-position: 96% 62%;
+  padding: 3px 32px 3px 3px;
+  color: white;
+  float: left;
+}
+#cssmenu {
+  border: none;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  font: 67.5%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+#cssmenu ul {
+  /* background: #333333;*/
+
+  height: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu li {
+  float: left;
+  padding: 0px;
+}
+#cssmenu li a {
+  background: #333333 url('http://localhost:8888/creme-brulee/css/../icons/seperator.png') bottom right no-repeat;
+  display: block;
+  font-weight: normal;
+  line-height: 42px;
+  margin: 0px;
+  padding: 0px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+#cssmenu > ul > li > a {
+  color: #cccccc;
+}
+#cssmenu ul ul a {
+  color: #cccccc;
+}
+#cssmenu li > a:hover,
+#cssmenu ul li:hover > a {
+  background: #78dbff url('http://localhost:8888/creme-brulee/css/../icons/hover.png') bottom center no-repeat;
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px #cccccc inset;
+  transition: 500ms all ease;
+}
+#cssmenu li ul {
+  background: #333333;
+  display: none;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 225px;
+  z-index: 200;
+  /*top:1em;
+  /*left:0;*/
+
+}
+#cssmenu li:hover ul {
+  display: block;
+  box-shadow: 0px 0px 20px #cccccc inset;
+  transition: 500ms all ease;
+}
+#cssmenu li li {
+  background: url('http://localhost:8888/creme-brulee/css/../icons/sub_sep.png') bottom left no-repeat;
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: 225px;
+}
+#cssmenu li:hover li a {
+  background: none;
+  box-shadow: 0px 0px 20px #cccccc inset;
+  transition: 500ms all ease;
+}
+#cssmenu li ul a {
+  display: block;
+  height: 35px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
+}
+#cssmenu li ul a:hover,
+#cssmenu li ul li:hover > a {
+  background: #78dbff url('http://localhost:8888/creme-brulee/css/../icons/hover_sub.png') center left no-repeat;
+  border: 0px;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px #cccccc inset;
+  transition: 500ms all ease;
+}
+#cssmenu p {
+  clear: left;
+}
+</style>
+    <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+    <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">  -->
+    <!-- !Modernizr - All other JS at bottom -->
+    <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <style>
+    input {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border:1px solid #ccc;
+      font-size:20px;
+      width:300px;
+      min-height:30px;
+      display:block;
+      margin-bottom:15px;
+      margin-top:5px;
+      outline: none;
+
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      -o-border-radius:5px;
+      -ms-border-radius:5px;
+      border-radius:5px;
+    }
+  </style>
+    <script src="game.php_files/less.js" type="text/javascript"></script>
+</head>
+
+
+<body><audio id="sound_click">
+  <source src="game.php_files/click.mp3" type="audio/mp3">
+  <source src="game.php_files/click.ogg" type="audio/ogg">
+</audio>
+
+
+
+    <div id="container">   
+        <section class="container" id="main">       
+            <div class="four columns alpha" id="left-col">
+                
+                <div class="score">
+                    <div>
+                        <span class="points">0</span> points
+                    </div>
+                    <div>
+                        <span class="scoreStreak">0</span> in a row | <span class="scoreMultiplier">1</span>x multiplier | <span class="percentage">0</span>% correct 
+                    </div>
+                </div>
+                
+                <div class="current-software" id="buttons">
+                    <img id="application-logo" src="game.php_files/Illustrator.png">
+                    <h2><span id="application-name">Illustrator</span></h2>
+                    <button class="button" id="new-game">New Game</button>
+                    
+                    <button class="button" id="reset">Reset</button>
+
+                    <img id="logo" class="logo-main" src="game.php_files/logo.png" alt="tut tut revolution logo">
+                </div>
+                
+                <div style="opacity: 1; visibility: visible; top: 510px;" id="my-modal" class="reveal-modal">
+                    <div id="modal_container">
+                        <h1>Illustrator</h1>
+                        <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
+                        <h2>Select 4 shortcuts you would like to train on.</h2>
+                        <div id="icon_holder">  
+                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style="height: 240px; display: block;">           
+                                    <div>
+                                        <div class="textbox_container1"> 
+                                            <div class="text"> Shortcut name </div>
+                                            <br>
+                                            <input value="dfjskh" class="textbox1" onmouseover="sound_click.play()" placeholder="Name" type="text"> 
+                                            <br>
+                                            <br>
+                                        </div> <!-- end .textbox_container1 -->
+
+                                        <div class="textbox_container1"> 
+                                            <div class="text"> Press shortcut </div>
+                                            <br>
+                                            <input value="k" class="textbox short" onmouseover="sound_click.play()" placeholder="1st key" maxlength="1" type="text">
+                                            <input value="k" class="textbox short" onmouseover="sound_click.play()" placeholder="(optional)" maxlength="1" type="text">
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                        <div class="textbox_container1">    
+                                            <div class="text"> Image</div>
+                                            <br>
+                                            <input class="textbox1" onmouseover="sound_click.play()" placeholder="URL" type="text"> 
+                                             
+                                               <!-- form should of uploading img be here -->
+                                            
+                                            OR 
+                                            <input class="button" name="shortcut_image" id="shortcut_image" style="width: 150px" required="" type="file">
+                                            <br><br>
+                                        </div>
+                                        <div class="textbox_container1"> 
+                                            <div class="text"> Preview Image </div>
+                                            <br>
+                                            
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                    <br><br>
+
+                                    <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
+                                    <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
+                                    <a class="button" href="javascript:createShortcut()" onmouseover="sound_click.play()">Create</a>
+                                    <a class="button" href="javascript:hideShortcutModal()" onmouseover="sound_click.play()">Cancel</a>
+                                    </div></form>
+
+                                
+
+                            
+                            <div class="new_shortcut"></div>
+
+                                                        <div class="icon_selector" id="icon-41" data-id="41" data-shortcut="C" data-name="Crop" style="background-image:url('');">   
+                            </div>
+                                                    </div>
+                        
+                        
+                        <ul class="active-selections">
+                            Currently selected tools:
+                        </ul>
+
+                        <button class="button" id="start">Start</button>  
+                    </div>
+                </div><div style="display: block;" class="reveal-modal-bg"></div>
+            </div>
+
+            <div class="twelve columns omega" id="main-col">
+                <div class="row" id="top-row">
+                    <div id="lifebar">
+                        <div id="lifebar-scale"></div>
+                    </div>
+                </div>
+                <div class="row" id="board">
+                    <div class="three columns alpha" id="col1-board">
+                        <div class="icon-background"></div>
+                    </div>
+                    <div class="three columns" id="col2-board">
+                        <div class="icon-background"></div>
+                    </div>
+                    <div class="three columns" id="col3-board">
+                        <div class="icon-background"></div>
+                    </div>
+                    <div class="three columns omega" id="col4-board">
+                        <div class="icon-background"></div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /main -->        
+        <footer>
+        </footer><!-- /footer -->
+    </div><!--!/#container -->
+    <div style="width: 0px; height: 0px;" id="music"><img style="width: 0px; height: 0px; display: none;" id="jp_poster_0"><object style="width: 0px; height: 0px;" tabindex="-1" type="application/x-shockwave-flash" data="game.php_files/Jplayer.swf" name="jp_flash_0" id="jp_flash_0" height="1" width="1"><param value="jQuery=jQuery&amp;id=music&amp;vol=0.8&amp;muted=false" name="flashvars"><param value="always" name="allowscriptaccess"><param value="#000000" name="bgcolor"><param value="opaque" name="wmode"></object></div>
+    <!-- !Javascript - at the bottom for fast page loading -->
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+    <script src="game.php_files/jquery.js"></script>
+    <script>!window.jQuery && document.write('<script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>')</script>
+    
+    <script src="game.php_files/scoring.js"></script>
+    <script src="game.php_files/hotkeys.js"></script>
+    <script src="game.php_files/jquery_003.js"></script>
+    <script src="game.php_files/jquery_002.js"></script>
+    <script src="game.php_files/game.js"></script>
+    <script src="game.php_files/edit.js"></script>
+    
+
+</body></html>

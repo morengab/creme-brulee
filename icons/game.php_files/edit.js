@@ -36,32 +36,7 @@ function hideShortcutModal() {
 function createShortcut() {
 
 
-// magically put shortcuts users created and put them into database
+// magically put shortcuts users created into database
 
 
-}
-
-$j(document).ready(function() {
-    
-    $j("input#shortcut_image").change(function (event){
-        previewFile(event.target.files[0]);
-    });
-});
-
-
-function previewFile(file) {
-    var preview = document.getElementById("shortcut_image_preview");
-    if (typeof FileReader != 'undefined') {
-        var reader = new FileReader();
-        reader.onload = function (event) {
-            var image = new Image();
-            image.src = event.target.result;
-            image.width = 100; // a fake resize
-            preview.innerHTML = "";
-            preview.appendChild(image);
-        };
-        reader.readAsDataURL(file);
-    } else {
-        preview.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '');
-    }
 }

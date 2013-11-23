@@ -134,16 +134,23 @@ $shortcuts = getShortcuts($database, $app_id);
                                             <br><br> 
                                         </div> <!-- end .textbox_container1 -->
                                         <div class = "textbox_container1">    
-                                            <div class ="text"> Image URL </div>
+                                            <div class ="text"> Image</div>
                                             <br>
-                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
                                             <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
                                                <!-- form should of uploading img be here -->
                                             </form>
                                             OR 
-                                            <button class="button" onmouseover="sound_click.play()">Browse</button>  
+                                            <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
                                             <br><br>
                                         </div>
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Preview Image </div>
+                                            <br>
+                                            <div id="shortcut_image_preview"></div>
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
                                     <br><br>
 
                                     <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
