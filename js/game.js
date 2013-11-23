@@ -171,7 +171,6 @@ function incPlayCount () {
 			console.log(xhr.responseText);
 			console.log(textStatus);
 			console.log(error);
-			debugger;
 		},
 		dataType: "json"
 	});
