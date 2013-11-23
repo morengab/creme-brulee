@@ -78,7 +78,7 @@ $database = new medoo('macadamia_cluster_02');
 					<div class="back" onmouseout = "sound.play()"> 
 						<a href = "<?php echo 'game.php?id='. $app['id']; ?>">
 							<div class="app_back"><img class = "resize_logo" src = "<?php echo $app['image_url'];?>"> </div>
-							<div class= "play"> PLAY</div>
+							<div class= "play">PLAY</div>
 						</a>
 					</div>
 				</div>
@@ -89,13 +89,12 @@ $database = new medoo('macadamia_cluster_02');
 		</div>
 		
 		<div id="my-modal" class="reveal-modal app-modal">
-            
             <form enctype="multipart/form-data" method="post" name="fileinfo" id="create_app">
             	<label>Name</label>
 		        <input type="text" name="app_name" autocomplete="on" maxlength="64" value="Illustrator" id="app_name" required />
             	
             	<label>Image</label>
-		        <input type="file" name="app_image" id="app_image"/>
+		        <input type="file" name="app_image" id="app_image" required/>
 		    	
             	<div id="app_image_preview"></div>
 

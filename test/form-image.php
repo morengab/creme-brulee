@@ -46,9 +46,12 @@
             xhr.open("POST", "stash.php", true);
             xhr.onload = function(oEvent) {
                 if (xhr.status == 200) {
+                    console.log(xhr);
+                    console.log(xhr.status);
+
                     result.innerHTML = xhr.responseText;
                 } else {
-                    result.innerHTML = "Error " + xhr.status + " occurred uploading your file.<br \/>";
+                    result.innerHTML = "Error " + xhr.status + " occurred.";
                 }
             };
 

@@ -3,7 +3,7 @@ $j = jQuery.noConflict();
 $j(document).ready(function() {
     showAppModal();
     
-    $j("#app_image").change(function(event){
+    $j("input#app_image").change(function (event){
         previewFile(event.target.files[0]);
     });
 });
@@ -46,13 +46,13 @@ function createApp() {
     xhr.open("POST", "bin/create-app.php", true);
     xhr.onload = function(e) {
         if (xhr.status == 200) {
-            hideAppModal();
+            //hideAppModal();
             console.log(xhr.responseText);
             result.innerHTML = xhr.responseText;
         } else {
-            result.innerHTML = "Error " + xhr.status + " occurred uploading your file.<br \/>";
+            result.innerHTML = "Error " + xhr.status + " occurred.<br \/>";
         }
     };
-
+    debugger;
     xhr.send(formData);
 }
