@@ -5,6 +5,7 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+
     <meta charset="utf-8">
     <!--[if IE]><![endif]-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -56,6 +57,10 @@
   <source src="media/click.ogg" type="audio/ogg" />
 </audio>
 
+<audio id="sound_open">
+  <source src="media/open.mp3" type="audio/mp3" />
+  <source src="media/open.ogg" type="audio/ogg" />
+</audio>
 
 <?php 
 require_once 'downloads/medoo.min.php';
