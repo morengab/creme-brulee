@@ -5,6 +5,7 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+
     <meta charset="utf-8">
     <!--[if IE]><![endif]-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -49,6 +50,17 @@
   </style>
     <script src="js/less.js" type="text/javascript"></script>
 </head>
+
+
+<audio id="sound_click">
+  <source src="media/click.mp3" type="audio/mp3" />
+  <source src="media/click.ogg" type="audio/ogg" />
+</audio>
+
+<audio id="sound_open">
+  <source src="media/open.mp3" type="audio/mp3" />
+  <source src="media/open.ogg" type="audio/ogg" />
+</audio>
 
 <?php 
 require_once 'downloads/medoo.min.php';
@@ -106,20 +118,58 @@ $shortcuts = getShortcuts($database, $app_id);
                     <div id="modal_container">
                         <h1><?php echo $app["name"]; ?></h1>
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
-                        <h2>Select 4 shortcuts you would like to train on.</h2>
+                        <h2>Select 4 shortcuts you would like to train on..</h2>
                         <div id="icon_holder">  
-                            <form method="post" action="game.php" name="create_shortcut" id="create_shortcut">
-                               <!--  <div class ="text"> Name </div><br> -->
-                                <input type="text" name="shortcut" id="shortcut_code" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
-                              <!--   <div class ="text"> Press here </div><br> -->
-                                <input type="text" name="shortcut" id="shortcut_press" required class="textbox1" onmouseover = "sound_click.play()"> <br><br>
-                                <label>Image:</label>
-                                <input type="text" name="image_url" id="shortcode_image_url" />
-                                <input type="hidden" name="app_id" value="<?php echo $app_id; ?>"/>
-                                <input type="submit" value="Create Shortcut" />
-                            </form>
+                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style = "height: 240px">           
+                                    <div>
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Shortcut name </div>
+                                            <br>
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name"> 
+                                            <br>
+                                            <br>
+                                        </div> <!-- end .textbox_container1 -->
+
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Press shortcut </div>
+                                            <br>
+                                            <input type ="text" class="textbox short" onkeypress = "showKey(event)" onmouseover = "sound_click.play()" placeholder ="1st key" maxlength = "3" />
+                    
+                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" />
+                                            <br> <br> 
+                                            <p id ="showKey" class ="text"> None </p>
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                        <div class = "textbox_container1">    
+                                            <div class ="text"> Image</div>
+                                            <br>
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
+                                            <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
+                                               <!-- form should of uploading img be here -->
+                                            </form>
+                                            OR 
+                                            <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
+                                            <br><br>
+                                        </div>
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Preview Image </div>
+                                            <br>
+                                            <div id="shortcut_image_preview"></div>
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                    <br><br>
+
+                                    <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
+                                    <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
+                                    <a class = "button" href="javascript:createShortcut()" onmouseover = "sound_click.play()" >Create</a>
+                                    <a class = "button" href="javascript:hideShortcutModal()" onmouseover = "sound_click.play()" >Cancel</a>
+                                    </div>
+
+                                </form>
+
                             
-                            <div class="new_shortcut"></div>
+                            <div class="new_shortcut" onmousedown = "sound_open.play()" ></div>
 
                             <?php                            
                             foreach ($shortcuts as $sc):
@@ -136,6 +186,7 @@ $shortcuts = getShortcuts($database, $app_id);
                             endforeach;
                             ?>
                         </div>
+                        
                         
                         <ul class="active-selections">
                             Currently selected tools:
@@ -183,6 +234,7 @@ $shortcuts = getShortcuts($database, $app_id);
     <script src="js/jquery.jplayer.min.js"></script>
     <script src="js/game.js"></script>
     <script src="js/edit.js"></script>
+    <script src="js/keypress.js"></script>
     
 </body>
 </html>
