@@ -118,7 +118,7 @@ $shortcuts = getShortcuts($database, $app_id);
                     <div id="modal_container">
                         <h1><?php echo $app["name"]; ?></h1>
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
-                        <h2>Select 4 shortcuts you would like to train on.</h2>
+                        <h2>Select 4 shortcuts you would like to train on..</h2>
                         <div id="icon_holder">  
                                 <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style = "height: 240px">           
                                     <div>
@@ -167,7 +167,7 @@ $shortcuts = getShortcuts($database, $app_id);
                                 </form>
 
                             
-                            <div class="new_shortcut"></div>
+                            <div class="new_shortcut" onmousedown = "sound_open.play()" ></div>
 
                             <?php                            
                             foreach ($shortcuts as $sc):
