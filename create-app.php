@@ -5,10 +5,11 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+
     <meta charset="utf-8">
     <!--[if IE]><![endif]-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Create App</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="keywords" content="" />
     <meta name="author" content="">
@@ -21,163 +22,216 @@
     <link rel="stylesheet/less" text="text/css" href="css/icon.less">
     <link rel="stylesheet/less" text="text/css" href="css/eric-test-css.less">
     <link rel="stylesheet/less" text="text/css" href="css/create-app.less">
-
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
     <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">  -->
     <!-- !Modernizr - All other JS at bottom -->
     <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+
+    <style>
+    input {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border:1px solid #ccc;
+      font-size:20px;
+      width:300px;
+      min-height:30px;
+      display:block;
+      margin-bottom:15px;
+      margin-top:5px;
+      outline: none;
+
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      -o-border-radius:5px;
+      -ms-border-radius:5px;
+      border-radius:5px;
+    }
+  </style>
     <script src="js/less.js" type="text/javascript"></script>
 </head>
+
 
 <audio id="sound_click">
   <source src="media/click.mp3" type="audio/mp3" />
   <source src="media/click.ogg" type="audio/ogg" />
 </audio>
 
-<script type="text/javascript">
-    var sound = document.getElementById("sound_click");
-    document.getElementById("sound_click").defaultPlaybackRate = 1.5;
-</script>
+<audio id="sound_open">
+  <source src="media/open.mp3" type="audio/mp3" />
+  <source src="media/open.ogg" type="audio/ogg" />
+</audio>
 
-<body>     
-    <div class = "container plusfour">
+<?php 
+require_once 'downloads/medoo.min.php';
+
+$database = new medoo('macadamia_cluster_02');
 
 
-        <div class ="create_app_header"> Create App </div>
+$app_id = $_GET["id"];
 
-        <br><br>
+$app = $database->get("apps", "*", ["id"=>$app_id]);
 
-        <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
-            <label class="create_app_title">App Title</label><br>
-            <input type="text" name="name" id="textbox1 app_name" />
-            <br><br>
-            <label class="create_app_title">Image Url</label><br>
-            <input type="text" name="image_url" id="textbox1 app_image_url" />
-            <input type="submit" class="browse_button" value="Create App" />
-        </form> -->
-        <form method="post" action="bin/create-app.php" name="create-app" id="create-app">
-            <div class = "textbox_container1"> 
-                <label class="create_app_title">App Title</label>
-                <input type="text" name="app_name" class="textbox1" onmouseover="sound_click.play()" autofocus> 
-            </div>
+function getShortcuts($database, $app_id) {
+    $shortcuts = $database->select("shortcuts", [
+        "shortcuts.id",
+        "shortcuts.app_id",
+        "shortcuts.name",
+        "shortcuts.shortcut",
+        "shortcuts.image_url"
+    ], [
+        "shortcuts.app_id" => $app_id,
+        "ORDER" => "shortcuts.name ASC",
+        "LIMIT" => 50
+    ]);
+    return $shortcuts;
+}
 
-            <div class = "textbox_container3"> 
-                <div class = "create_app_title"> Image URL </div>
-                <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
-                <button class = "browse_button" onmouseover = "sound_click.play()">Browse</button>
-            </div>
+$shortcuts = getShortcuts($database, $app_id);
 
-            <br>
-            <br>
-           
-            <div>
-                <div class = "textbox_container1"> 
-                    <div class ="text"> Shortcut name </div>
-                    <br>
-                    <input type="text" class="textbox1" onmouseover = "sound_click.play()"> 
-                    <br>
-                    <br>
-                </div> <!-- end .textbox_container1 -->
-
-                <div class = "textbox_container2"> 
-                    <div class ="text"> Select shortcut here </div>
-                    <br>
-                    <div id='cssmenu'>
-                        <ul>
-                           <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 1</span></a>
-                                <ul>
-                                     <li><a href='#'><span>Ctrl</span></a></li>
-                                     <li><a href='#'><span>Alt</span></a></li>
-                                     <li><a href='#'><span>Shift</span></a></li>
-                                     <li><a href='#'><span>A</span></a></li>
-                                     <li><a href='#'><span>B</span></a></li>
-                                     <li><a href='#'><span>C</span></a></li>
-                                     <li><a href='#'><span>D</span></a></li>
-                                     <li><a href='#'><span>E</span></a></li>
-                                     <li><a href='#'><span>F</span></a></li>
-                                     <li><a href='#'><span>G</span></a></li>
-                                     <li><a href='#'><span>H</span></a></li>
-                                     <li><a href='#'><span>I</span></a></li>
-                                     <li><a href='#'><span>J</span></a></li>
-                                     <li><a href='#'><span>K</span></a></li>
-                                     <li><a href='#'><span>L</span></a></li>
-                                     <li><a href='#'><span>M</span></a></li>
-                                     <li><a href='#'><span>N</span></a></li>
-                                     <li><a href='#'><span>O</span></a></li>
-                                     <li><a href='#'><span>P</span></a></li>
-                                     <li><a href='#'><span>Q</span></a></li>
-                                     <li><a href='#'><span>R</span></a></li>
-                                     <li><a href='#'><span>S</span></a></li>
-                                     <li><a href='#'><span>T</span></a></li>
-                                     <li><a href='#'><span>U</span></a></li>
-                                     <li><a href='#'><span>V</span></a></li>
-                                     <li><a href='#'><span>W</span></a></li>
-                                     <li><a href='#'><span>X</span></a></li>
-                                     <li><a href='#'><span>Y</span></a></li>
-                                     <li><a href='#'><span>Z</span></a></li>
-                                </ul>
-                            </li>
-                           
-                            <li class='has-sub' onmouseover = "sound_click.play()"><a href='#'><span>Key 2</span></a>
-                                <ul>
-                                     <li><a href='#'><span>Ctrl</span></a></li>
-                                     <li><a href='#'><span>Alt</span></a></li>
-                                     <li><a href='#'><span>Shift</span></a></li>
-                                     <li><a href='#'><span>A</span></a></li>
-                                     <li><a href='#'><span>B</span></a></li>
-                                     <li><a href='#'><span>C</span></a></li>
-                                     <li><a href='#'><span>D</span></a></li>
-                                     <li><a href='#'><span>E</span></a></li>
-                                     <li><a href='#'><span>F</span></a></li>
-                                     <li><a href='#'><span>G</span></a></li>
-                                     <li><a href='#'><span>H</span></a></li>
-                                     <li><a href='#'><span>I</span></a></li>
-                                     <li><a href='#'><span>J</span></a></li>
-                                     <li><a href='#'><span>K</span></a></li>
-                                     <li><a href='#'><span>L</span></a></li>
-                                     <li><a href='#'><span>M</span></a></li>
-                                     <li><a href='#'><span>N</span></a></li>
-                                     <li><a href='#'><span>O</span></a></li>
-                                     <li><a href='#'><span>P</span></a></li>
-                                     <li><a href='#'><span>Q</span></a></li>
-                                     <li><a href='#'><span>R</span></a></li>
-                                     <li><a href='#'><span>S</span></a></li>
-                                     <li><a href='#'><span>T</span></a></li>
-                                     <li><a href='#'><span>U</span></a></li>
-                                     <li><a href='#'><span>V</span></a></li>
-                                     <li><a href='#'><span>W</span></a></li>
-                                     <li><a href='#'><span>X</span></a></li>
-                                     <li><a href='#'><span>Y</span></a></li>
-                                     <li><a href='#'><span>Z</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
+?>
+<body>
+    <div id="container">   
+        <section class="container" id="main">       
+            <div class="four columns alpha" id="left-col">
+                
+                <div class="score">
+                    <div>
+                        <span class="points">0</span> points
                     </div>
-                    <br><br> 
-                </div> <!-- end .textbox_container2 -->
+                    <div>
+                        <span class="scoreStreak">0</span> in a row | <span class="scoreMultiplier">1</span>x multiplier | <span class="percentage">0</span>% correct 
+                    </div>
+                </div>
+                
+                <div class="current-software" id="buttons">
+                    <img id="application-logo" src="<?php echo $app["image_url"]; ?>">
+                    <h2><span id="application-name"><?php echo $app["name"]; ?></span></h2>
+                    <button class="button" id="new-game">New Game</button>
+                    
+                    <button class="button" id="reset">Reset</button>
 
-                <div class = "textbox_container3"> 
-                    <div class ="text"> Image URL </div>
-                    <br>
-                    <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
-                    <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> <br>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-                        or Choose a file to upload: 
-                        <input name="uploadedfile"  type="file" class = "interactive_button" onmouseover = "sound_click.play()"/>
-                        <!-- <input type="submit" value="Upload File" align="right" class = "interactive_button" onmouseover = "sound_click.play()" /> -->
-                    </form>
-                    <button class="interactive_button" onmouseover="sound_click.play()">Browse</button> 
-                    <input type="submit" class="interactive_button" onmouseover="sound_click.play()" value="Submit">
-                    <br><br>
-                </div> <!-- end .textbox_container3 -->
+                    <img id="logo" class="logo-main" src="icons/logo.png" alt="tut tut revolution logo">
+                </div>
+                
+                <div id="my-modal" class="reveal-modal">
+                    <div id="modal_container">
+                        <h1><?php echo $app["name"]; ?></h1>
+                        <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
+                        <h2>Select 4 shortcuts you would like to train on..</h2>
+                        <div id="icon_holder">  
+                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style = "height: 240px">           
+                                    <div>
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Shortcut name </div>
+                                            <br>
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name"> 
+                                            <br>
+                                            <br>
+                                        </div> <!-- end .textbox_container1 -->
+
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Press shortcut </div>
+                                            <br>
+                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="1st key" maxlength = "1" />
+                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" />
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                        <div class = "textbox_container1">    
+                                            <div class ="text"> Image</div>
+                                            <br>
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
+                                            <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
+                                               <!-- form should of uploading img be here -->
+                                            </form>
+                                            OR 
+                                            <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
+                                            <br><br>
+                                        </div>
+                                        <div class = "textbox_container1"> 
+                                            <div class ="text"> Preview Image </div>
+                                            <br>
+                                            <div id="shortcut_image_preview"></div>
+
+                                            <br><br> 
+                                        </div> <!-- end .textbox_container1 -->
+                                    <br><br>
+
+                                    <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
+                                    <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
+                                    <a class = "button" href="javascript:createShortcut()" onmouseover = "sound_click.play()" >Create</a>
+                                    <a class = "button" href="javascript:hideShortcutModal()" onmouseover = "sound_click.play()" >Cancel</a>
+                                    </div>
+
+                                </form>
+
+                            
+                            <div class="new_shortcut" onmousedown = "sound_open.play()" ></div>
+
+                            <?php                            
+                            foreach ($shortcuts as $sc):
+                            ?>
+                            <div
+                                class="icon_selector"
+                                id="icon-<?php echo $sc['id']; ?>" 
+                                data-id="<?php echo $sc['id']; ?>"
+                                data-shortcut="<?php echo $sc['shortcut']; ?>"
+                                data-name="<?php echo $sc['name']; ?>"
+                                style="background-image:url('<?php echo $sc['image_url']; ?>');">   
+                            </div>
+                            <?php
+                            endforeach;
+                            ?>
+                        </div>
+                        
+                        
+                        <ul class="active-selections">
+                            Currently selected tools:
+                        </ul>
+
+                        <button class="button" id="start">Start</button>  
+                    </div>
+                </div>
             </div>
-        </form>
-        <div id="result"></div>
-    </div> <!-- end .container.plusfour -->
-    
 
+            <div class="twelve columns omega" id="main-col">
+                <div class="row" id="top-row">
+                    <div id="lifebar">
+                        <div id="lifebar-scale"></div>
+                    </div>
+                </div>
+                <div class="row" id="board">
+                    <div class="three columns alpha" id="col1-board">
+                        <div class="icon-background"></div>
+                    </div>
+                    <div class="three columns" id="col2-board">
+                        <div class="icon-background"></div>
+                    </div>
+                    <div class="three columns" id="col3-board">
+                        <div class="icon-background"></div>
+                    </div>
+                    <div class="three columns omega" id="col4-board">
+                        <div class="icon-background"></div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /main -->        
+        <footer>
+        </footer><!-- /footer -->
+    </div><!--!/#container -->
+    <div id="music"></div>
+    <!-- !Javascript - at the bottom for fast page loading -->
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>!window.jQuery && document.write('<script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>')</script>
+    
+    <script src="js/scoring.js"></script>
+    <script src="js/hotkeys.js"></script>
+    <script src="js/jquery.reveal.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/game.js"></script>
     <script src="js/edit.js"></script>
+    
 </body>
+</html>
