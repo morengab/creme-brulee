@@ -115,6 +115,11 @@ $shortcuts = getShortcuts($database, $app_id);
                 </div>
                 
                 <div id="my-modal" class="reveal-modal">
+                        <ul id="leaderboard">
+                            <li><a>Leaderboard</a></li>
+                            <li><a>32880000</a></li>
+                            <li><a>4i994</a></li>
+                        </ul>
                     <div id="modal_container">
                         <h1><?php echo $app["name"]; ?></h1>
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
