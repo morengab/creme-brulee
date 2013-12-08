@@ -3,7 +3,7 @@
 // error_reporting(E_ALL);
 
 require_once 'downloads/medoo.min.php';
-$database = new medoo('d53482573gb7uf');
+$database = new medoo('macadamia_cluster_02');
 
 if (isset($_GET['app_id'])) {
 	$results = $database->select("shortcuts", array(

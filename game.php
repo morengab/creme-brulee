@@ -65,7 +65,7 @@
 <?php 
 require_once 'downloads/medoo.min.php';
 
-$database = new medoo('d53482573gb7uf');
+$database = new medoo('macadamia_nut_02');
 
 $app_id = $_GET["id"];
 

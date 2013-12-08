@@ -4,11 +4,11 @@ class medoo {
 	protected $database_type = 'mysql';
 
 	// For MySQL, MSSQL, Sybase
-	protected $server = 'ttr.gabymorenocesar.com';
+	protected $server = 'localhost';
 	
-	protected $username = 'ztogrcaogrsdjs';
+	protected $username = 'root';
 	
-	protected $password = 'pLiDqQLhoQbjlrTWNkHjm28a_W';
+	protected $password = 'root';
 
 	// For SQLite
 	protected $database_file = '';

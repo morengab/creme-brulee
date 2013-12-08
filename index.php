@@ -31,7 +31,7 @@
 </head>
 <?php 
 require_once 'downloads/medoo.min.php';
-$database = new medoo('d53482573gb7uf');
+$database = new medoo('macadamia_cluster_02');
 ?>
 <body>
 <audio id="sound">
