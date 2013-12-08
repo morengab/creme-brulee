@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.33)
 # Database: macadamia_cluster_02
-# Generation Time: 2013-12-08 20:29:54 +0000
+# Generation Time: 2013-12-08 21:47:42 +0000
 # ************************************************************
 
 
@@ -71,7 +71,7 @@ VALUES
 	(83,21,'Scissors','c','icons/illustrator/scissors.png'),
 	(91,21,'Eyedropper','i','icons/illustrator/eyedropper.png'),
 	(94,21,'Hand','h','icons/illustrator/hand.png'),
-	(100,7,'Direct Selection','a','icons/indesign/directionselection.png'),
+	(100,7,'Direct Selection','a','icons/indesign/directselection.png'),
 	(102,7,'Pen','p','icons/indesign/pen.png'),
 	(103,7,'Type','t','icons/indesign/type.png'),
 	(104,7,'Pencil','n','icons/indesign/pencil.png'),

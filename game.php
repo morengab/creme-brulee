@@ -111,8 +111,13 @@ $shortcuts = getShortcuts($database, $app_id);
                     <button class="button" id="new-game">New Game</button>
                     
                     <button class="button" id="reset">Reset</button>
+                    <br>
+                    <button class= "button" id ="home" onclick="location.href='http://www.gabymorenocesar.com/ttr/'"> Home</button>
 
-                    <img id="logo" class="logo-main" src="icons/logo.png" alt="tut tut revolution logo">
+
+                    <!-- <button class="button" id="home"> <a href= "http://www.gabymorenocesar.com/ttr/">Home</a></button> -->
+
+                    <img id="logo" class="logo-main" src="icons/logo2.png" alt="tut tut revolution logo">
                 </div>
                 
                 <div id="my-modal" class="reveal-modal">
