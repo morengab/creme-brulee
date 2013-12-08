@@ -63,9 +63,11 @@
 </audio>
 
 <?php
-require_once 'downloads/medoo.min.php';
+require_once "downloads/medoo.min-local.php";
+$database =  new medoo('macadamia_cluster_02');
 
-$database = new medoo('macadamia_cluster_02');
+// require_once "downloads/medoo.min.php";
+// $database =  new medoo('d53482573gb7uf');
 
 $app_id = $_GET["id"];
 

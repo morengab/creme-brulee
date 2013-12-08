@@ -30,8 +30,12 @@
 	<script src="js/less.js" type="text/javascript"></script>
 </head>
 <?php 
-require_once 'downloads/medoo.min.php';
-$database = new medoo('macadamia_cluster_02');
+require_once "downloads/medoo.min-local.php";
+$database =  new medoo('macadamia_cluster_02');
+
+// require_once "downloads/medoo.min.php";
+// $database =  new medoo('d53482573gb7uf');
+
 ?>
 <body>
 <audio id="sound">
