@@ -329,10 +329,10 @@ function Icon(keymap, label, image) {
 }
 
 
-
 Icon.prototype.setKeyMap = function () {
 	var el = this;
-	$j(document).bind("keypress", el.keymap, function () {
+
+	keypress.combo(el.keymap, function() {
 		if (el.state == 1)
 		{
 
@@ -348,7 +348,25 @@ Icon.prototype.setKeyMap = function () {
 				beat = (60000/bpm) * 2;
 			}
 		}
-	});	
+	});
+
+	// $j(document).bind("keypress", el.keymap, function () {
+	// 	if (el.state == 1)
+	// 	{
+
+	// 		$j("#" + el.uniq).addClass("press");
+	// 		el.state = 2;
+	// 		scoreCorrectAnswer();
+	// 		debugScoring();
+	// 		el.superbanner();
+	// 		if (scoreMultiplier > 1) {
+	// 			beat = (60000/bpm) * (3.5 / scoreMultiplier);
+	// 		}
+	// 		else {
+	// 			beat = (60000/bpm) * 2;
+	// 		}
+	// 	}
+	// });	
 
 }
 

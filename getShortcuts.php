@@ -6,15 +6,15 @@ require_once 'downloads/medoo.min.php';
 $database = new medoo('macadamia_cluster_02');
 
 if (isset($_GET['app_id'])) {
-	$results = $database->select("shortcuts", [
+	$results = $database->select("shortcuts", array(
 	        "shortcuts.id",
 	        "shortcuts.app_id",
 	        "shortcuts.name",
 	        "shortcuts.shortcut",
 	        "shortcuts.image_url"
-    	], [
+    	), array(
 	        "shortcuts.app_id" => $_GET['app_id']
-    	]
+    	)
     );
 
 } else {	

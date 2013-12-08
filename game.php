@@ -65,25 +65,24 @@
 <?php 
 require_once 'downloads/medoo.min.php';
 
-$database = new medoo('macadamia_cluster_02');
-
+$database = new medoo('macadamia_nut_02');
 
 $app_id = $_GET["id"];
 
-$app = $database->get("apps", "*", ["id"=>$app_id]);
+$app = $database->get("apps", "*", array("id"=>$app_id));
 
 function getShortcuts($database, $app_id) {
-    $shortcuts = $database->select("shortcuts", [
+    $shortcuts = $database->select("shortcuts", array(
         "shortcuts.id",
         "shortcuts.app_id",
         "shortcuts.name",
         "shortcuts.shortcut",
         "shortcuts.image_url"
-    ], [
+    ), array(
         "shortcuts.app_id" => $app_id,
         "ORDER" => "shortcuts.name ASC",
         "LIMIT" => 50
-    ]);
+    ));
     return $shortcuts;
 }
 
@@ -148,7 +147,7 @@ $shortcuts = getShortcuts($database, $app_id);
                                         <div class = "textbox_container1"> 
                                             <div class ="text"> Shortcut name </div>
                                             <br>
-                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name"> 
+                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" value="Brush"> 
                                             <br>
                                             <br>
                                         </div> <!-- end .textbox_container1 -->
@@ -156,7 +155,7 @@ $shortcuts = getShortcuts($database, $app_id);
                                         <div class = "textbox_container1"> 
                                             <div class ="text"> Press shortcut </div>
                                             <br>
-                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="1st key" maxlength = "1" />
+                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="1st key" maxlength = "1"/>
                                             <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" />
 
                                             <br><br> 
@@ -165,9 +164,9 @@ $shortcuts = getShortcuts($database, $app_id);
                                             <div class ="text"> Image</div>
                                             <br>
                                             <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
-                                            <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
+                                            <!-- <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image">  -->
                                                <!-- form should of uploading img be here -->
-                                            </form>
+                                            <!-- </form> -->
                                             OR 
                                             <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
                                             <br><br>
@@ -186,7 +185,6 @@ $shortcuts = getShortcuts($database, $app_id);
                                     <a class = "button" href="javascript:createShortcut()" onmouseover = "sound_click.play()" >Create</a>
                                     <a class = "button" href="javascript:hideShortcutModal()" onmouseover = "sound_click.play()" >Cancel</a>
                                     </div>
-
                                 </form>
 
                             
@@ -250,7 +248,7 @@ $shortcuts = getShortcuts($database, $app_id);
     <script>!window.jQuery && document.write('<script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>')</script>
     
     <script src="js/scoring.js"></script>
-    <script src="js/hotkeys.js"></script>
+    <script src="js/keypress.js"></script>
     <script src="js/jquery.reveal.js"></script>
     <script src="js/jquery.jplayer.min.js"></script>
     <script src="js/game.js"></script>

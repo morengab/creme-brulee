@@ -1,7 +1,7 @@
 $j = jQuery.noConflict();
 
 $j(function() { 
-    $j("form#create-shortcut").hide();
+    // $j("form#create-shortcut").hide();
 
     $j(".new_shortcut").click(function(){
         $j("form#create-shortcut").slideToggle();
@@ -25,6 +25,11 @@ $j(function() {
 
         return false;
     });
+
+    $j("input#shortcut_image").change(function (event){
+        previewFile(event.target.files[0]);
+    });
+
 });
 
 
@@ -34,19 +39,23 @@ function hideShortcutModal() {
 
 
 function createShortcut() {
+    var result = document.getElementById("result"),
+        formData = new FormData(document.forms.namedItem("fileinfo"));
 
-
-// magically put shortcuts users created and put them into database
-
-
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "bin/create-app.php", true);
+    xhr.onload = function(e) {
+        if (xhr.status == 200) {
+            hideAppModal();
+            
+            var app_id = xhr.responseText;
+            window.location.href = "game.php?id="+app_id;
+        } else {
+            result.innerHTML = "Error " + xhr.status + " occurred.<br \/>";
+        }
+    };
+    xhr.send(formData);
 }
-
-$j(document).ready(function() {
-    
-    $j("input#shortcut_image").change(function (event){
-        previewFile(event.target.files[0]);
-    });
-});
 
 
 function previewFile(file) {

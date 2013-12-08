@@ -10,12 +10,12 @@ if (isset($_GET['app_id'])) {
 
     $database->update(
         "apps",
-        [
+        array(
             "plays[+]" => 1
-        ], 
-        [
+        ), 
+        array(
             "id" => $id
-        ]
+        )
     );
     echo $id;
 } else {

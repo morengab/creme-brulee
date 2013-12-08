@@ -45,7 +45,6 @@ $database = new medoo('macadamia_cluster_02');
 </script>
 
 <div class="whole_container">
-
 	<div class="head_container"> 
 		<img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo">
 	</div>
@@ -155,6 +154,36 @@ $database = new medoo('macadamia_cluster_02');
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/jquery.reveal.js"></script>
 <script src="js/app.js"></script>
-
+<script src="js/keypress.js"></script>
+<script>
+	
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
