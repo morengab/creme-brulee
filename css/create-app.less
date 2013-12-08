@@ -232,7 +232,133 @@ float: left;
 
 // leaderboard css
 
-ul#leaderboard {font-family: @SUB_FONT;margin:0;padding:0;width:10em; position: fixed; top: 130px; left: 100px; }
+#leaderboard_container { position: fixed; top: 130px; left: 100px; }
+
+
+ul#leaderboard {font-family: @SUB_FONT;margin:0;padding:0;width:100px; float:left; }
 ul#leaderboard li {margin:0;padding:0;list-style:none;margin:0 0 2px 0;}
-ul#leaderboard li a {text-decoration:none;display:block;padding:0.3em 0.5em;border-left:0.4em solid #036;color:#fff;background:#036;}
-ul#leaderboard li a:hover {border-left:0.4em solid #fe3;color:#fff;background:#369;}
+ul#leaderboard li a {text-decoration:none;display:block;padding:0.3em 0.5em;border-left:0.4em solid #036;color:#fff;
+                       animation:blink 5s linear 2s infinite alternate;
+                      /* Safari and Chrome: */
+                      -webkit-animation:blink 5s linear 2s infinite alternate;}
+ul#leaderboard li a:hover {border-left:0.4em solid #fe3;
+                            color:#fff;background:#369;
+                          transition:500ms all ease; 
+
+
+                          -moz-box-shadow: 10px 10px 5px #0b072b;
+                          -webkit-box-shadow: 10px 10px 5px #0b072b;
+                          box-shadow: 10px 10px 5px #0b072b;
+
+
+                          }
+
+#leaderboard #leaderboard_title {background-color:#FFCC00; color: black;
+                                animation:blink_title 5s linear 2s infinite alternate;
+                                /* Safari and Chrome: */
+                                -webkit-animation:blink_title 5s linear 2s infinite alternate; }
+
+@keyframes blink
+{
+0%   {background-color: @LIGHT_BLUE; opacity: 1.0;}
+25%  {background-color: @LIGHT_BLUE; opacity: 0.5;}
+50%  {background-color: @LIGHT_BLUE; opacity: 1.0;}
+75%  {background-color: @LIGHT_BLUE; opacity: 0.5;}
+100% {background-color: @LIGHT_BLUE; opacity: 1.0;}
+}
+@keyframes blink_title
+{
+0%   {background-color:#FFCC00; opacity: 1.0;}
+25%  {background-color:#FFCC00; opacity: 0.5;}
+50%  {background-color:#FFCC00; opacity: 1.0;}
+75%  {background-color:#FFCC00; opacity: 0.5;}
+100% {background-color:#FFCC00; opacity: 1.0;}
+}
+
+@-webkit-keyframes blink /* Safari and Chrome: */
+{
+0%   {background-color: @LIGHT_BLUE; opacity: 1.0;}
+25%  {background-color: @LIGHT_BLUE; opacity: 0.5;}
+50%  {background-color: @LIGHT_BLUE; opacity: 1.0;}
+75%  {background-color: @LIGHT_BLUE; opacity: 0.5;}
+100% {background-color: @LIGHT_BLUE; opacity: 1.0;}
+}
+
+@-webkit-keyframes blink_title
+{
+0%   {background-color:#FFCC00; opacity: 1.0;}
+25%  {background-color:#FFCC00; opacity: 0.5;}
+50%  {background-color:#FFCC00; opacity: 1.0;}
+75%  {background-color:#FFCC00; opacity: 0.5;}
+100% {background-color:#FFCC00; opacity: 1.0;}
+}
+
+#highscore_font{
+
+  font-size: 50px;
+  font-family: @LIGHT_BLUE;
+  text-align: center;
+  animation:blink_text 4s linear 2s infinite alternate;
+  /* Safari and Chrome: */
+  -webkit-animation:blink_text 4s linear 2s infinite alternate;
+  // float:left;
+}
+
+@keyframes blink_text /* Safari and Chrome: */
+{
+0%   {opacity: 1.0;}
+25%  {opacity: 0.5;}
+50%  {opacity: 1.0;}
+75%  {opacity: 0.5;}
+100% {opacity: 1.0;}
+}
+
+@-webkit-keyframes blink_text
+{
+0%   { opacity: 1.0;}
+25%  { opacity: 0.5;}
+50%  { opacity: 0;}
+75%  { opacity: 0.5;}
+100% { opacity: 1.0;}
+}
+
+
+
+.rotate_font {
+
+
+color:#FFCC00;
+font-size: 80px;
+-webkit-animation: rotateAnimation 0.8476s 1 ease, blink_text 4s linear 2s infinite alternate; 
+-moz-animation: rotateAnimation 0.8476s 1 ease, blink_text 4s linear 2s infinite alternate;
+-o-animation: rotateAnimation 0.8476s 1 ease, blink_text 4s linear 2s infinite alternate;
+text-align: center;
+
+
+}
+
+
+@-webkit-keyframes rotateAnimation {
+from {  -moz-transform: rotate(720deg) scale(0.01) }
+to {  -moz-transform: rotate(0deg) scale(1)  }
+}
+@-moz-keyframes rotateAnimation {
+from {  -moz-transform: rotate(720deg) scale(0.01) }
+to {  -moz-transform: rotate(0deg) scale(1)  }
+}
+@-o-keyframes rotateAnimation {
+from {  -moz-transform: rotate(720deg) scale(0.01) }
+to {  -moz-transform: rotate(0deg) scale(1)  }
+}
+
+
+
+#highscore{
+  position: fixed;
+  top: 300px;
+  left: 500px;
+
+}
+
+
+
