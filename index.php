@@ -83,8 +83,6 @@ $database = new medoo('macadamia_cluster_02');
 					</div>
 				</div>
 				<h2><?php echo $app["name"]; ?></h2>
-				<!-- <p class="plays">Plays: <?php echo $app["plays"]; ?></p> -->
-				<!-- <p class="plays"><?php echo $app["plays"]; ?> plays</p> -->
 				<p class="plays">Played <?php echo $app["plays"]; ?>x</p>
 			</div>
 			<?php
