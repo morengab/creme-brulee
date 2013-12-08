@@ -1,32 +1,34 @@
 $j = jQuery.noConflict();
 
 $j(function() { 
-    // $j("form#create-shortcut").hide();
-
+    hideShortcutModal();
+    toggleModifiers();
+    
     $j(".new_shortcut").click(function(){
         $j("form#create-shortcut").slideToggle();
     });
-    
+
     $j("input#shortcut_image").change(function (event){
         previewShortcutFile(event.target.files[0]);
     });
 
     document.getElementById("shortcut_code").value = "";
-    toggleModifiers();
 });
 
-function createShortcut() {debugger;
+function hideShortcutModal() {
+    $j('form#create-shortcut').hide();
+}
+
+function createShortcut() {
     var result = document.getElementById("result"),
-        formData = new FormData(document.forms.namedItem("fileinfo"));
+        formData = new FormData(document.forms.namedItem("create-shortcut"));
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "bin/create-app.php", true);
+    xhr.open("POST", "bin/create-shortcut.php", true);
     xhr.onload = function(e) {
         if (xhr.status == 200) {
             hideShortcutModal();
-            
-            var app_id = xhr.responseText;
-            window.location.href = "game.php?id="+app_id;
+            console.log(xhr.response);
         } else {
             result.innerHTML = "Error " + xhr.status + " occurred.<br \/>";
         }
@@ -78,8 +80,5 @@ function toggleModifiers () {
     }
 
     document.getElementById("toggle_modifiers").dataset.detect = toggle;
-    $("##shortcut_code").focus();
-}
-function hideShortcutModal() {
-    $j('form#create-shortcut').hide();
+    $j("#shortcut_code").focus();
 }

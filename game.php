@@ -151,12 +151,12 @@ $shortcuts = getShortcuts($database, $app_id);
                                 <input type="submit" value="Create Shortcut" />
                             </form> -->
                             
-                            <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style = "height: 240px">           
+                            <form method="post" action="bin/create-app.php" name="create-shortcut" id="create-shortcut" style = "height: 240px">           
                                 <div>
                                     <div class = "textbox_container1"> 
                                         <div class ="text">Name</div>
                                         <br>
-                                        <input type="text" id="shortcut_name" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" value="Test"> 
+                                        <input type="text" id="shortcut_name" name="shortcut_name" class="textbox1" onmouseover = "sound_click.play()" placeholder="Name" value="Test"> 
                                         <br>
                                         <br>
                                     </div> <!-- end .textbox_container1 -->
@@ -164,7 +164,7 @@ $shortcuts = getShortcuts($database, $app_id);
                                     <div class = "textbox_container1"> 
                                         <div class ="text">Shortcut</div>
                                         <br>
-                                        <input type="text" id="shortcut_code" class="textbox short" name="name" onmouseover="sound_click.play()"/>
+                                        <input type="text" id="shortcut_code" name="shortcut_code" class="textbox short" onmouseover="sound_click.play()"/>
                                         <br>
                                         <br>
                                         <br>
@@ -174,9 +174,9 @@ $shortcuts = getShortcuts($database, $app_id);
                                     <div class = "textbox_container1">    
                                         <div class ="text">Image</div>
                                         <br>
-                                        <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
+                                        <input type="text" name="shortcut_image_url" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
                                         OR 
-                                        <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
+                                        <input class = "button" name="shortcut_image" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
                                         <br><br>
                                     </div>
                                     
@@ -188,13 +188,13 @@ $shortcuts = getShortcuts($database, $app_id);
                                         <br><br> 
                                     </div> <!-- end .textbox_container1 -->
                                     <br><br>
-
-                                    <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
-                                    <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
+                                    
+                                    <input type="hidden" name="app_id" value="<?php echo $app_id; ?>">
                                     <a class = "button" href="javascript:createShortcut()" onmouseover = "sound_click.play()" >Create</a>
                                     <a class = "button" href="javascript:hideShortcutModal()" onmouseover = "sound_click.play()" >Cancel</a>
                                 </div>
                             </form>
+                            <div id="result"></div>
 
                             
                             <div class="new_shortcut" onmousedown = "sound_open.play()" ></div>

@@ -24,7 +24,7 @@ if (isset($_GET['app_id'])) {
 $response = array();
 foreach ($results as $result) {
 	$response[$result['id']] = array(
-		'app_id' => $result['app_id'], // < -- new 
+		'app_id' => $result['app_id'],
 		'name' => $result['name'], 
 		'shortcut' => $result['shortcut'], 
 		'image' => $result['image_url']
