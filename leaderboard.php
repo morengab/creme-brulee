@@ -42,14 +42,21 @@
 </script>
 
 <body>     
-    <div class = "container">
+    <div class="header">
+        <p id="highscore_font"> NEW HIGH SCORE!!</P>
+        <p class="rotate_font"> 5820 </P>   
+    </div>
 
-        <ul id="main-nav">
-            <li><a>1</a></li>
-            <li><a>32880000</a></li>
-            <li><a>4i994</a></li>
-        </ul>
+       
+    <form method="post" action="bin/create-app.php" id="highscore" style = "height: 200px">           
 
+        <br>
+        <div class = "textbox_container1"> 
+            <div class ="text"> Your name </div>
+            <br>
+            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" maxlength ="8"> 
+            <br>                                                                         
+    </form>
         <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
             <label class="create_app_title">App Title</label><br>
             <input type="text" name="name" id="textbox1 app_name" />
@@ -58,5 +65,5 @@
             <input type="text" name="image_url" id="textbox1 app_image_url" />
             <input type="submit" class="browse_button" value="Create App" />
         </form> -->
-        
+    
 </body>
