@@ -44,67 +44,11 @@
 <body>     
     <div class = "container">
 
-        <div class="Leaderboard" >
-           
-                            <table >
-                             
-                                <tr>
-                                    <td>
-                                        Title 1
-                                    </td>
-                                    <td >
-                                        Title 2
-                                    </td>
-                                    <td>
-                                        Title 3
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td >
-                                        Row 1
-                                    </td>
-                                    <td>
-                                        Row 1
-                                    </td>
-                                    <td>
-                                        Row 1
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td >
-                                        Row 2
-                                    </td>
-                                    <td>
-                                        Row 2
-                                    </td>
-                                    <td>
-                                        Row 2
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td >
-                                        Row 2
-                                    </td>
-                                    <td>
-                                        Row 2
-                                    </td>
-                                    <td>
-                                        Row 2
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td >
-                                        Row 3
-                                    </td>
-                                    <td>
-                                        Row 3
-                                    </td>
-                                    <td>
-                                        Row 3
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
+        <ul id="main-nav">
+            <li><a>1</a></li>
+            <li><a>32880000</a></li>
+            <li><a>4i994</a></li>
+        </ul>
 
         <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
             <label class="create_app_title">App Title</label><br>
