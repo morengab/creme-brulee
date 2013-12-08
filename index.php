@@ -45,6 +45,7 @@ $database = new medoo('macadamia_cluster_02');
 </script>
 
 <div class="whole_container">
+
 	<div class="head_container"> 
 		<img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo">
 	</div>
@@ -65,44 +66,6 @@ $database = new medoo('macadamia_cluster_02');
 		</div>
 		
 		<div id="app_container">
-					<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-			<div class="flipper">
-				<div class="front" onmouseover="sound.play()">
-					<div class ="app_front_plus"><img class="resize_logo" src="icons/plus.png"></div>
-				</div>
-				<div class="back" onmouseout="sound.play()"> 
-					<a href="javascript:showAppModal()">
-						<div class="app_back"><img class="resize_logo" src="icons/plus.png"> </div>
-						<div class="create"> Create your own app!</div>
-					</a>
-				</div>
-			</div>
-		</div>
-				<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-			<div class="flipper">
-				<div class="front" onmouseover="sound.play()">
-					<div class ="app_front_plus"><img class="resize_logo" src="icons/plus.png"></div>
-				</div>
-				<div class="back" onmouseout="sound.play()"> 
-					<a href="javascript:showAppModal()">
-						<div class="app_back"><img class="resize_logo" src="icons/plus.png"> </div>
-						<div class="create"> Create your own app!</div>
-					</a>
-				</div>
-			</div>
-		</div>		<div class="flip-container" ontouchstart="this.classList.toggle('hover')">
-			<div class="flipper">
-				<div class="front" onmouseover="sound.play()">
-					<div class ="app_front_plus"><img class="resize_logo" src="icons/plus.png"></div>
-				</div>
-				<div class="back" onmouseout="sound.play()"> 
-					<a href="javascript:showAppModal()">
-						<div class="app_back"><img class="resize_logo" src="icons/plus.png"> </div>
-						<div class="create"> Create your own app!</div>
-					</a>
-				</div>
-			</div>
-		</div>
 			<?php
 			$apps = $database->select("apps", "*");
 			foreach ($apps as $app):
@@ -155,35 +118,6 @@ $database = new medoo('macadamia_cluster_02');
 <script src="js/jquery.reveal.js"></script>
 <script src="js/app.js"></script>
 <script src="js/keypress.js"></script>
-<script>
-	
-</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
