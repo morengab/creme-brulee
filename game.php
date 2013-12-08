@@ -62,7 +62,7 @@
   <source src="media/open.ogg" type="audio/ogg" />
 </audio>
 
-<?php 
+<?php
 require_once 'downloads/medoo.min.php';
 
 $database = new medoo('macadamia_cluster_02');
@@ -142,50 +142,61 @@ $shortcuts = getShortcuts($database, $app_id);
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
                         <h2>Select 4 shortcuts you would like to train on..</h2>
                         <div id="icon_holder">  
-                                <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style = "height: 240px">           
-                                    <div>
-                                        <div class = "textbox_container1"> 
-                                            <div class ="text"> Shortcut name </div>
-                                            <br>
-                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" value="Brush"> 
-                                            <br>
-                                            <br>
-                                        </div> <!-- end .textbox_container1 -->
 
-                                        <div class = "textbox_container1"> 
-                                            <div class ="text"> Press shortcut </div>
-                                            <br>
-                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="1st key" maxlength = "1"/>
-                                            <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" />
+                           <!--  <form method="post" action="data.php" name="create_shortcut" id="create_shortcut">
+                                <label>Key</label>
+                                <input type="text" id="short_name" name="name" placeholder=""/>
+                                <br>
+                                <p><a id="toggle_modifiers" data-detect="false" href="javascript:toggleModifiers()">Don't detect modifiers</a></p>
+                                <input type="submit" value="Create Shortcut" />
+                            </form> -->
+                            
+                            <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut" style = "height: 240px">           
+                                <div>
+                                    <div class = "textbox_container1"> 
+                                        <div class ="text">Name</div>
+                                        <br>
+                                        <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" value="Brush"> 
+                                        <br>
+                                        <br>
+                                    </div> <!-- end .textbox_container1 -->
 
-                                            <br><br> 
-                                        </div> <!-- end .textbox_container1 -->
-                                        <div class = "textbox_container1">    
-                                            <div class ="text"> Image</div>
-                                            <br>
-                                            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
-                                            <!-- <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image">  -->
-                                               <!-- form should of uploading img be here -->
-                                            <!-- </form> -->
-                                            OR 
-                                            <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
-                                            <br><br>
-                                        </div>
-                                        <div class = "textbox_container1"> 
-                                            <div class ="text"> Preview Image </div>
-                                            <br>
-                                            <div id="shortcut_image_preview"></div>
+                                    <div class = "textbox_container1"> 
+                                        <div class ="text">Shortcut</div>
+                                        <br>
+                                        <input type="text" id="short_name" class="textbox short" name="name" placeholder="" onmouseover="sound_click.play()"/>
+                                        <a id="toggle_modifiers" data-detect="false" href="javascript:toggleModifiers()">Don't detect modifiers</a>
+                                        <!-- <input type ="text" class="textbox short" onmouseover="sound_click.play()" placeholder ="1st key" maxlength = "1"/>
+                                        <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" /> -->
 
-                                            <br><br> 
-                                        </div> <!-- end .textbox_container1 -->
+                                        <br><br> 
+                                    </div> <!-- end .textbox_container1 -->
+                                    <div class = "textbox_container1">    
+                                        <div class ="text">Image</div>
+                                        <br>
+                                        <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
+                                        <!-- <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image">  -->
+                                        <!-- form should of uploading img be here -->
+                                        <!-- </form> -->
+                                        OR 
+                                        <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
+                                        <br><br>
+                                    </div>
+                                    <div class = "textbox_container1"> 
+                                        <div class ="text"> Preview Image </div>
+                                        <br>
+                                        <div id="shortcut_image_preview"></div>
+
+                                        <br><br> 
+                                    </div> <!-- end .textbox_container1 -->
                                     <br><br>
 
                                     <!-- <button class="button" onmouseover="sound_click.play()">Cancel</button>  
                                     <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit" float = "left"> -->
                                     <a class = "button" href="javascript:createShortcut()" onmouseover = "sound_click.play()" >Create</a>
                                     <a class = "button" href="javascript:hideShortcutModal()" onmouseover = "sound_click.play()" >Cancel</a>
-                                    </div>
-                                </form>
+                                </div>
+                            </form>
 
                             
                             <div class="new_shortcut" onmousedown = "sound_open.play()" ></div>
@@ -253,6 +264,7 @@ $shortcuts = getShortcuts($database, $app_id);
     <script src="js/jquery.jplayer.min.js"></script>
     <script src="js/game.js"></script>
     <script src="js/edit.js"></script>
+    <script src="js/app.js"></script>
     
 </body>
 </html>

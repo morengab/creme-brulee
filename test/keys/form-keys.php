@@ -40,11 +40,7 @@
     <script src="../../js/keypress.js"></script>
     <script>
         $(document).ready(function() {
-
-            $( "#short_name" ).focus(function() {
-              console.log( "Handler for .focus() called." );
-            });
-           // toggleModifiers();
+           toggleModifiers();
         });
 
         function toggleModifiers () {
@@ -52,10 +48,7 @@
             if (toggle === "true") {
                 toggle = "false";
                 document.getElementById("toggle_modifiers").innerHTML = "Detect modifiers";
-                keypress.unregister_combo("shift");
-                keypress.unregister_combo("ctrl");
-                keypress.unregister_combo("alt");
-                keypress.unregister_combo("meta");
+                keypress.reset();
             } else {
                 toggle = "true";
                 document.getElementById("toggle_modifiers").innerHTML = "Don't detect modifiers";
@@ -74,8 +67,8 @@
                 keypress.combo("meta", function() {
                     document.getElementById("short_name").value += "cmd ";
                 });
-
             }
+
             document.getElementById("toggle_modifiers").dataset.detect = toggle;
             $("#short_name").focus();
         }
