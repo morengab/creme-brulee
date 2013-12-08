@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.33)
 # Database: macadamia_cluster_02
-# Generation Time: 2013-12-08 18:30:03 +0000
+# Generation Time: 2013-12-08 19:36:32 +0000
 # ************************************************************
 
 
@@ -18,32 +18,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-
-# Dump of table apps
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `apps`;
-
-CREATE TABLE `apps` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(256) NOT NULL DEFAULT '',
-  `date` varchar(256) DEFAULT '',
-  `image_url` varchar(256) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `apps` WRITE;
-/*!40000 ALTER TABLE `apps` DISABLE KEYS */;
-
-INSERT INTO `apps` (`id`, `name`, `date`, `image_url`)
-VALUES
-	(6,'Illustrator','','icons/Illustrator.png'),
-	(7,'InDesign','','icons/Indesign.png'),
-	(10,'Photoshop','','icons/Photoshop.png');
-
-/*!40000 ALTER TABLE `apps` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table shortcuts
@@ -83,32 +57,35 @@ VALUES
 	(36,10,'Pen','p','icons/photoshop/pen.png'),
 	(37,10,'Rectangular Marquee','m','icons/photoshop/select.png'),
 	(38,10,'Shape','u','icons/photoshop/shape.png'),
-	(72,6,'Selection','v',NULL),
-	(73,6,'Direction Selection','a',NULL),
-	(74,6,'Magic Wand','y',NULL),
-	(75,6,'Lasso','q',NULL),
-	(76,6,'Pen','p',NULL),
-	(77,6,'Type','t',NULL),
-	(78,6,'Line Segment','\\',NULL),
-	(79,6,'Rectangle','m',NULL),
-	(80,6,'Ellipse','l',NULL),
-	(81,6,'Paintbrush','b',NULL),
-	(82,6,'Pencil','n',NULL),
-	(83,6,'Scissors','c',NULL),
-	(84,6,'Rotate','r',NULL),
-	(85,6,'Reflect','o',NULL),
-	(86,6,'Scale','s',NULL),
-	(87,6,'Freetransform','e',NULL),
-	(88,6,'Column Graph','j',NULL),
-	(89,6,'Mesh','u',NULL),
-	(90,6,'Gradient','g',NULL),
-	(91,6,'Eyedropper','i',NULL),
-	(92,6,'Blend','w',NULL),
-	(93,6,'Live Paint Bucket','k',NULL),
-	(94,6,'Hand','h',NULL),
-	(95,6,'Zoom','z',NULL),
-	(96,6,'Toggle between Fill & Stroke','x',NULL),
-	(97,6,'Default Fill & Stroke','f',NULL);
+	(72,6,'Selection','v','icons/illustrator/selection'),
+	(73,6,'Direction Selection','a','icons/illustrator/directselection'),
+	(74,6,'Magic Wand','y','icons/illustrator/magicwand'),
+	(75,6,'Lasso','q','icons/illustrator/lasso'),
+	(76,6,'Pen','p','icons/illustrator/pen'),
+	(77,6,'Type','t','icons/illustrator/type'),
+	(78,6,'Line Segment','\\','icons/illustrator/line'),
+	(79,6,'Rectangle','m','icons/illustrator/rectangle'),
+	(80,6,'Ellipse','l','icons/illustrator/ellipse'),
+	(81,6,'Paintbrush','b','icons/illustrator/paintbrush'),
+	(82,6,'Pencil','n','icons/illustrator/pencil'),
+	(83,6,'Scissors','c','icons/illustrator/scissors'),
+	(91,6,'Eyedropper','i','icons/illustrator/eyedropper'),
+	(94,6,'Hand','h','icons/illustrator/hand'),
+	(100,7,'Direct Selection','a','icons/indesign/directionselection'),
+	(102,7,'Pen','p','icons/indesign/pen'),
+	(103,7,'Type','t','icons/indesign/type'),
+	(104,7,'Pencil','n','icons/indesign/pencil'),
+	(106,7,'Rectangle ','m','icons/indesign/rectangle'),
+	(107,7,'Ellipse','l','icons/indesign/ellipse'),
+	(111,7,'Hand','h','icons/indesign/hand'),
+	(112,7,'Eyedropper','i','icons/indesign/eyedropper'),
+	(113,7,'lasso','q','icons/indesign/lasso'),
+	(114,7,'Line Segment','\\','icons/indesign/line'),
+	(115,7,'Magic Wand','y','icons/indesign/magicwand'),
+	(116,7,'Scissors','c','icons/indesign/scissors'),
+	(117,7,'Zoom','z','icons/indesign/zoom'),
+	(118,7,'Paint Brush','b','icons/indesign/paintbrush'),
+	(119,6,'Zoom','z','icons/illustrator/zoom');
 
 /*!40000 ALTER TABLE `shortcuts` ENABLE KEYS */;
 UNLOCK TABLES;
