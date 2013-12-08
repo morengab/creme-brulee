@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.33)
 # Database: macadamia_cluster_02
-# Generation Time: 2013-12-08 19:36:32 +0000
+# Generation Time: 2013-12-08 19:55:19 +0000
 # ************************************************************
 
 
@@ -58,35 +58,35 @@ VALUES
 	(36,10,'Pen','p','icons/photoshop/pen.png'),
 	(37,10,'Rectangular Marquee','m','icons/photoshop/select.png'),
 	(38,10,'Shape','u','icons/photoshop/shape.png'),
-	(72,6,'Selection','v','icons/illustrator/selection'),
-	(73,6,'Direction Selection','a','icons/illustrator/directselection'),
-	(74,6,'Magic Wand','y','icons/illustrator/magicwand'),
-	(75,6,'Lasso','q','icons/illustrator/lasso'),
-	(76,6,'Pen','p','icons/illustrator/pen'),
-	(77,6,'Type','t','icons/illustrator/type'),
-	(78,6,'Line Segment','\\','icons/illustrator/line'),
-	(79,6,'Rectangle','m','icons/illustrator/rectangle'),
-	(80,6,'Ellipse','l','icons/illustrator/ellipse'),
-	(81,6,'Paintbrush','b','icons/illustrator/paintbrush'),
-	(82,6,'Pencil','n','icons/illustrator/pencil'),
-	(83,6,'Scissors','c','icons/illustrator/scissors'),
-	(91,6,'Eyedropper','i','icons/illustrator/eyedropper'),
-	(94,6,'Hand','h','icons/illustrator/hand'),
-	(100,7,'Direct Selection','a','icons/indesign/directionselection'),
-	(102,7,'Pen','p','icons/indesign/pen'),
-	(103,7,'Type','t','icons/indesign/type'),
-	(104,7,'Pencil','n','icons/indesign/pencil'),
-	(106,7,'Rectangle ','m','icons/indesign/rectangle'),
-	(107,7,'Ellipse','l','icons/indesign/ellipse'),
-	(111,7,'Hand','h','icons/indesign/hand'),
-	(112,7,'Eyedropper','i','icons/indesign/eyedropper'),
-	(113,7,'lasso','q','icons/indesign/lasso'),
-	(114,7,'Line Segment','\\','icons/indesign/line'),
-	(115,7,'Magic Wand','y','icons/indesign/magicwand'),
-	(116,7,'Scissors','c','icons/indesign/scissors'),
-	(117,7,'Zoom','z','icons/indesign/zoom'),
-	(118,7,'Paint Brush','b','icons/indesign/paintbrush'),
-	(119,6,'Zoom','z','icons/illustrator/zoom');
+	(72,21,'Selection','v','icons/illustrator/selection.png'),
+	(73,21,'Direction Selection','a','icons/illustrator/directselection.png'),
+	(74,21,'Magic Wand','y','icons/illustrator/magicwand.png'),
+	(75,21,'Lasso','q','icons/illustrator/lasso.png'),
+	(76,21,'Pen','p','icons/illustrator/pen.png'),
+	(77,21,'Type','t','icons/illustrator/type.png'),
+	(78,21,'Line Segment','\\','icons/illustrator/line.png'),
+	(79,21,'Rectangle','m','icons/illustrator/rectangle.png'),
+	(80,21,'Ellipse','l','icons/illustrator/ellipse.png'),
+	(81,21,'Paintbrush','b','icons/illustrator/paintbrush.png'),
+	(82,21,'Pencil','n','icons/illustrator/pencil.png'),
+	(83,21,'Scissors','c','icons/illustrator/scissors.png'),
+	(91,21,'Eyedropper','i','icons/illustrator/eyedropper.png'),
+	(94,21,'Hand','h','icons/illustrator/hand.png'),
+	(100,7,'Direct Selection','a','icons/indesign/directionselection.png'),
+	(102,7,'Pen','p','icons/indesign/pen.png'),
+	(103,7,'Type','t','icons/indesign/type.png'),
+	(104,7,'Pencil','n','icons/indesign/pencil.png'),
+	(106,7,'Rectangle ','m','icons/indesign/rectangle.png'),
+	(107,7,'Ellipse','l','icons/indesign/ellipse.png'),
+	(111,7,'Hand','h','icons/indesign/hand.png'),
+	(112,7,'Eyedropper','i','icons/indesign/eyedropper.png'),
+	(113,7,'lasso','q','icons/indesign/lasso.png'),
+	(114,7,'Line Segment','\\','icons/indesign/line.png'),
+	(115,7,'Magic Wand','y','icons/indesign/magicwand.png'),
+	(116,7,'Scissors','c','icons/indesign/scissors.png'),
+	(117,7,'Zoom','z','icons/indesign/zoom.png'),
+	(118,7,'Paint Brush','b','icons/indesign/paintbrush.png'),
+	(119,21,'Zoom','z','icons/illustrator/zoom.png');
 
 /*!40000 ALTER TABLE `shortcuts` ENABLE KEYS */;
 UNLOCK TABLES;
