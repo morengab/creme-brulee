@@ -42,36 +42,21 @@
 </script>
 
 <body>     
-    <div>
+    <div class="header">
         <p id="highscore_font"> NEW HIGH SCORE!!</P>
         <p class="rotate_font"> 5820 </P>   
     </div>
 
-           
-        <form method="post" action="bin/create-app.php" id="highscore" style = "height: 240px">           
+       
+    <form method="post" action="bin/create-app.php" id="highscore" style = "height: 200px">           
 
+        <br>
+        <div class = "textbox_container1"> 
+            <div class ="text"> Your name </div>
             <br>
-            <div class = "textbox_container1"> 
-                <div class ="text"> Your name </div>
-                <br>
-                <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" maxlength ="8"> 
-                <br>
-                
-            </div> <!-- end .textbox_container1 -->
-
-            <div class = "textbox_container1"> 
-                <div class ="text"> Image</div>
-                <br>
-                <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
-                   <!-- form should of uploading img be here -->
-                </form>
-                <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
-                <br><br>
-            </div>
-
-                                                
-                                   
-        </form>
+            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" maxlength ="8"> 
+            <br>                                                                         
+    </form>
         <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
             <label class="create_app_title">App Title</label><br>
             <input type="text" name="name" id="textbox1 app_name" />
