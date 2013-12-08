@@ -98,7 +98,7 @@ $shortcuts = getShortcuts($database, $app_id);
                 
                 <div class="score">
                     <div>
-                        <span class="points">0</span> points
+                        <span id="player_score" class="points">0</span> points
                     </div>
                     <div>
                         <span class="scoreStreak">0</span> in a row | <span class="scoreMultiplier">1</span>x multiplier | <span class="percentage">0</span>% correct 
