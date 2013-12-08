@@ -5,39 +5,7 @@ $j(document).ready(function() {
     $j("input#app_image").change(function (event){
         previewFile(event.target.files[0]);
     });
-
-    toggleModifiers();
 });
-
-function toggleModifiers () {
-    var toggle = document.getElementById("toggle_modifiers").dataset['detect'];
-    if (toggle === "true") {
-        toggle = "false";
-        document.getElementById("toggle_modifiers").innerHTML = "Detect modifiers";
-        keypress.reset();
-    } else {
-        toggle = "true";
-        document.getElementById("toggle_modifiers").innerHTML = "Don't detect modifiers";
-        keypress.combo("shift", function() {
-            document.getElementById("short_name").value += "shift ";
-        });
-
-        keypress.combo("ctrl", function() {
-            document.getElementById("short_name").value += "ctrl ";
-        });
-
-        keypress.combo("alt", function() {
-            document.getElementById("short_name").value += "alt ";
-        });
-
-        keypress.combo("meta", function() {
-            document.getElementById("short_name").value += "cmd ";
-        });
-    }
-
-    document.getElementById("toggle_modifiers").dataset.detect = toggle;
-    $("#short_name").focus();
-}
 
 function createShortcut() {
     var result = document.getElementById("result"),

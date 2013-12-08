@@ -156,7 +156,7 @@ $shortcuts = getShortcuts($database, $app_id);
                                     <div class = "textbox_container1"> 
                                         <div class ="text">Name</div>
                                         <br>
-                                        <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" value="Brush"> 
+                                        <input type="text" id="shortcut_name" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" value="Test"> 
                                         <br>
                                         <br>
                                     </div> <!-- end .textbox_container1 -->
@@ -164,26 +164,24 @@ $shortcuts = getShortcuts($database, $app_id);
                                     <div class = "textbox_container1"> 
                                         <div class ="text">Shortcut</div>
                                         <br>
-                                        <input type="text" id="short_name" class="textbox short" name="name" placeholder="" onmouseover="sound_click.play()"/>
+                                        <input type="text" id="shortcut_code" class="textbox short" name="name" onmouseover="sound_click.play()"/>
+                                        <br>
+                                        <br>
+                                        <br>
                                         <a id="toggle_modifiers" data-detect="false" href="javascript:toggleModifiers()">Don't detect modifiers</a>
-                                        <!-- <input type ="text" class="textbox short" onmouseover="sound_click.play()" placeholder ="1st key" maxlength = "1"/>
-                                        <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" maxlength = "1" /> -->
-
-                                        <br><br> 
                                     </div> <!-- end .textbox_container1 -->
+                                    
                                     <div class = "textbox_container1">    
                                         <div class ="text">Image</div>
                                         <br>
                                         <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder ="URL" /> 
-                                        <!-- <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image">  -->
-                                        <!-- form should of uploading img be here -->
-                                        <!-- </form> -->
                                         OR 
                                         <input class = "button" type="file" name="shortcut_image" id="shortcut_image" style ="width: 150px" required/>
                                         <br><br>
                                     </div>
+                                    
                                     <div class = "textbox_container1"> 
-                                        <div class ="text"> Preview Image </div>
+                                        <div class ="text">Preview Image</div>
                                         <br>
                                         <div id="shortcut_image_preview"></div>
 
@@ -264,7 +262,6 @@ $shortcuts = getShortcuts($database, $app_id);
     <script src="js/jquery.jplayer.min.js"></script>
     <script src="js/game.js"></script>
     <script src="js/edit.js"></script>
-    <script src="js/app.js"></script>
     
 </body>
 </html>

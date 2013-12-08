@@ -22,28 +22,29 @@
 
 # Dump of table apps
 # ------------------------------------------------------------
+USE d53482573gb7uf;
 
-DROP TABLE IF EXISTS `apps`;
+-- DROP TABLE IF EXISTS `apps`;
 
-CREATE TABLE `apps` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(256) NOT NULL DEFAULT '',
-  `date` varchar(256) DEFAULT '',
-  `image_url` varchar(256) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- CREATE TABLE `apps` (
+--   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+--   `name` varchar(256) NOT NULL DEFAULT '',
+--   `date` varchar(256) DEFAULT '',
+--   `image_url` varchar(256) DEFAULT NULL,
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `apps` WRITE;
-/*!40000 ALTER TABLE `apps` DISABLE KEYS */;
+-- LOCK TABLES `apps` WRITE;
+-- /*!40000 ALTER TABLE `apps` DISABLE KEYS */;
 
-INSERT INTO `apps` (`id`, `name`, `date`, `image_url`)
-VALUES
-	(6,'Illustrator','','icons/Illustrator.png'),
-	(7,'InDesign','','icons/Indesign.png'),
-	(10,'Photoshop','','icons/Photoshop.png');
+-- INSERT INTO `apps` (`id`, `name`, `date`, `image_url`)
+-- VALUES
+-- 	(6,'Illustrator','','icons/Illustrator.png'),
+-- 	(7,'InDesign','','icons/Indesign.png'),
+-- 	(10,'Photoshop','','icons/Photoshop.png');
 
-/*!40000 ALTER TABLE `apps` ENABLE KEYS */;
-UNLOCK TABLES;
+-- /*!40000 ALTER TABLE `apps` ENABLE KEYS */;
+-- UNLOCK TABLES;
 
 
 # Dump of table shortcuts
