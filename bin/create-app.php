@@ -3,7 +3,7 @@
 // error_reporting(E_ALL);
 
 require_once '../downloads/medoo.min.php';
-$database = new medoo('macadamia_cluster_02');
+$database = new medoo('d53482573gb7uf');
 
 // get info from form
 $app_name = $_POST['app_name'];

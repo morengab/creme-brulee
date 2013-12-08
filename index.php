@@ -31,7 +31,7 @@
 </head>
 <?php 
 require_once 'downloads/medoo.min.php';
-$database = new medoo('macadamia_cluster_02');
+$database = new medoo('d53482573gb7uf');
 ?>
 <body>
 <audio id="sound">
@@ -45,7 +45,6 @@ $database = new medoo('macadamia_cluster_02');
 </script>
 
 <div class="whole_container">
-
 	<div class="head_container"> 
 		<img id="logo2" src="icons/logo2.png" alt="tut tut revolution logo">
 	</div>

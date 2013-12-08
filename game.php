@@ -65,25 +65,24 @@
 <?php 
 require_once 'downloads/medoo.min.php';
 
-$database = new medoo('macadamia_cluster_02');
-
+$database = new medoo('d53482573gb7uf');
 
 $app_id = $_GET["id"];
 
-$app = $database->get("apps", "*", ["id"=>$app_id]);
+$app = $database->get("apps", "*", array("id"=>$app_id));
 
 function getShortcuts($database, $app_id) {
-    $shortcuts = $database->select("shortcuts", [
+    $shortcuts = $database->select("shortcuts", array(
         "shortcuts.id",
         "shortcuts.app_id",
         "shortcuts.name",
         "shortcuts.shortcut",
         "shortcuts.image_url"
-    ], [
+    ), array(
         "shortcuts.app_id" => $app_id,
         "ORDER" => "shortcuts.name ASC",
         "LIMIT" => 50
-    ]);
+    ));
     return $shortcuts;
 }
 
