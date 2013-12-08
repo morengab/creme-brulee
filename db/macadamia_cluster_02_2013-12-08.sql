@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.33)
 # Database: macadamia_cluster_02
-# Generation Time: 2013-12-08 19:55:19 +0000
+# Generation Time: 2013-12-08 20:29:54 +0000
 # ************************************************************
 
 
@@ -19,7 +19,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-USE d53482573gb7uf;
 
 # Dump of table shortcuts
 # ------------------------------------------------------------
