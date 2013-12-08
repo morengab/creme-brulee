@@ -44,9 +44,67 @@
 <body>     
     <div class = "container">
 
-
-        <div class ="create_app_header"> Create Shortcuts </div>
-        <br><br>
+        <div class="Leaderboard" >
+           
+                            <table >
+                             
+                                <tr>
+                                    <td>
+                                        Title 1
+                                    </td>
+                                    <td >
+                                        Title 2
+                                    </td>
+                                    <td>
+                                        Title 3
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        Row 1
+                                    </td>
+                                    <td>
+                                        Row 1
+                                    </td>
+                                    <td>
+                                        Row 1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        Row 2
+                                    </td>
+                                    <td>
+                                        Row 2
+                                    </td>
+                                    <td>
+                                        Row 2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        Row 2
+                                    </td>
+                                    <td>
+                                        Row 2
+                                    </td>
+                                    <td>
+                                        Row 2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >
+                                        Row 3
+                                    </td>
+                                    <td>
+                                        Row 3
+                                    </td>
+                                    <td>
+                                        Row 3
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
 
         <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
             <label class="create_app_title">App Title</label><br>
@@ -56,50 +114,5 @@
             <input type="text" name="image_url" id="textbox1 app_image_url" />
             <input type="submit" class="browse_button" value="Create App" />
         </form> -->
-        <form method="post" action="bin/create-app.php" name="create-app" id="create-shortcut">           
-            <div>
-                <div class = "textbox_container1"> 
-                    <div class ="text"> Shortcut name </div>
-                    <br>
-                    <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name"> 
-                    <br>
-                    <br>
-                </div> <!-- end .textbox_container1 -->
-
-                <div class = "textbox_container1"> 
-                    <div class ="text"> Press shortcut here </div>
-                    <br>
-                    <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="1st key"/>
-                    +
-                    <input type ="text" class="textbox short" onmouseover = "sound_click.play()" placeholder ="(optional)" />
-
-                    <br><br> 
-                </div> <!-- end .textbox_container2 -->
-
-              
-                    <div class ="text"> Image URL </div>
-                    <br>
-                    <input type="text" class="textbox1" onmouseover = "sound_click.play()" /> 
-                    <form enctype="multipart/form-data" action="create-app.php" method="POST" id="upload_image"> 
-                       <!-- form should be here -->
-                    </form>
-                    OR 
-                    <button class="button" onmouseover="sound_click.play()">Browse</button> 
-
-                    
-                    <br><br>
-            
-
-            </div>
-
-        </form>
-
-        <div id="result"></div>
-   	<br> <br>
-    <input type="submit" class="button" onmouseover="sound_click.play()" value="Submit">
-    </div> <!-- end .container -->
-    
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/edit.js"></script>
+        
 </body>
