@@ -15,12 +15,11 @@ function addHighScore() {
             score: score,
             name: $j("#high_scorer_name").val()
         },
-        success: function (data, textStatus, xhr) { debugger;
+        success: function (data, textStatus, xhr) {
             var response = JSON.parse(data);
-            
-            
-        },
-        error: function (xhr, textStatus, error) { debugger;
+            window.location.href = "game.php?id="+app_id;
+        },  
+        error: function (xhr, textStatus, error) {
             console.log(xhr.responseText);
             console.log(textStatus);
             console.log(error);

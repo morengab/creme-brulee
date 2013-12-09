@@ -59,14 +59,6 @@
             <br>
             <a class="button" href="javascript:addHighScore()" onmouseover="sound_click.play()">Add</a>                                         
     </form>
-        <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
-            <label class="create_app_title">App Title</label><br>
-            <input type="text" name="name" id="textbox1 app_name" />
-            <br><br>
-            <label class="create_app_title">Image Url</label><br>
-            <input type="text" name="image_url" id="textbox1 app_image_url" />
-            <input type="submit" class="browse_button" value="Create App" />
-        </form> -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/leaderboard.js"></script>
     
