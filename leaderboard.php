@@ -43,19 +43,21 @@
 
 <body>     
     <div class="header">
-        <p id="highscore_font"> NEW HIGH SCORE!!</P>
-        <p class="rotate_font"> 5820 </P>   
+        <p id="highscore_font">NEW HIGH SCORE!!</P>
+        <p class="rotate_font"> <?php echo $_GET['score']; ?> </P>   
     </div>
-
        
-    <form method="post" action="bin/create-app.php" id="highscore" style = "height: 200px">           
-
+    <form method="post" action="bin/add-high-score.php" name="high_score" id="highscore" style = "height: 200px">         
         <br>
         <div class = "textbox_container1"> 
-            <div class ="text"> Your name </div>
+            <div class ="text">Your name</div>
             <br>
-            <input type="text" class="textbox1" onmouseover = "sound_click.play()" placeholder = "Name" maxlength ="8"> 
-            <br>                                                                         
+            <input type="text" name="name" id="high_scorer_name" class="textbox1" onmouseover="sound_click.play()" placeholder="Name" value="Tom" maxlength="8"> 
+            <br>
+            <input type="hidden" name="score"> 
+            <br>
+            <br>
+            <a class="button" href="javascript:addHighScore()" onmouseover="sound_click.play()">Add</a>                                         
     </form>
         <!-- <form method="post" action="create-app.php" name="create_app" id="create_app">
             <label class="create_app_title">App Title</label><br>
@@ -65,5 +67,8 @@
             <input type="text" name="image_url" id="textbox1 app_image_url" />
             <input type="submit" class="browse_button" value="Create App" />
         </form> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/leaderboard.js"></script>
     
 </body>
+</html>

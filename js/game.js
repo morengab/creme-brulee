@@ -14,7 +14,7 @@ var userSelected = [];
 var currentIcon = 0;
 
 $j(document).ready(function () {
-	isHighScore();
+
 	//show modal on page load
 	$j('#my-modal').reveal({
      animation: 'fade',                   //fade, fadeAndPop, none
@@ -158,22 +158,39 @@ Array.prototype.remove = function() {
     return this;
 };
 
-function isHighScore() {
+function isHighScore(score) {
+	var app_id = document.location.search.match("\\d+")[0];
+	
 	$j.ajax({
 		url: "bin/is-high-score.php",
 		data: {
-			app_id: document.location.search.match("\\d+")[0],
-			score: document.getElementById("player_score").innerHTML
+			app_id: app_id,
+			score: score
 		},
 		success: function (data, textStatus, xhr) {
-			console.log(xhr.response);
-		}, 
+			var response = JSON.parse(data);
+			if (response.length === 1)
+				return;	
+			
+			var low = parseInt(response[0].score);
+			if (score > low  || response.length < 10) { 
+				window.location.href = "leaderboard.php?score="+score+"&app_id="+app_id;
+			} else {
+				game.endGame();
+						
+				$j(".icon").remove();
+				$j("#lifebar").css("background", "#5f2136");
+				$j("#board").append("<span class='points' id=\"gameOver\"style=\"margin-top:400px; font-size: 5em; color:white;\"><center><b>GAME OVER</b><center></span>");
+				$j("#music").jPlayer("stop");
+				started = false;
+			}
+			
+		},
 		error: function (xhr, textStatus, error) {
-			console.log(xhr.responseText);
+ 			console.log(xhr.responseText);
 			console.log(textStatus);
 			console.log(error);
-		},
-		dataType: "json"
+		}
 	});
 }
 
@@ -240,8 +257,6 @@ Game.prototype.animate = function(current) {
 				{
 					$j(this).addClass("active");
 					self.setActive();
-					
-					
 				}
 				else if (parseInt(pos.top) <= -50 && self.state != 2)
 				{
@@ -254,13 +269,8 @@ Game.prototype.animate = function(current) {
 					scoreWrongAnswer(-multiplier);
 					self.state = 2;
 					if (isGameOver()) {
-						game.endGame();
-						// isHighScore();
-						$j(".icon").remove();
-						$j("#lifebar").css("background", "#5f2136");
-						$j("#board").append("<span class='points' id=\"gameOver\"style=\"margin-top:400px; font-size: 5em; color:white;\"><center><b>GAME OVER</b><center></span>");
-						$j("#music").jPlayer("stop");
-						started = false;
+						var score = parseInt(document.getElementById("player_score").innerHTML);
+						isHighScore(score);
 					}
 				}
 			}	

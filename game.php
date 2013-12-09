@@ -63,6 +63,9 @@
 </audio>
 
 <?php
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 require_once "downloads/medoo.min-local.php";
 $database =  new medoo('macadamia_cluster_02');
 
@@ -88,8 +91,16 @@ function getShortcuts($database, $app_id) {
     return $shortcuts;
 }
 
-$shortcuts = getShortcuts($database, $app_id);
+$high_scores = $database->select("high_scores", array(
+        "high_scores.name",
+        "high_scores.score"
+    ), array(
+        "high_scores.app_id" => $app_id,
+        "ORDER" => "high_scores.score DESC",
+        "LIMIT" => 10
+    ));
 
+$shortcuts = getShortcuts($database, $app_id);
 ?>
 <body>
     <div id="container">   
@@ -109,7 +120,6 @@ $shortcuts = getShortcuts($database, $app_id);
                     <img id="application-logo" src="<?php echo $app["image_url"]; ?>">
                     <h2><span id="application-name"><?php echo $app["name"]; ?></span></h2>
                     <button class="button" id="new-game">New Game</button>
-                    
                     <button class="button" id="reset">Reset</button>
                     <br>
                     <button class= "button" id ="home" onclick="location.href='http://www.gabymorenocesar.com/ttr/'"> Home</button>
@@ -122,25 +132,26 @@ $shortcuts = getShortcuts($database, $app_id);
                 
                 <div id="my-modal" class="reveal-modal">
                         <div id= "leaderboard_container">
-                            <ul id="leaderboard">
+
+                             <ul id="leaderboard">
                                 <li><a id="leaderboard_title">Name</a></li>
-                                <li><a>Eric</a></li>
-                                <li><a>Gaby</a></li>
-                                <li><a>Bulbasaur</a></li>
-                                <li><a>Lala</a></li>
-                                <li><a>Amigo</a></li>
-                                <li><a>Obama</a></li>
-                                <li><a>Ash</a><li>
+                                <?php                            
+                                foreach ($high_scores as $hs):
+                                ?>
+                                <li><a href=""><?php echo $hs['name']; ?></a></li>
+                                <?php
+                                endforeach;
+                                ?>
                             </ul>
                             <ul id="leaderboard">
                                 <li><a id="leaderboard_title">Score</a></li>
-                                <li><a>100</a></li>
-                                <li><a>90</a></li>
-                                <li><a>33</a></li>
-                                <li><a>26</a></li>
-                                <li><a>14</a></li>
-                                <li><a>10</a></li>
-                                <li><a>-5</a></li>
+                                <?php                            
+                                foreach ($high_scores as $hs):
+                                ?>
+                                <li><a href=""><?php echo $hs['score']; ?></a></li>
+                                <?php
+                                endforeach;
+                                ?>
 
                             </ul>
                         </div>
@@ -149,15 +160,7 @@ $shortcuts = getShortcuts($database, $app_id);
                         <!-- <img id="logo" class="logo-modal" src="icons/logo.png" alt="tut tut revolution logo"> -->
                         <h2>Select 4 shortcuts you would like to train on..</h2>
                         <div id="icon_holder">  
-
-                           <!--  <form method="post" action="data.php" name="create_shortcut" id="create_shortcut">
-                                <label>Key</label>
-                                <input type="text" id="short_name" name="name" placeholder=""/>
-                                <br>
-                                <p><a id="toggle_modifiers" data-detect="false" href="javascript:toggleModifiers()">Don't detect modifiers</a></p>
-                                <input type="submit" value="Create Shortcut" />
-                            </form> -->
-                            
+  
                             <form method="post" action="bin/create-app.php" name="create-shortcut" id="create-shortcut" style = "height: 240px">           
                                 <div>
                                     <div class = "textbox_container1"> 

@@ -9,18 +9,19 @@ $database =  new medoo('macadamia_cluster_02');
 // // $database =  new medoo('d53482573gb7uf');
 
 if (isset($_GET['app_id'])) {
-    $id = $_GET['app_id'];
+    $app_id = $_GET['app_id'];
     $score = $_GET['score'];
+    $name = $_GET['name'];
 
-    $scores = $database->select("high_scores", array(
-        "high_scores.score"
-        ), array(
-        "high_scores.app_id" => $id,
-        "ORDER" => "high_scores.score ASC",
-        "LIMIT" => 10
-    ));
+    $new_high_score = array(
+        "app_id" => $app_id,
+        "name" => $name,
+        "score" => $score
+    );
 
-    echo json_encode($scores);
+    $database->insert("high_scores", $new_high_score);
+
+    echo json_encode($new_high_score);
 } else {
     echo "Error: $_GET failed to return app_id";
 }
